@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+*{
+    box-sizing: border-box;
+}
+.img{
+    margin: 0 15%;
+    z-index: -99;
+    position: absolute;
+    width: 70vw;
+    /* height: 100vh; */
+
+}
+
+.red{
+    background: rgba(255, 0, 0, 0.5);
+    height: 30px;
+}
+.col,.col-4{
+    font-size: 1.5rem;
+}
+.cn{
+    font-family: "cwTeXYen", sans-serif;
+}
+.en{
+    font-family: 'UKIJ Chiwer Kesme', sans-serif;
+    /* letter-spacing: 0.5em; */
+}
+.price{
+    font-family: 'UKIJ Chiwer Kesme', sans-serif;    
+}
