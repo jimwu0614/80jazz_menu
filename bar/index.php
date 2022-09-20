@@ -13,7 +13,9 @@
 <body>
     <div class="container">
         <div class="row">
-            
+            <div class="col">
+                <div class="con"></div>
+            </div>
         </div>
     </div>
 
