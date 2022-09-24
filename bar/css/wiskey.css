@@ -1,0 +1,11 @@
+.wiskey{
+    background: url(../img/whisky.jpeg);
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    background-position-x: 75% ;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+}
+
