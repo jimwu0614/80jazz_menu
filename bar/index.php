@@ -1,3 +1,6 @@
+<?php
+include "./base.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +17,7 @@
     <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/whiskey.css">
 </head>
 
 <body>
@@ -25,15 +29,17 @@
             <ul class="nav sidebar-nav">
                 <div class="sidebar-header">
                     <div class="sidebar-brand">
-                        <a href="#">80 Jazz Menu</a>
+                        <a href="index.php">80 Jazz Menu</a>
                     </div>
                 </div>
-                <li><a href="?do=wiskey">Wiskey</a></li>
+                <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=gin">Gin</a></li>
                 <li><a href="?do=rum">Rum</a></li>
                 <li><a href="?do=vodka">Vodka</a></li>
                 <li><a href="?do=tequila">Tequila</a></li>
+                <!-- <li><a href="?do=sake">Sake&Shochu</a></li> -->
+                <!-- <li><a href="?do=wine">Wine</a></li> -->
                 <li><a href="?do=cocktail">Cocktail</a></li>
                 <!-- <li><a href="?do=">Events</a></li> -->
             </ul>
