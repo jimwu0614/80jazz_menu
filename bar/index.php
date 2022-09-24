@@ -11,6 +11,7 @@
     <link href="http://fonts.cdnfonts.com/css/melinda" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/pixelade" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -24,16 +25,17 @@
             <ul class="nav sidebar-nav">
                 <div class="sidebar-header">
                     <div class="sidebar-brand">
-                        <a href="#">Brand</a>
+                        <a href="#">80 Jazz Menu</a>
                     </div>
                 </div>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#events">Events</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#followme">Follow me</a></li>
+                <li><a href="?do=wiskey">Wiskey</a></li>
+                <li><a href="?do=brandy">Brandy</a></li>
+                <li><a href="?do=gin">Gin</a></li>
+                <li><a href="?do=rum">Rum</a></li>
+                <li><a href="?do=vodka">Vodka</a></li>
+                <li><a href="?do=tequila">Tequila</a></li>
+                <li><a href="?do=cocktail">Cocktail</a></li>
+                <!-- <li><a href="?do=">Events</a></li> -->
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
