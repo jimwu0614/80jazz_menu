@@ -34,14 +34,14 @@ include "./base.php";
                 </div>
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
-                <li><a href="?do=gin">Gin</a></li>
-                <li><a href="?do=rum">Rum</a></li>
-                <li><a href="?do=vodka">Vodka</a></li>
-                <li><a href="?do=tequila">Tequila</a></li>
+                <li><a href="?do=gin">Gin & Vodka</a></li>
+                <li><a href="?do=rum">Rum &Tequila</a></li>
+                <!-- <li><a href="?do=vodka">Vodka</a></li> -->
+                <!-- <li><a href="?do=tequila">Tequila</a></li> -->
                 <!-- <li><a href="?do=sake">Sake&Shochu</a></li> -->
                 <!-- <li><a href="?do=wine">Wine</a></li> -->
                 <li><a href="?do=cocktail">Cocktail</a></li>
-                <!-- <li><a href="?do=">Events</a></li> -->
+                <li><a href="?do=event" id="event">Events</a></li>
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

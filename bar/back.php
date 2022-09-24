@@ -25,7 +25,7 @@ include "./base.php";
         <span>chinese</span><input type="text" name="chinese" id=""><br>
         <span>type</span><select name="type" id="">
                             <option value="single">single</option>  
-                            <option value="blended" selected>blended</option>  
+                            <option value="blended">blended</option>  
                             <option value="bourbon">bourbon</option>   
                         </select><br>
         <!-- <span>inprice</span><input type="number" name="" id=""><br> -->
@@ -33,6 +33,7 @@ include "./base.php";
         <span>glass</span><input type="number" name="glass" id=""><br>
         <span>memo</span><input type="text" name="memo" id=""><br>
         <span>intro</span><input type="text" name="intro" id=""><br>
+        <span>promo</span><input type="text" name="promo" id=""><br>
         <span>rank</span><input type="number" name="rank" value="<?=$rank?>"><br>
         <input type="submit" value="submit">
 

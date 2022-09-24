@@ -285,6 +285,11 @@ html {
     -webkit-transition: all .35s ease-in-out;
 }
 
+
+#event{
+    color: #ddd;
+    cursor: not-allowed;
+}
 /*-------------------------------*/
 /*            Overlay            */
 /*-------------------------------*/
