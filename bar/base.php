@@ -116,5 +116,8 @@ class DB{
     
 
 }
-$Whiskey = new DB('jazz_whiskey')
+$Whiskey = new DB('jazz_whiskey');
+$Brandy = new DB('jazz_brandy');
+$Ginvodka = new DB('jazz_ginvodka');
+$Rumteq = new DB('jazz_rumteq');
 ?>
