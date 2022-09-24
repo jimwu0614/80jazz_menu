@@ -12,7 +12,7 @@
     <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/pixelade" rel="stylesheet">
     <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/neon.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>

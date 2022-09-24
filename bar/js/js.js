@@ -1,9 +1,13 @@
 $(document).ready(function () {
+    var trigger2 = $('.neon-button');
     var trigger = $('.hamburger'),
         overlay = $('.overlay'),
        isClosed = false;
   
       trigger.click(function () {
+        hamburger_cross();      
+      });
+      trigger2.click(function () {
         hamburger_cross();      
       });
   
