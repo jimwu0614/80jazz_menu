@@ -71,14 +71,10 @@ include "./base.php";
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
     </div>
     <!-- /#wrapper -->
 
-    <footer>
-        <a href="back.php">Copyright © 2022 Jim-Wu. All rights reserved.</a>
-    
-    </footer>
+
     <script src="./js/js.js"></script>
 </body>
 
