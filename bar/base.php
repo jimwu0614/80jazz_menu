@@ -120,4 +120,11 @@ $Whiskey = new DB('jazz_whiskey');
 $Brandy = new DB('jazz_brandy');
 $Ginvodka = new DB('jazz_ginvodka');
 $Rumteq = new DB('jazz_rumteq');
+$Liquer = new DB('jazz_Liquer');
+$Sake = new DB('jazz_sake');
+$Wine = new DB('jazz_wine');
+$Cocktail = new DB('jazz_Cocktail');
+$Soft = new DB('jazz_soft');
+$Meal = new DB('jazz_Meal');
+$Event = new DB('jazz_Event');
 ?>

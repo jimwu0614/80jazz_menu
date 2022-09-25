@@ -37,12 +37,11 @@ include "./base.php";
                 </div>
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
-                <li><a href="?do=gin">Gin & Vodka</a></li>
-                <li><a href="?do=rum">Rum &Tequila</a></li>
-                <!-- <li><a href="?do=vodka">Vodka</a></li> -->
-                <!-- <li><a href="?do=tequila">Tequila</a></li> -->
-                <!-- <li><a href="?do=sake">Sake&Shochu</a></li> -->
-                <!-- <li><a href="?do=wine">Wine</a></li> -->
+                <li><a href="?do=ginvodka">Gin & Vodka</a></li>
+                <li><a href="?do=rumteq">Rum &Tequila</a></li>
+                <li><a href="?do=Liquer">Liquer</a></li>
+                <li><a href="?do=sake">Sake&Shochu</a></li>
+                <li><a href="?do=wine">Wine</a></li>
                 <li><a href="?do=cocktail">Cocktail</a></li>
                 <li><a href="?do=softdrink">Softdrink</a></li>
                 <li><a href="?do=meal" id="meal">Meal</a></li>
