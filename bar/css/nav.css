@@ -185,15 +185,15 @@ html {
     line-height: 32px;
     text-align: center;
     opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transition: all .35s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed:hover:before {
     opacity: 1;
     display: block;
-    -webkit-transform: translate3d(-100px, 0, 0);
-    -webkit-transition: all .35s ease-in-out;
+    transform: translate3d(-100px, 0, 0);
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed .hamb-top,
@@ -207,6 +207,12 @@ html {
     height: 4px;
     width: 100%;
 }
+.hamburger.is-closed{
+    position: fixed;
+    left: 0;
+    top: 20px;
+    z-index: 999;
+}
 
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
@@ -216,7 +222,7 @@ html {
 
 .hamburger.is-closed .hamb-top {
     top: 5px;
-    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed .hamb-middle {
@@ -226,17 +232,17 @@ html {
 
 .hamburger.is-closed .hamb-bottom {
     bottom: 5px;
-    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed:hover .hamb-top {
     top: 0;
-    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-closed:hover .hamb-bottom {
     bottom: 0;
-    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-open .hamb-top,
@@ -252,8 +258,8 @@ html {
 }
 
 .hamburger.is-open .hamb-top {
-    -webkit-transform: rotate(45deg);
-    -webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
+    transform: rotate(45deg);
+    transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
 }
 
 .hamburger.is-open .hamb-middle {
@@ -261,8 +267,8 @@ html {
 }
 
 .hamburger.is-open .hamb-bottom {
-    -webkit-transform: rotate(-45deg);
-    -webkit-transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
+    transform: rotate(-45deg);
+    transition: -webkit-transform .2s cubic-bezier(.73, 1, .28, .08);
 }
 
 .hamburger.is-open:before {
@@ -274,15 +280,15 @@ html {
     line-height: 32px;
     text-align: center;
     opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    -webkit-transition: all .35s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transition: all .35s ease-in-out;
 }
 
 .hamburger.is-open:hover:before {
     opacity: 1;
     display: block;
-    -webkit-transform: translate3d(-100px, 0, 0);
-    -webkit-transition: all .35s ease-in-out;
+    transform: translate3d(-100px, 0, 0);
+    transition: all .35s ease-in-out;
 }
 
 
