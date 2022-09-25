@@ -12,4 +12,5 @@
     right: 0px;
     flex-direction: column;
     padding-top: 10rem;
+    overflow: auto;
 }

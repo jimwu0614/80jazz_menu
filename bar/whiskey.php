@@ -8,7 +8,7 @@
         <table class="w100 ">
             <tr>
                 <td class="w60"></td>
-                <td class="w20">Glass/杯</td>
+                <td class="w20">Glass/<br>杯</td>
                 <td class="w20">Bottle/瓶</td>
             </tr>
             <tbody class="tbody">

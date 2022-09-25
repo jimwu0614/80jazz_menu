@@ -28,6 +28,7 @@
     border-radius: 30px;
     backdrop-filter: blur(3px);
     color: #faebd7;
+    overflow: auto;
 }
 
 table *{
