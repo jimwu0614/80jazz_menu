@@ -40,8 +40,8 @@ include "./base.php";
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
                 <li><a href="?do=rumteq">Rum &Tequila</a></li>
                 <li><a href="?do=Liquer">Liquer</a></li>
-                <li><a href="?do=sake">Sake&Shochu</a></li>
-                <li><a href="?do=wine">Wine</a></li>
+                <li><a href="?do=sake" id="sake">Sake&Shochu</a></li>
+                <li><a href="?do=wine" id="wine">Wine</a></li>
                 <li><a href="?do=cocktail">Cocktail</a></li>
                 <li><a href="?do=softdrink">Softdrink</a></li>
                 <li><a href="?do=meal" id="meal">Meal</a></li>

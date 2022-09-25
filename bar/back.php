@@ -18,19 +18,20 @@ include "./base.php";
 
 <body>
     <?php
-    $rank = $Whiskey->math('max','id')+1
+    $rank = $Ginvodka->math('max','rank')+1
     ?>
     <form action="./api/add.php" method="post" style="font-size: 2rem; text-align:center;">
         <select name="liquer">
             <option value="Whiskey">Whiskey</option>
-            <option value="Brandy" selected>Brandy</option>
-            <option value="Gin">Gin</option>
-            <option value="Rum">Rum</option>
+            <option value="Brandy">Brandy</option>
+            <option value="Ginvodka" selected>Ginvodka</option>
+            <option value="Rumteq">Rumteq</option>
             <option value="Sake">Sake</option>
             <option value="Wine">Wine</option>
             <option value="Cocktail">Cocktail</option>
             <option value="Softdrink">Softdrink</option>
-        </select>
+            <option value="Meal">Meal</option>
+        </select><br>
         <span>name</span><input type="text" name="name" id=""><br>
         <span>chinese</span><input type="text" name="chinese" id=""><br>
         <span>type</span><select name="type" id="">
@@ -38,9 +39,14 @@ include "./base.php";
                             <option value="blended">blended</option>  
                             <option value="bourbon">bourbon</option>    -->
 
-                            <option value="Cognac">Cognac</option>  
-                            <option value="Armagnac">Armagnac</option>  
+                            <!-- <option value="Cognac">Cognac</option>  
+                            <option value="Armagnac">Armagnac</option>   -->
 
+                            <!-- <option value="Gin">Gin</option>
+                            <option value="Vodka" selected>Vodka</option> -->
+
+                            <option value="Rum">Rum</option>
+                            <option value="Tequila">Tequila</option>
                         </select><br>
         <!-- <span>inprice</span><input type="number" name="" id=""><br> -->
         <span>bottle</span><input type="number" name="bottle" id=""><br>

@@ -295,7 +295,7 @@ html {
 }
 
 
-#event,#meal{
+#event,#meal,#sake,#wine{
     color: #ddd;
     cursor: not-allowed;
 }
