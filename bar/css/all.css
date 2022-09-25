@@ -1,0 +1,22 @@
+.container{
+    margin: 0;
+    padding: 0;
+    /* overflow: auto; */
+}
+footer{
+    height: 50px; 
+    width: 100vw;
+    color: #fff;
+    position: relative;
+    top: 50px;
+    padding: auto;
+}
+
+footer a:hover{
+    text-align: center;
+}
+
+footer a:hover{
+    color: #fff;
+    text-decoration: none;
+}

@@ -3,6 +3,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    z-index: -99;
     background-size: cover;
     background-position-x: 75% ;
     background-color: rgba(0, 0, 0, 0.5);

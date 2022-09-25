@@ -15,6 +15,7 @@ include "./base.php";
     <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/pixelade" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/liquor.css">
@@ -58,25 +59,26 @@ include "./base.php";
                 <span class="hamb-bottom"></span>
             </button>
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <?php
-							$do=$_GET['do']??'main';
-                            $file='./'.$do.".php";
-                            if(file_exists($file)){
-                                include $file;
-                            }else{
-                                include "./main.php";
-                            }
-                        ?>
-                    </div>
-                </div>
+                <?php
+					$do=$_GET['do']??'main';
+                    $file='./'.$do.".php";
+                    if(file_exists($file)){
+                        include $file;
+                    }else{
+                        include "./main.php";
+                    }
+                ?>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
 
     </div>
     <!-- /#wrapper -->
+
+    <footer>
+        <a href="back.php">Copyright © 2022 Jim-Wu. All rights reserved.</a>
+    
+    </footer>
     <script src="./js/js.js"></script>
 </body>
 

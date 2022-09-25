@@ -1,4 +1,5 @@
-<div class="whiskey ">
+<div class="whiskey"></div>
+<div class="box">
     <div class="liquortitle">
         <span class="type single active">Single</span>
         <span class="type blended">Blended</span>
@@ -9,15 +10,13 @@
             <tr>
                 <td class="w60"></td>
                 <td class="w20">Glass/<br>杯</td>
-                <td class="w20">Bottle/瓶</td>
+                <td class="w20">Bottle/<br>瓶</td>
             </tr>
             <tbody class="tbody">
 
             </tbody>
-
         </table>
     </div>
-
 </div>
 <script>
     $(document).ready(function(){

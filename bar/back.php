@@ -38,6 +38,7 @@ include "./base.php";
         <input type="submit" value="submit">
 
     </form>
+    <a href="index.php">back</a>
 </body>
 
 </html>
