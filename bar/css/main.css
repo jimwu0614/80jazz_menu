@@ -13,7 +13,7 @@
     background-color: #010a01;
     background-image: url(../img/brick.jpg);
     background-repeat: no-repeat;
-    background-size: 85rem;
+    background-size: 90rem;
     background-position-x: 46%;
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +32,7 @@
 
 .centered {
     position: relative;
+    height: 110vh;
     left: 50%;
     top: 42%;
     transform: translate(-50%, -50%);

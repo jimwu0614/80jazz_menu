@@ -13,6 +13,8 @@
     color: #fff;
     font-family: 'Mufan', sans-serif;
     font-size: 2.5rem;     
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+
 }
 
 .container{
@@ -21,9 +23,96 @@
 
 .blur{
     margin: 5px auto;
-    width: 75vw;
+    width: 90vw;
     min-height: 300px;
     border-radius: 30px;
     backdrop-filter: blur(3px);
+    color: #faebd7;
+}
 
+table *{
+    padding: 0;
+    margin: 0;
+}
+
+table tr{
+    height: 50px;
+}
+
+table tr td:nth-child(2){
+    text-align: center;
+    height: 50px;
+}
+table tr td:nth-child(3){
+    text-align: center;
+    height: 50px;
+}
+
+table tr td pre{
+    color: rgb(244, 210, 22);
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+table td.crossed
+{
+   background-image: linear-gradient(to bottom right,  transparent calc(50% - 1px), rgb(179, 179, 179), transparent calc(50% + 1px)); 
+   background-size: 8rem;
+   background-repeat: no-repeat;
+   background-position-y: -10px;
+}
+
+.w100{
+	width: 100%;
+}
+
+.w90{
+	width: 90%;
+}
+
+.w80{
+	width: 80%;
+}
+
+.w70{
+	width: 70%;
+}
+
+.w60{
+	width: 60%;
+}
+
+.w50{
+	width: 50%;
+}
+
+.w40{
+	width: 40%;
+}
+
+.w45{
+	width: 45%;
+}
+
+.w30{
+	width: 30%;
+}
+
+.w20{
+	width: 20%;
+}
+
+.w10{
+	width: 10%;
+}
+
+.w5{
+	width: 5%;
+}
+.red{
+    background:red ;
+    height: 20px;
+}
+.blue{
+    background: blue;
+    height: 20px;
 }

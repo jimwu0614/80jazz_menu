@@ -19,6 +19,7 @@ include "./base.php";
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/liquor.css">
     <link rel="stylesheet" href="./css/whiskey.css">
+    <script src="./js/jqyery3.6.1.js"></script>
 </head>
 
 <body>
@@ -76,7 +77,6 @@ include "./base.php";
 
     </div>
     <!-- /#wrapper -->
-    <script src="./js/jqyery3.6.1.js"></script>
     <script src="./js/js.js"></script>
 </body>
 

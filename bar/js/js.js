@@ -1,3 +1,5 @@
+// nav bar用的JS
+
 $(document).ready(function () {
     var trigger2 = $('.neon-button');
     var trigger = $('.hamburger'),
