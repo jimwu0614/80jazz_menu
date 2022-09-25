@@ -56,7 +56,7 @@ html {
 
 #page-content-wrapper {
     width: 100%;
-    padding-top: 55px;
+    /* padding-top: 55px; */
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -286,10 +286,8 @@ html {
 }
 
 
-#event{
+#event,#meal{
     color: #ddd;
     cursor: not-allowed;
 }
-/*-------------------------------*/
-/*            Overlay            */
-/*-------------------------------*/
+

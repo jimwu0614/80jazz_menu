@@ -1,13 +1,18 @@
-<div class="whiskey">
-    <div class="whiskeytitle">
-        <span class="single">Single</span><span class="blended">Blended</span><span class="bourbon">Bourbon</span>
+<div class="whiskey ">
+    <div class="liquortitle">
+        <span class="type single active">Single</span>
+        <span class="type blended">Blended</span>
+        <span class="type bourbon">Bourbon</span>
     </div>
-    <table>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <div class="blur">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
     <div class="blended"></div>
     <div class="bourbon"></div>
 </div>

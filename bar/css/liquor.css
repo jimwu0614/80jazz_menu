@@ -1,0 +1,29 @@
+.liquortitle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.liquortitle .active{
+    color: rgb(234, 213, 73);
+    font-size: 3.5rem;
+}
+
+.liquortitle span{
+    color: #fff;
+    font-family: 'Mufan', sans-serif;
+    font-size: 2.5rem;     
+}
+
+.container{
+    padding: 0;
+}
+
+.blur{
+    margin: 5px auto;
+    width: 75vw;
+    min-height: 300px;
+    border-radius: 30px;
+    backdrop-filter: blur(3px);
+
+}

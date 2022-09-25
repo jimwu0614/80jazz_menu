@@ -17,6 +17,7 @@ include "./base.php";
     <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/liquor.css">
     <link rel="stylesheet" href="./css/whiskey.css">
 </head>
 
@@ -41,6 +42,8 @@ include "./base.php";
                 <!-- <li><a href="?do=sake">Sake&Shochu</a></li> -->
                 <!-- <li><a href="?do=wine">Wine</a></li> -->
                 <li><a href="?do=cocktail">Cocktail</a></li>
+                <li><a href="?do=softdrink">Softdrink</a></li>
+                <li><a href="?do=meal" id="meal">Meal</a></li>
                 <li><a href="?do=event" id="event">Events</a></li>
             </ul>
         </nav>

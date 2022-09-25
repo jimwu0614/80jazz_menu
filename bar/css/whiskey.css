@@ -9,16 +9,7 @@
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     display: flex;
+    right: 0px;
     flex-direction: column;
-}
-
-.whiskeytitle{
-    display: flex;
-    justify-content: space-around;
-}
-
-.whiskeytitle span{
-    color: #fff;
-    font-family: 'Mufan', sans-serif;
-    font-size: 2.5rem;     
+    padding-top: 10rem;
 }
