@@ -1,0 +1,27 @@
+<?php
+include "../base.php";
+
+$rows = $Ginvodka->all(['type'=>$_POST['type']]);
+foreach ($rows as $key => $value) {
+    ?>
+
+    <tr>
+        <td><pre><?=$value['name']?></pre></td>
+
+<?php
+        if ($value['glass']==0) {
+?>
+        <td class="crossed"><pre></pre></td>
+<?php    
+        }else{
+?>
+        <td><pre><?=$value['glass'];?></pre></td>
+<?php    
+        }
+?>
+
+        <td><pre><?=$value['bottle']?></pre></td>
+    </tr>
+    <?php
+}
+?>
