@@ -18,7 +18,7 @@ include "./base.php";
 
 <body>
     <?php
-    $rank = $Beerliquer->math('max','rank')+1
+    $rank = $Sake->math('max','rank')+1
     ?>
     <form action="./api/add.php" method="post" style="font-size: 2rem; text-align:center;">
         <select name="kind">
@@ -27,14 +27,14 @@ include "./base.php";
             <option value="Ginvodka">Ginvodka</option>
             <option value="Rumteq">Rumteq</option>
             <option value="Beerliquer" selected>Beerliquer</option>
-            <option value="Sake">Sake</option>
+            <option value="Sake"selected>Sake</option>
             <option value="Wine">Wine</option>
             <option value="Cocktail">Cocktail</option>
             <option value="Softdrink">Softdrink</option>
             <option value="Meal">Meal</option>
         </select><br>
         <span>name</span><input type="text" name="name" id=""><br>
-        <span>chinese</span><input type="text" name="chinese" id=""><br>
+        <!-- <span>chinese</span><input type="text" name="chinese" id=""><br> -->
         <span>type</span><select name="type" id="">
                             <!-- <option value="Single">Single</option>  
                             <option value="Blended">Blended</option>  
@@ -49,7 +49,11 @@ include "./base.php";
                             <!-- <option value="Rum">Rum</option>
                             <option value="Tequila">Tequila</option> -->
 
-                            <option value="Beerliquer">Beerliquer</option>
+                            <!-- <option value="Beer">Beer</option>
+                            <option value="Liquer">Liquer</option> -->
+
+                            <option value="Sake">Sake</option>
+                            <option value="Shochu" selected>Shochu</option>
                         </select><br>
         <span>bottle</span><input type="number" name="bottle" id=""><br>
         <span>glass</span><input type="number" name="glass" id=""><br>

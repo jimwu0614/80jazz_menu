@@ -292,7 +292,7 @@ html {
 }
 
 
-#event,#meal,#sake,#wine{
+#event,#meal,#wine{
     color: #ddd;
     cursor: not-allowed;
 }
