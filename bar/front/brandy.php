@@ -34,7 +34,7 @@
         add.addClass("active");
 
         let type = $(this).text();
-        console.log(type);
+        // console.log(type);
 
         $.post("./api/getbrandy.php", {type}, (res) => {
             $(".tbody").html(res)

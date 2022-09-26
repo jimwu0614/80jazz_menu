@@ -9,7 +9,12 @@
     justify-content: space-around;
     align-items: center;
 }
-
+@media (min-width: 768px) {
+    .liquortitle{
+        justify-content: space-evenly;
+        padding: 0 15rem;
+    }
+}
 .liquortitle .active{
     color: rgb(234, 213, 73);
     font-size: 3.5rem;
@@ -30,8 +35,13 @@
     border-radius: 30px 30px 10px 10px;
     color: #faebd7;
     overflow: auto;
-    backdrop-filter: blur(2.5px);
-    -webkit-backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+}
+@media (min-width: 768px) {
+    .blur{
+        width: 60vw;
+    }
 }
 
 table *{
@@ -71,53 +81,6 @@ table td.crossed
    background-position-y: -10px;
 }
 
-.w100{
-	width: 100%;
-}
-
-.w90{
-	width: 90%;
-}
-
-.w80{
-	width: 80%;
-}
-
-.w70{
-	width: 70%;
-}
-
-.w60{
-	width: 60%;
-}
-
-.w50{
-	width: 50%;
-}
-
-.w40{
-	width: 40%;
-}
-
-.w45{
-	width: 45%;
-}
-
-.w30{
-	width: 30%;
-}
-
-.w20{
-	width: 20%;
-}
-
-.w10{
-	width: 10%;
-}
-
-.w5{
-	width: 5%;
-}
 .red{
     background:red ;
     height: 20px;
