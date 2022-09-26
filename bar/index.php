@@ -11,10 +11,9 @@ include "./base.php";
     <title>80 Jazz</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="http://fonts.cdnfonts.com/css/melinda" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/pixelade" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/eagle-lake" rel="stylesheet">
+                
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
