@@ -98,9 +98,6 @@ html {
 
 .sidebar-nav li:hover {
     background: skyblue !important;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .sidebar-nav li:hover:before,

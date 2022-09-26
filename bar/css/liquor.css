@@ -53,8 +53,14 @@ table tr td:nth-child(3){
 }
 
 table tr td pre{
-    color: rgb(244, 210, 22);
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    color: rgb(255, 255, 22);
+    text-shadow: 3px 3px 5px black;
+    font-size: 1rem;
+}
+@media (min-width: 768px) {
+    table tr td pre{
+        font-size: 2rem;
+    }
 }
 
 table td.crossed
