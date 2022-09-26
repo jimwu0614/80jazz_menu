@@ -31,13 +31,13 @@
     overflow: auto;
 }
 .ginvodka{
-    background: url(../img/gin.jpeg);
+    background: url(../img/vodka.jpeg);
     height: 100vh;
     width: 100vw;
     position: fixed;
     z-index: -99;
     background-size: cover;
-    background-position-x: 87% ;
+    background-position-x: 5% ;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
