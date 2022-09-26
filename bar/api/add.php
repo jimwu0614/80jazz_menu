@@ -23,9 +23,9 @@ switch ($kind) {
         $Rumteq->save($_POST);
         to("../back.php");
         break;
-    case 'Liquer':
+    case 'Beerliquer':
         unset($_POST['kind']);
-        $Liquer->save($_POST);
+        $Beerliquer->save($_POST);
         to("../back.php");
         break;
     case 'Sake':

@@ -19,7 +19,7 @@ include "./base.php";
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/liquor.css">
-    <link rel="stylesheet" href="./css/whiskey.css">
+    <link rel="stylesheet" href="./css/bgpic.css">
     <script src="./js/jqyery3.6.1.js"></script>
 </head>
 
@@ -39,7 +39,7 @@ include "./base.php";
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
                 <li><a href="?do=rumteq">Rum &Tequila</a></li>
-                <li><a href="?do=Liquer">Liquer</a></li>
+                <li><a href="?do=beerliquer">Beer&Liquer</a></li>
                 <li><a href="?do=sake" id="sake">Sake&Shochu</a></li>
                 <li><a href="?do=wine" id="wine">Wine</a></li>
                 <li><a href="?do=cocktail">Cocktail</a></li>
@@ -60,11 +60,11 @@ include "./base.php";
             <div class="container">
                 <?php
 					$do=$_GET['do']??'main';
-                    $file='./'.$do.".php";
+                    $file='./front/'.$do.".php";
                     if(file_exists($file)){
                         include $file;
                     }else{
-                        include "./main.php";
+                        include "./front/main.php";
                     }
                 ?>
             </div>

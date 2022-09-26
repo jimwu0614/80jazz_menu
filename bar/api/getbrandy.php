@@ -1,7 +1,7 @@
 <?php
 include "../base.php";
 
-$rows = $Whiskey->all(['type'=>$_POST['type']]);
+$rows = $Brandy->all(['type'=>$_POST['type']]);
 foreach ($rows as $key => $value) {
     ?>
 

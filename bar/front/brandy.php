@@ -1,9 +1,8 @@
-<div class="whiskey"></div>
+<div class="brandy"></div>
 <div class="box">
     <div class="liquortitle">
-        <span class="type single active">Single</span>
-        <span class="type blended">Blended</span>
-        <span class="type bourbon">Bourbon</span>
+        <span class="type active">Cognac</span>
+        <!-- <span class="type">Armagnac</span> -->
     </div>
     <div class="blur">
         <table class="w100 ">
@@ -20,7 +19,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getwhiskey.php", {type:'Single'}, (res) => {
+        $.post("./api/getbrandy.php", {type:'Cognac'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -37,7 +36,7 @@
         let type = $(this).text();
         console.log(type);
 
-        $.post("./api/getwhiskey.php", {type}, (res) => {
+        $.post("./api/getbrandy.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })
