@@ -1,7 +1,7 @@
 <?php
 include "../base.php";
 
-$rows = $Rumteq->all(['type'=>$_POST['type']]);
+$rows = $Rumteq->all(['type'=>$_POST['type'],'sh'=>1],"ORDER BY RANK ASC");
 foreach ($rows as $key => $value) {
     ?>
 

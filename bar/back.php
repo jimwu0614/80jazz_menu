@@ -18,7 +18,7 @@ include "./base.php";
 
 <body>
     <?php
-    $rank = $Sake->math('max','rank')+1
+    $rank = $Soft->math('max','rank')+1
     ?>
     <form action="./api/add.php" method="post" style="font-size: 2rem; text-align:center;">
         <select name="kind">
@@ -26,16 +26,16 @@ include "./base.php";
             <option value="Brandy">Brandy</option>
             <option value="Ginvodka">Ginvodka</option>
             <option value="Rumteq">Rumteq</option>
-            <option value="Beerliquer" selected>Beerliquer</option>
-            <option value="Sake"selected>Sake</option>
+            <option value="Beerliquer">Beerliquer</option>
+            <option value="Sake">Sake</option>
             <option value="Wine">Wine</option>
             <option value="Cocktail">Cocktail</option>
-            <option value="Softdrink">Softdrink</option>
+            <option value="Softdrink" selected>Softdrink</option>
             <option value="Meal">Meal</option>
         </select><br>
         <span>name</span><input type="text" name="name" id=""><br>
-        <!-- <span>chinese</span><input type="text" name="chinese" id=""><br> -->
-        <span>type</span><select name="type" id="">
+        <span>chinese</span><input type="text" name="chinese" id=""><br>
+        <!-- <span>type</span><select name="type" id=""> -->
                             <!-- <option value="Single">Single</option>  
                             <option value="Blended">Blended</option>  
                             <option value="Bourbon">Bourbon</option>    -->
@@ -52,10 +52,10 @@ include "./base.php";
                             <!-- <option value="Beer">Beer</option>
                             <option value="Liquer">Liquer</option> -->
 
-                            <option value="Sake">Sake</option>
-                            <option value="Shochu" selected>Shochu</option>
-                        </select><br>
-        <span>bottle</span><input type="number" name="bottle" id=""><br>
+                            <!-- <option value="Sake">Sake</option>
+                            <option value="Shochu" selected>Shochu</option> -->
+                         <!-- </select><br>  -->
+        <!-- <span>bottle</span><input type="number" name="bottle" id=""><br> -->
         <span>glass</span><input type="number" name="glass" id=""><br>
         <span>memo</span><input type="text" name="memo" id=""><br>
         <span>intro</span><input type="text" name="intro" id=""><br>

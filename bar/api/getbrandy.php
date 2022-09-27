@@ -1,7 +1,7 @@
 <?php
 include "../base.php";
 
-$rows = $Brandy->all(['type'=>$_POST['type']]);
+$rows = $Brandy->all(['type'=>$_POST['type'],'sh'=>1],"ORDER BY RANK ASC");
 foreach ($rows as $key => $value) {
     ?>
 

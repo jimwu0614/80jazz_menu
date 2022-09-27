@@ -13,7 +13,7 @@ if ($_POST['type']=='Beer') {
 </tr>
 <tbody class="tbody">
 <?php
-$rows = $Beerliquer->all(['type'=>'Beer']);
+$rows = $Beerliquer->all(['type'=>$_POST['type'],'sh'=>1],"ORDER BY RANK ASC");
 foreach ($rows as $key => $value) {
     ?>
 
