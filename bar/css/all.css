@@ -3,23 +3,6 @@
     padding: 0;
     /* overflow: auto; */
 }
-footer{
-    height: 50px; 
-    width: 100vw;
-    color: #fff;
-    position: relative;
-    bottom: 0px;
-}
-
-footer a{
-    display: block;
-    text-align: center;
-}
-
-footer a:hover{
-    color: #fff;
-    text-decoration: none;
-}
 
 .flex{
 	display: flex;
