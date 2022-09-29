@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="http://fonts.cdnfonts.com/css/melinda" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/coffee.css">
+    <link rel="stylesheet" href="./css/bgpic.css">
+
 </head>
 <body>
-    <img class="img" src="./coffee-beans-g85ad67117_1920.jpg" alt="">
+    <div class="coffee"></div>
     <div class="container">
         <div class="row mt-4">
             <div class="col-3"></div>
