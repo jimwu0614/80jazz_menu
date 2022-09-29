@@ -138,20 +138,46 @@ footer a:hover{
 
 
 .neon-button {
-    font-size: 3rem;
     font-family: clipneon;
     display: block;
-    width: 14rem;
     margin: 0 auto;
     cursor: pointer;
     text-decoration: none;
-    color: rgb(255, 20, 189);
-    border: rgb(255, 20, 189) 0.125em solid;
     padding: 0.25em 1em;
     border-radius: 0.25em;
+}
+
+.cafe{
+    font-size: 1.5em;
+    width: 12rem;
+    color: rgb(255, 20, 189);
+    border: rgb(255, 20, 189) 0.125em solid;
     text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.45em currentColor;
     box-shadow: inset 0 0 0.5em 0 rgb(255, 20, 189), 0 0 0.5em 0 rgb(255, 20, 189);
 }
+
+.bar{
+    font-size: 1.5em;
+    width: 12rem;
+    color: rgb(255, 20, 189);
+    border: rgb(255, 20, 189) 0.125em solid;
+    text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 rgb(255, 20, 189), 0 0 0.5em 0 rgb(255, 20, 189);
+}
+@media (min-width: 768px) {
+    .cafe{
+        font-size: 3rem;
+        width: 22rem;
+    }
+    .bar{
+        font-size: 3rem;
+        width: 20rem;
+    }
+
+}
+
+
+
 
 .neon-button:hover{
     color: rgb(255, 20, 189);
