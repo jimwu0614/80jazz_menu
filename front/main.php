@@ -5,7 +5,7 @@
             <h1 class="neon-effect">Lounge Bar</h1>
         </div>
     <br>
-    <a href="./cafe.php" class="neon-button cafe mb-4" >Café&nbsp;&nbsp;Menu</a>
+    <a href="./coffee.php" class="neon-button cafe mb-4" >Café&nbsp;&nbsp;Menu</a>
     <a href="#" class="neon-button bar" data-toggle="offcanvas">Bar&nbsp;&nbsp;Menu</a>
     </div>
 </div>
