@@ -14,7 +14,7 @@
         foreach ($rows as $key => $value) {
         ?>
             <tr>
-                <td class="w50"><pre><?=$value['name']?></pre></td>
+                <td class="w50"><pre data-type="cocktail" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
                 <td class="w50"><pre><?=$value['chinese']?></pre></td>
             </tr>
         <?php

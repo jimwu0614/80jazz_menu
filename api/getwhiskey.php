@@ -6,7 +6,7 @@ foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre><?=$value['name']?></pre></td>
+        <td><pre data-type="whiskey" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
 
 <?php
         if ($value['glass']==0) {

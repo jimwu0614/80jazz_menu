@@ -18,7 +18,7 @@ foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre><?=$value['name']?></pre></td>
+        <td><pre data-type="beer" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
         <td><pre><?=$value['glass']?></pre></td>
         <td><pre><?=$value['bottle']?></pre></td>
     </tr>
@@ -42,7 +42,7 @@ foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre><?=$value['name']?></pre></td>
+        <td><pre data-type="liquer" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
 
 <?php
         if ($value['glass']==0) {

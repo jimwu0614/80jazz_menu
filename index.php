@@ -11,15 +11,7 @@ include "./base.php";
     <title>80 Jazz</title>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
-    </script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <link href="http://fonts.cdnfonts.com/css/mufan" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/eagle-lake" rel="stylesheet">
@@ -79,11 +71,32 @@ include "./base.php";
             </div>
         </div>
         <!-- /#page-content-wrapper -->
+
     </div>
     <!-- /#wrapper -->
 
 
     <script src="./js/js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        //點擊小圖會用MODAL放大
+
+    // $(document).ready(function () {
+
+    // $(".open").on("click",function(){
+    //     let img=$(this).attr('src')  //拿到圖片的連結
+
+    //                             //把連結塞到一個img標籤中..把標籤放到modal中的modal-body區塊中...
+    //                             //button那三行是右上角的叉
+    //     $('.modal-header').html(`<img class="modal_pic" src="${img}">  
+    //                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    //                                 <span aria-hidden="true">&times;</span>
+    //                             </button>
+    //                             `) 
+    //     })
+
+    // })
+    </script>
 </body>
 
 </html>
