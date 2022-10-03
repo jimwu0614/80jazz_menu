@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 *{
     box-sizing: border-box;
+    color: bisque;
 }
 .img{
     margin: 0 15%;
@@ -22,9 +23,9 @@
     font-family: "cwTeXYen", sans-serif;
 }
 .en{
-    font-family: 'UKIJ Chiwer Kesme', sans-serif;
+    font-family: 'Behind Script', sans-serif;
     /* letter-spacing: 0.5em; */
 }
 .price{
-    font-family: 'UKIJ Chiwer Kesme', sans-serif;    
+    font-family: 'Behind Script', sans-serif;
 }

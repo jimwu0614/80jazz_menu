@@ -7,7 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    
     <link href="http://fonts.cdnfonts.com/css/melinda" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/ukij-chiwer-kesme" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/behind-script" rel="stylesheet">
+        
     <link rel="stylesheet" href="./css/bgpic.css">
     <link rel="stylesheet" href="./css/coffee.css">
 
@@ -15,8 +16,7 @@
 <body>
     <div class="coffee"></div>
     <div class="container">
-        <div class="row mt-4">
-
+        <div class="row ">
             <div class="col-12 mt-5">
                 <span class="cn">義式濃縮</span><span class="en">Espresso</span><span class="price">.......$XXX</span> <br>
                 <span class="cn">美式</span><span class="en">Americano </span><span class="price">.......$XXX</span> <br>
