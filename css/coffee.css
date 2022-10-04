@@ -2,6 +2,8 @@
 *{
     box-sizing: border-box;
     color: rgb(255, 228, 196);
+    margin: 0;
+    padding: 0;
 }
 
 /* 切換開關 */
@@ -50,6 +52,8 @@
 .flag{
     width: 40%;
 }
+/* 切換開關結束 */
+
 
 .above,.under{
     font-size: 1.4rem;

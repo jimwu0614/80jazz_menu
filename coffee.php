@@ -25,9 +25,9 @@
 	    </label>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
 
-        <div class="row ">
+        <div class="row">
             <div class="col-12 title">
                 <div class="line">&nbsp;</div>
                 <h1>Coffee</h1>
