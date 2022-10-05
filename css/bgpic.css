@@ -138,7 +138,8 @@
     position: fixed;
     z-index: -99;
     background-size: cover;
-    background-position-x: 90% ;
+    background-position-x: 0% ;
+    background-position-y: 10rem;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
