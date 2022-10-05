@@ -60,6 +60,10 @@
     width: 100%;
 }
 
+.under{
+    border-bottom: 1px solid rgba(66, 66, 66, 0.6);
+}
+
 .cn{
     font-family: "cwTeXYen", sans-serif;
     letter-spacing: auto;
@@ -91,7 +95,7 @@
     position: relative;
     width: 12.5rem;
     height: 12px;
-    background-color: rgb(224, 216, 176);
+    background-color: rgba(224, 216, 176, 0.4);
     z-index: -1;
-    top: 55px;
+    top: 45px;
 }
