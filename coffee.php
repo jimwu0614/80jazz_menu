@@ -27,7 +27,7 @@
         </label>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid main_body">
 
         <div class="row">
             <div class="col-12 title">
@@ -150,6 +150,14 @@
                     <span class="price">$180</span>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 title">
+                <!-- <div class="line">&nbsp;</div> -->
+                <h1 class="back"><a href="../80jazz_menu/">Back</a></h1>
+            </div>
+
         </div>
 
 

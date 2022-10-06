@@ -12,6 +12,7 @@
     top: 2rem;
     right: 2rem;
     float: right;
+    z-index: 9999;
 }
 
 .checkbox {
@@ -54,7 +55,10 @@
 }
 /* 切換開關結束 */
 
-
+.main_body{
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+}
 .above,.under{
     font-size: 1.4rem;
     width: 100%;
@@ -98,4 +102,12 @@
     background-color: rgba(224, 216, 176, 0.4);
     z-index: -1;
     top: 45px;
+}
+
+.back{
+    margin: 1.5rem auto;
+}
+.back a{
+    text-decoration: none;
+    color: rgb(206, 148, 97);
 }
