@@ -127,4 +127,7 @@ $Cocktail = new DB('jazz_cocktail');
 $Soft = new DB('jazz_soft');
 $Meal = new DB('jazz_meal');
 $Event = new DB('jazz_event');
+$Admin = new DB('jazz_admin');
+$Coffee = new DB('jazz_coffee');
+
 ?>

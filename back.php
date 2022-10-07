@@ -17,54 +17,7 @@ include "./base.php";
 </head>
 
 <body>
-    <?php
-    $rank = $Soft->math('max','rank')+1
-    ?>
-    <form action="./api/add.php" method="post" style="font-size: 2rem; text-align:center;">
-        <select name="kind">
-            <option value="Whiskey">Whiskey</option>
-            <option value="Brandy">Brandy</option>
-            <option value="Ginvodka">Ginvodka</option>
-            <option value="Rumteq">Rumteq</option>
-            <option value="Beerliquer">Beerliquer</option>
-            <option value="Sake">Sake</option>
-            <option value="Wine">Wine</option>
-            <option value="Cocktail">Cocktail</option>
-            <option value="Softdrink" selected>Softdrink</option>
-            <option value="Meal">Meal</option>
-        </select><br>
-        <span>name</span><input type="text" name="name" id=""><br>
-        <span>chinese</span><input type="text" name="chinese" id=""><br>
-        <!-- <span>type</span><select name="type" id=""> -->
-                            <!-- <option value="Single">Single</option>  
-                            <option value="Blended">Blended</option>  
-                            <option value="Bourbon">Bourbon</option>    -->
 
-                            <!-- <option value="Cognac">Cognac</option>  
-                            <option value="Armagnac">Armagnac</option>   -->
-
-                            <!-- <option value="Gin">Gin</option>
-                            <option value="Vodka" selected>Vodka</option> -->
-
-                            <!-- <option value="Rum">Rum</option>
-                            <option value="Tequila">Tequila</option> -->
-
-                            <!-- <option value="Beer">Beer</option>
-                            <option value="Liquer">Liquer</option> -->
-
-                            <!-- <option value="Sake">Sake</option>
-                            <option value="Shochu" selected>Shochu</option> -->
-                         <!-- </select><br>  -->
-        <!-- <span>bottle</span><input type="number" name="bottle" id=""><br> -->
-        <span>glass</span><input type="number" name="glass" id=""><br>
-        <span>memo</span><input type="text" name="memo" id=""><br>
-        <span>intro</span><input type="text" name="intro" id=""><br>
-        <span>promo</span><input type="text" name="promo" id=""><br>
-        <span>rank</span><input type="number" name="rank" value="<?=$rank?>"><br>
-        <input type="submit" value="submit">
-
-    </form>
-    <a href="index.php">back</a>
 </body>
 
 </html>
