@@ -12,12 +12,14 @@ if(empty($_SESSION['user'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>後台管理</title>
+    <title>80Jazz後台管理</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
 
     <link rel="stylesheet" href="./css/back.css">
 </head>
@@ -73,6 +75,9 @@ if(empty($_SESSION['user'])){
         <div class="left">
             <a href="?do=coffee" class=" left_item <?=($do == 'coffee')?'left_item_active':''?>">
                 Coffee
+            </a>
+            <a href="?do=bean" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
+                Beans
             </a>
             <a href="?do=whiskey" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
                 Whiskey
