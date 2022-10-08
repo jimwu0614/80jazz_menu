@@ -10,7 +10,8 @@
     </div>
 </div>
 <footer class="footer">
-    <span data-bs-toggle="modal" data-bs-target="#Loginmodal">Copyright © 2022 80-jazz. All rights reserved. Design by Jim Wu</span>
+    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="big">Copyright © 2022 80-jazz. All rights reserved. Design by Jim Wu</span>
+    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="small">Copyright © 2022 80-jazz.<br>All rights reserved. Design by Jim Wu</span>
 </footer>
 
 <div class="modal fade" id="Loginmodal">

@@ -40,9 +40,18 @@
     text-decoration: none;    
     text-align: center;
 }
+
+.footer .small{
+    display: none;
+}
 @media (max-width: 768px) {
-    .footer{
+    .footer .big{
         display: none;
+    }
+    .footer .small{
+        display: block;
+        position: relative;
+        bottom: 1rem;
     }
 }
 
