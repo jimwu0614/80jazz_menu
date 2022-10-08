@@ -13,7 +13,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getbeerliquer.php", {type:'Beer'}, (res) => {
+        $.post("./get/getbeerliquer.php", {type:'Beer'}, (res) => {
 
             $("#table").html(res)
         })
@@ -30,7 +30,7 @@
         let type = $(this).text();
         console.log(type);
 
-        $.post("./api/getbeerliquer.php", {type}, (res) => {
+        $.post("./get/getbeerliquer.php", {type}, (res) => {
             $("#table").html(res)
         })
     })

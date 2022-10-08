@@ -50,7 +50,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getwhiskey.php", {type:'Single'}, (res) => {
+        $.post("./get/getwhiskey.php", {type:'Single'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -67,7 +67,7 @@
         let type = $(this).text();
         // console.log(type);
 
-        $.post("./api/getwhiskey.php", {type}, (res) => {
+        $.post("./get/getwhiskey.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })

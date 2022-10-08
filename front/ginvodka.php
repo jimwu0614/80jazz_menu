@@ -20,7 +20,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getginvodka.php", {type:'Gin'}, (res) => {
+        $.post("./get/getginvodka.php", {type:'Gin'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -37,7 +37,7 @@
         let type = $(this).text();
         // console.log(type);
 
-        $.post("./api/getginvodka.php", {type}, (res) => {
+        $.post("./get/getginvodka.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })

@@ -19,7 +19,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getbrandy.php", {type:'Cognac'}, (res) => {
+        $.post("./get/getbrandy.php", {type:'Cognac'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -36,7 +36,7 @@
         let type = $(this).text();
         // console.log(type);
 
-        $.post("./api/getbrandy.php", {type}, (res) => {
+        $.post("./get/getbrandy.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })

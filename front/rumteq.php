@@ -20,7 +20,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getrumteq.php", {type:'Rum'}, (res) => {
+        $.post("./get/getrumteq.php", {type:'Rum'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -37,7 +37,7 @@
         let type = $(this).text();
         // console.log(type);
 
-        $.post("./api/getrumteq.php", {type}, (res) => {
+        $.post("./get/getrumteq.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })

@@ -160,6 +160,22 @@ form {
     margin-right: 10px;
 }
 
+.form_item_edit {
+    margin-left:25px;
+    color: gray;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.form_item_edit:hover {
+    color: rgb(214, 37, 37);
+}
+
+.form_item_edit:active {
+    color: rgb(175, 35, 35);
+}
+
 .form_item_del {
     margin-left:25px;
     color: gray;

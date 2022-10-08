@@ -20,7 +20,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./api/getsake.php", {type:'Shochu'}, (res) => {
+        $.post("./get/getsake.php", {type:'Shochu'}, (res) => {
 
             $(".tbody").html(res)
         })
@@ -37,7 +37,7 @@
         let type = $(this).text();
         // console.log(type);
 
-        $.post("./api/getsake.php", {type}, (res) => {
+        $.post("./get/getsake.php", {type}, (res) => {
             $(".tbody").html(res)
         })
     })
