@@ -8,7 +8,7 @@ if ($chk>=1) {
     ?>
     <script>
         alert('帳號或密碼輸入錯誤');
-        location.href='../index.php?do=login';
+        location.href='../index.php';
     </script>
 <?php
 

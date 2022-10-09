@@ -59,6 +59,13 @@
     backdrop-filter: blur(3.5px);
     -webkit-backdrop-filter: blur(3.5px);
 }
+@media (min-width: 768px) {
+    .main_body{
+        width: 50%;
+    }
+
+}
+
 .above,.under{
     font-size: 1.4rem;
     width: 100%;

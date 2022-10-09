@@ -21,9 +21,7 @@ $rows = $Admin->all();
                 <div class="form_item_header">
                     帳號管理
                 </div>
-                <div class="form_item_text" style="margin: 0;">
-                    請輸入要更新的文字內容
-                </div>
+
             </div>
             <div class="addBtn">
 

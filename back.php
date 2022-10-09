@@ -18,6 +18,8 @@ if(empty($_SESSION['user'])){
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <script src="./js/jqyery3.6.1.js"></script>
 
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/back.css">
@@ -125,8 +127,9 @@ if(empty($_SESSION['user'])){
 
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
-    </script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer">
+    </script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
@@ -145,8 +148,7 @@ if(empty($_SESSION['user'])){
     <!-- resume sh -->
     <script src="./js/resume_sh.js"></script>
 
-    <!-- resume add -->
-    <script src="./js/resume_add.js"></script>
+
 
 
 

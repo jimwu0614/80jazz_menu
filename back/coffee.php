@@ -1,7 +1,3 @@
-<?php
-$Education = new DB('resume_education');
-$rows = $Education->all("ORDER BY `order_num` DESC");
-?>
 <div class="right_content">
     <!-- 麵包屑 -->
     <nav aria-label="breadcrumb">
@@ -10,28 +6,22 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                學習歷程管理
+                Coffee
             </li>
         </ol>
     </nav>
 
     <div class="form_group">
-        
         <div class="form_item form_item_Title">
                 <div>
                     <div class="form_item_header">
-                        學習歷程管理
-                    </div>
-                    <div class="form_item_text">
-                        請輸入要更新的文字內容
+                        Coffee
                     </div>
                 </div>
                 <div class="addBtn">
-
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
                         新增
                     </button>
-
                 </div>
             </div>
             
@@ -41,7 +31,7 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
                     <div class="modal-content">
                         <!-- modal-header -->
                         <div class="modal-header">
-                            <h5 class="modal-title" id="addModalLabel">新增學習歷程</h5>
+                            <h5 class="modal-title" id="addModalLabel">新增品項</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -51,17 +41,30 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
                         <!-- modal-body -->
                         <div class="modal-body">
                             <form>
+                                <select name="type" id="type">
+                                    <option value="coffee">Coffee</option>
+                                    <option value="special">Special coffee</option>
+                                    <option value="tea">Tea</option>
+                                </select>
                                 <div class="form-group">
-                                    <label for="title" class="col-form-label">學校名稱&科系</label>
-                                    <input type="text" class="form-control" id="title" required>
+                                    <label for="name" class="col-form-label">英文</label>
+                                    <input type="text"  class="form-control" id="name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="during" class="col-form-label">就讀期間</label>
-                                    <input type="text" class="form-control" id="during" required>
+                                    <label for="chinese" class="col-form-label">中文</label>
+                                    <input type="text" class="form-control" id="chinese">
                                 </div>
                                 <div class="form-group">
-                                    <label for="text" class="col-form-label">文字描述</label>
-                                    <textarea class="form-control" id="text"></textarea>
+                                    <label for="japanese" class="col-form-label">日文</label>
+                                    <input type="text" class="form-control" id="japanese">
+                                </div>
+                                <div class="form-group">
+                                    <label for="price" class="col-form-label">價格</label>
+                                    <input type="number" class="form-control" id="price">
+                                </div>
+                                <div class="form-group">
+                                    <label for="intro" class="col-form-label">文字描述</label>
+                                    <textarea class="form-control" id="intro"></textarea>
                                 </div>
                             </form>
                         </div>
@@ -84,6 +87,8 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
             <!-- data -->
             <div>
                 <?php
+                
+                $rows = $Coffee->all("ORDER BY `rank` DESC");
                 foreach ($rows as $key => $row) {
                 ?>
                     <div class="form_item_group">
@@ -111,7 +116,7 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
 
                         </div>
                         <div class="form_item">
-                            <div class="form_item_text">學校名稱&科系</div>
+                            <div class="form_item_text">品名</div>
                             <input type="text" name="title[]" value="<?= $row['title'] ?>" class="form-control">
                         </div>
                         <div class="form_item">
@@ -142,7 +147,29 @@ $rows = $Education->all("ORDER BY `order_num` DESC");
     </form>
     <!-- form end -->
 
-    <footer>
-        &copy; <?= date('Y') ?> FY
-    </footer>
+
 </div>
+<script>
+    // resume_add
+$('.form_group').on('click', '#addBtn', function() {
+    let type = $('#type').val();
+    let name = $('#name').val();
+    let chinese = $('#chinese').val();
+    let japanese = $('#japanese').val();
+    let price = $('#price').val();
+    let table = 'Coffee'
+
+    console.log(type);
+    $.post('./api/add_menu.php', {type, name, chinese, japanese, price, table}, () => {
+        Swal.fire({
+            icon: 'success',
+            title: '新增成功',
+            text: '成功新增一筆資料!',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                location.reload();
+            }
+        })
+    })
+})
+</script>
