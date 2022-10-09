@@ -45,17 +45,17 @@ $rows = $Admin->all();
                     <div class="form_item form_item_control">
                         <span class="form_item_num">第<?= $key + 1 ?>筆資料</span>
                         <div class="flex">
-                            <div class="form_item_edit" data-id="<?= $row['id'] ?>" data-toggle="modal" data-target="#editModal">
+                            <div class="form_item_edit" data-id="<?=$row['id']?>" data-toggle="modal" data-target="#editModal" onclick="edit(this)">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </div>
-                            <div class="form_item_del" data-id="<?= $row['id'] ?>">
+                            <div class="form_item_del" data-id="<?=$row['id']?>">
                                 <i class="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
                     </div>
                     <div class="form_item">
                         <div class="form_item_text">帳號</div>
-                        <input type="text" name="acc[]" value="<?= $row['acc'] ?>" class="form-control">
+                        <p><?= $row['acc'] ?></p>
                     </div>
                     <div class="form_item">
                         <div class="form_item_text">密碼</div>
@@ -114,35 +114,27 @@ $rows = $Admin->all();
     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <!-- modal-header -->
+                
                 <div class="modal-header">
                     <h5 class="modal-title" >修改密碼</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <!-- modal-header end -->
+                
+            <form action="./api/update.php" method="post">
 
-                <!-- modal-body -->
+                <div class="modal-body" id="edit_modal_body">
 
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="acc" class="col-form-label">帳號</label>
-                        <p id="editing_acc"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="pw" class="col-form-label">密碼</label>
-                        <input type="password" class="form-control" id="pw" required>
-                    </div>
                 </div>
-                <!-- modal-body end -->
+                
 
-                <!-- modal-footer -->
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="addAdminBtn" onclick="reg()">確定修改</button>
+                    <button type="submit" class="btn btn-primary" >確定修改</button>
                 </div>
-                <!-- modal-footer end -->
+            </form>
             </div>
         </div>
     </div>
@@ -187,7 +179,14 @@ function reg() {
 
 }
 
-function edit() {
+function edit(who) {
+    let editid = $(who).data('id');
+    $.post('./ajax/admin.php',{editid},(res)=>{
+        $("#edit_modal_body").html(res)
+    })
+}
+
+function update() {
     
 }
 </script>
