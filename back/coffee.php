@@ -43,7 +43,7 @@
                             <form>
                                 <select name="type" id="type">
                                     <option value="coffee">Coffee</option>
-                                    <option value="special">Special coffee</option>
+                                    <option value="cocktail">Coffee cocktail</option>
                                     <option value="tea">Tea</option>
                                 </select>
                                 <div class="form-group">

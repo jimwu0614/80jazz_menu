@@ -88,7 +88,7 @@ include "./base.php";
         <div class="row">
             <div class="col-12 title">
                 <div class="line">&nbsp;</div>
-                <h1>Special Coffe</h1>
+                <h1>Coffe Cocktail</h1>
             </div>
             <div class="col">
                 <div class="mt-3 above">
