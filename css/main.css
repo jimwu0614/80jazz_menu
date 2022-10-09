@@ -51,7 +51,7 @@
     .footer .small{
         display: block;
         position: relative;
-        bottom: 1rem;
+        /* bottom: 1rem; */
     }
 }
 

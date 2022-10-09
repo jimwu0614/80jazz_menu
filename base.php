@@ -19,6 +19,7 @@ class DB{
     function __construct($table){
         $this->table = $table;
         $this->pdo = new PDO($this->dsn,'root','');
+        // $this->pdo = new PDO($this->dsn,'s1110205','s1110205');
     }
 
     function save($ary){
