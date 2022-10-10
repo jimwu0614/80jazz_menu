@@ -3,57 +3,62 @@ include "../base.php";
 $table = $_POST['table'];
 switch ($table) {
     
-    case 'Coffee':
+    case 'coffee':
         unset($_POST['table']);
         $Coffee->save($_POST);
         to("../back.php?do=coffee");
         break;
-    case 'Whiskey':
+    case 'beans':
+        unset($_POST['table']);
+        $Beans->save($_POST);
+        to("../back.php?do=beans");
+        break;
+    case 'whiskey':
         unset($_POST['table']);
         $Whiskey->save($_POST);
         to("../back.php");
         break;
-    case 'Brandy':
+    case 'brandy':
         unset($_POST['table']);
         $Brandy->save($_POST);
         to("../back.php");
         break;
-    case 'Ginvodka':
+    case 'ginvodka':
         unset($_POST['table']);
         $Ginvodka->save($_POST);
         to("../back.php");
         break;
-    case 'Rumteq':
+    case 'rumteq':
         unset($_POST['table']);
         $Rumteq->save($_POST);
         to("../back.php");
         break;
-    case 'Beerliquer':
+    case 'beerliquer':
         unset($_POST['table']);
         $Beerliquer->save($_POST);
         to("../back.php");
         break;
-    case 'Sake':
+    case 'sake':
         unset($_POST['table']);
         $Sake->save($_POST);
         to("../back.php");
         break;
-    case 'Wine':
+    case 'wine':
         unset($_POST['table']);
         $Wine->save($_POST);
         to("../back.php");
         break;
-    case 'Cocktail':
+    case 'cocktail':
         unset($_POST['table']);
         $Cocktail->save($_POST);
         to("../cocktail.php");
         break;
-    case 'Softdrink':
+    case 'softdrink':
         unset($_POST['table']);
         $Soft->save($_POST);
         to("../back.php");
         break;
-    case 'Meal':
+    case 'meal':
         unset($_POST['table']);
         $Meal->save($_POST);
         to("../back.php");

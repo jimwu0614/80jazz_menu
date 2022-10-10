@@ -21,7 +21,7 @@ include "./base.php";
 <body>
     <div class="coffee"></div>
     <div class="beam"><a href="./beam.php"><img src="./img/beam.png" alt=""></a></div>
-    <div class="speech-bubble" id='bubble'>Roasted<br>Coffee beam<br>On sale</div>
+    <div class="speech-bubble" id='bubble'>Roasted<br>Coffee bean<br>On sale</div>
     <div class="box ">
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
@@ -62,7 +62,7 @@ include "./base.php";
                     <span class="jp" style="display:none;">カフェラテ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en"> Caffè latte</span>
+                    <span class="en">Caffè latte</span>
                     <span class="price">$160</span>
                 </div>
 
@@ -71,7 +71,7 @@ include "./base.php";
                     <span class="jp" style="display:none;">フレーバーラテ（ヘーゼルナッツ、バニラ、キャラメル、モカ、抹茶）</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en"> Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)</span>
+                    <span class="en">Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)</span>
                     <span class="price">$180</span>
                 </div>
 

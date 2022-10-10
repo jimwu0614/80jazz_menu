@@ -84,7 +84,6 @@
                 <?php
                 }
                 ?>
-            <input type="hidden" name="table" id="table" value="coffee">
          </div>
         <!-- data end -->
     </div>
@@ -130,7 +129,8 @@
                         <?php
                         $rank = $Coffee->math('max','rank')+1
                         ?>
-                            <input type="hidden" class="form-control" id="rank" value="<?=$rank?>">
+                            <input type="hidden" name="table" id="table" value="coffee">
+                            <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
                 <!-- modal-body end -->
@@ -187,7 +187,7 @@ $('#addBtn').on('click', function() {
     let japanese = $('#japanese').val();
     let price = $('#price').val();
     let rank = $('#rank').val();
-    let table = 'Coffee'
+    let table = 'coffee'
 
     console.log(type);
     console.log(chinese);
@@ -196,10 +196,9 @@ $('#addBtn').on('click', function() {
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
+            timer: 1500
         }).then((result) => {
-            if (result.isConfirmed) {
-                location.reload();
-            }
+            location.reload();
         })
     })
 })

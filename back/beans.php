@@ -31,6 +31,7 @@
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group">
+                <!-- 最上面控制區 -->
                 <div class="form_item form_item_control">
                     <span class="form_item_num">第<?= $key + 1 ?>筆資料</span>
                     <div class="form_item_btns">
@@ -53,29 +54,34 @@
                                 <i class="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
-                            
                     </div>
-
                 </div>
+                <!-- 最上面控制區 end -->
+                            
+
 
                 <div class="form_item first_item">
-                    <div class="form_item_text">英文</div>
+                    <div class="form_item_text">品名</div>
                     <p><?= $row['name'] ?></p>
                 </div>
 
                 <div class="form_item">
-                    <div class="form_item_text">中文</div>
-                    <p><?= $row['chinese'] ?></p>
+                    <div class="form_item_text">產區</div>
+                    <p><?= $row['land'] ?></p>
                 </div>
 
                 <div class="form_item">
-                    <div class="form_item_text">日文</div>
-                    <p><?= $row['japanese'] ?></p>
+                    <div class="form_item_text">焙度</div>
+                    <p><?= $row['roast'] ?></p>
                 </div>
 
                 <div class="form_item">
                     <div class="form_item_text">價格</div>
                     <p><?= $row['price'] ?></p>
+                </div>
+                <div class="form_item">
+                    <div class="form_item_text">簡介</div>
+                    <p><?= $row['intro'] ?></p>
                 </div>
                 
                 <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">
@@ -84,7 +90,6 @@
                 <?php
                 }
                 ?>
-            <input type="hidden" name="table" id="table" value="coffee">
          </div>
         <!-- data end -->
     </div>
@@ -106,31 +111,32 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-                        <select name="type" id="type">
-                            <option value="Coffee">Coffee</option>
-                            <option value="Cocktail">Coffee cocktail</option>
-                            <option value="Tea">Tea</option>
-                        </select>
                         <div class="form-group">
-                            <label for="name" class="col-form-label">英文</label>
+                            <label for="name" class="col-form-label">品名</label>
                             <input type="text"  class="form-control" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="chinese" class="col-form-label">中文</label>
-                            <input type="text" class="form-control" id="chinese">
+                            <label for="land" class="col-form-label">產區</label>
+                            <input type="text" class="form-control" id="land">
                         </div>
                         <div class="form-group">
-                            <label for="japanese" class="col-form-label">日文</label>
-                            <input type="text" class="form-control" id="japanese">
+                            <label for="roast" class="col-form-label">焙度</label>
+                            <input type="text" class="form-control" id="roast">
                         </div>
                         <div class="form-group">
                             <label for="price" class="col-form-label">價格</label>
                             <input type="number" class="form-control" id="price">
                         </div>
+                        <div class="form-group">
+                            <label for="intro" class="col-form-label">簡介</label>
+                            <textarea name="intro" id="intro" cols="60" rows="4"></textarea>
+                            
+                        </div>
                         <?php
-                        $rank = $Coffee->math('max','rank')+1
+                        $rank = $Beans->math('max','rank')+1
                         ?>
-                            <input type="hidden" class="form-control" id="rank" value="<?=$rank?>">
+                            <input type="hidden" name="table" id="table" value="beans">
+                            <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
                 <!-- modal-body end -->
@@ -180,25 +186,24 @@
 </div>
 <script>
     // resume_add
-$('.form_group').on('click', '#addBtn', function() {
-    let type = $('#type').val();
+$('#addBtn').on('click', function() {
     let name = $('#name').val();
-    let chinese = $('#chinese').val();
-    let japanese = $('#japanese').val();
+    let land = $('#land').val();
+    let roast = $('#roast').val();
     let price = $('#price').val();
+    let intro = $('#intro').val();
     let rank = $('#rank').val();
-    let table = 'Coffee'
+    let table = 'beans'
 
     // console.log(type);
-    $.post('./api/add_menu.php', {type, name, chinese, japanese, price, rank, table}, () => {
+    $.post('./api/add_menu.php', {name, land, roast, price, intro, rank, table}, () => {
         Swal.fire({
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
+            timer: 1500
         }).then((result) => {
-            if (result.isConfirmed) {
-                location.reload();
-            }
+            location.reload();
         })
     })
 })
@@ -206,7 +211,7 @@ $('.form_group').on('click', '#addBtn', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./ajax/coffee.php',{editid},(res)=>{
+    $.post('./ajax/beans.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

@@ -148,7 +148,7 @@ if(empty($_SESSION['user'])){
     <!-- sh -->
     <script src="./js/showhide.js"></script>
 
-
+    
 
 
 
@@ -244,6 +244,8 @@ if(empty($_SESSION['user'])){
         $('.drop_item').removeClass('dragActive');
 
     }
+
+    $(".swal2-popup").show().delay(1500).fadeOut();
     </script>
 </body>
 
