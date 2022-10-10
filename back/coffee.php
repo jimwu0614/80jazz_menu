@@ -42,9 +42,9 @@
                         <div class="modal-body">
                             <form>
                                 <select name="type" id="type">
-                                    <option value="coffee">Coffee</option>
-                                    <option value="cocktail">Coffee cocktail</option>
-                                    <option value="tea">Tea</option>
+                                    <option value="Coffee">Coffee</option>
+                                    <option value="Cocktail">Coffee cocktail</option>
+                                    <option value="Tea">Tea</option>
                                 </select>
                                 <div class="form-group">
                                     <label for="name" class="col-form-label">英文</label>
@@ -83,8 +83,7 @@
             </div>
             <!-- addmodal end -->
             
-            <!-- form -->
-            <form action="./api/resume.php" method="post">
+
             <!-- data -->
             <div>
                 <?php
@@ -105,7 +104,7 @@
                                 </div>
 
                                 <div class="form_item_sh">
-                                    <span class="form_item_smtitle">顯示</span>
+                                    <span class="form_item_smtitle">上架</span>
                                     <div class="sh_bg <?= ($row['sh'] == 1) ? 'sh_show' : '' ?>" data-id="<?= $row['id'] ?>">
                                         <div class="sh_btn <?= ($row['sh'] == 1) ? 'sh_btn_show' : '' ?>"></div>
                                     </div>
@@ -148,8 +147,35 @@
             </div>
             <!-- data end -->
         </div>
-    </form>
-    <!-- form end -->
+        <!-- edit modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5 class="modal-title" >修改商品</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+            <form action="./api/update.php" method="post">
+
+                <div class="modal-body" id="edit_modal_body">
+
+                    <!-- Ajax在這邊顯示 -->
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" >確定修改</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!-- edit modal end -->
+
 </div>
 <script>
     // resume_add
@@ -162,7 +188,7 @@ $('.form_group').on('click', '#addBtn', function() {
     let rank = $('#rank').val();
     let table = 'Coffee'
 
-    console.log(type);
+    // console.log(type);
     $.post('./api/add_menu.php', {type, name, chinese, japanese, price, rank, table}, () => {
         Swal.fire({
             icon: 'success',
@@ -175,4 +201,12 @@ $('.form_group').on('click', '#addBtn', function() {
         })
     })
 })
+
+
+function edit(who) {
+    let editid = $(who).data('id');
+    $.post('./ajax/coffee.php',{editid},(res)=>{
+        $("#edit_modal_body").html(res)
+    })
+}
 </script>
