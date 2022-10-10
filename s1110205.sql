@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-10-09 07:57:12
+-- 產生時間： 2022-10-10 16:52:44
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -39,6 +39,33 @@ CREATE TABLE `jazz_admin` (
 
 INSERT INTO `jazz_admin` (`id`, `acc`, `pw`) VALUES
 (1, 'admin', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `jazz_beans`
+--
+
+CREATE TABLE `jazz_beans` (
+  `id` tinyint(4) NOT NULL,
+  `name` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '品名',
+  `land` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '產區',
+  `roast` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '焙度',
+  `price` int(4) NOT NULL COMMENT '價格',
+  `intro` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '介紹',
+  `rank` tinyint(4) NOT NULL COMMENT '排序',
+  `sh` tinyint(1) NOT NULL DEFAULT 1 COMMENT '上架'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `jazz_beans`
+--
+
+INSERT INTO `jazz_beans` (`id`, `name`, `land`, `roast`, `price`, `intro`, `rank`, `sh`) VALUES
+(1, '日曬耶加 G1', '衣索比亞', '淺焙', 0, '衣索比亞陽光下熟成的甘醇果實，G1等級日曬耶加雪菲，研磨瞬間，雞蛋花般的香氣，優雅綻放，蜜桃與香檳葡萄的淡淡發酵水果香氣，餘韻綿長。', 1, 1),
+(2, '巧克力公爵', '瓜地馬拉', '中焙', 0, '黑巧克力深邃的口感，馥郁焦糖甜香，微苦的甜味，轉化成綿延不斷回甘的餘韻，充滿變化就像是位優雅的公爵，令人回味再三。', 2, 1),
+(3, '雅典娜女神', '衣索比亞、瓜', '淺焙', 0, '希臘神話中，雅典娜女神守護著農作物，也就是代表守護著美好滋味的咖啡果實。清新莓果與熱帶水果香氣悠然綻放，蘋果酒、玫瑰、杏仁、甜橙的愉悅甜感。一飲入口是具層次感且愉悅的甘柔甜味，令人沈醉不已。', 3, 1),
+(4, '白蜜甜心', '哥倫比亞、衣', '中焙', 0, '以蜜處理法特殊處理，入口即感受甜李、荔枝果蜜甘醇，香氣飽滿均衡，圓潤喉韻帶著細緻的咖啡花香，甜蜜花香於舌尖慢慢綻放。', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -151,11 +178,25 @@ INSERT INTO `jazz_cocktail` (`id`, `name`, `chinese`, `base`, `intro`, `ingredie
 
 CREATE TABLE `jazz_coffee` (
   `id` int(11) NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `japanese` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` int(11) NOT NULL
+  `type` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '分類',
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '英文品名',
+  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '中文',
+  `japanese` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '日文',
+  `price` int(11) NOT NULL COMMENT '價格',
+  `rank` tinyint(4) NOT NULL COMMENT '排序',
+  `sh` tinyint(1) NOT NULL DEFAULT 1 COMMENT '上下架',
+  `break` tinyint(1) NOT NULL DEFAULT 0 COMMENT '換行(ex:風味拿鐵)'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `jazz_coffee`
+--
+
+INSERT INTO `jazz_coffee` (`id`, `type`, `name`, `chinese`, `japanese`, `price`, `rank`, `sh`, `break`) VALUES
+(1, 'Coffee', 'Espresso', '義式濃縮', 'エスプレッソ', 120, 1, 1, 0),
+(2, 'Coffee', 'Americano', '美式', 'アメリカーノ', 130, 2, 1, 0),
+(4, 'Coffee', 'Caffè latte', '拿鐵', 'カフェラテ', 160, 3, 1, 0),
+(5, 'Coffee', 'Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)', '風味拿鐵（榛果、香草、焦糖瑪琪朵、摩卡、抹茶）', 'フレーバーラテ（ヘーゼルナッツ、バニラ、キャラメル、モカ、抹茶）', 180, 4, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -379,6 +420,12 @@ ALTER TABLE `jazz_admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `jazz_beans`
+--
+ALTER TABLE `jazz_beans`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `jazz_beerliquer`
 --
 ALTER TABLE `jazz_beerliquer`
@@ -394,6 +441,12 @@ ALTER TABLE `jazz_brandy`
 -- 資料表索引 `jazz_cocktail`
 --
 ALTER TABLE `jazz_cocktail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `jazz_coffee`
+--
+ALTER TABLE `jazz_coffee`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -440,7 +493,13 @@ ALTER TABLE `jazz_wine`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_admin`
 --
 ALTER TABLE `jazz_admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beans`
+--
+ALTER TABLE `jazz_beans`
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beerliquer`
@@ -459,6 +518,12 @@ ALTER TABLE `jazz_brandy`
 --
 ALTER TABLE `jazz_cocktail`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_coffee`
+--
+ALTER TABLE `jazz_coffee`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_ginvodka`

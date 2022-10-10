@@ -22,7 +22,7 @@ $data = $Beans->find($_POST['editid']);
 </div>
 <div class="form-group">
     <label for="intro" class="col-form-label">簡介</label>
-    <textarea value="<?=$data['intro']?>" name="intro" id="intro" cols="60" rows="4"></textarea>
+    <textarea value="<?=$data['intro']?>" name="intro" id="intro" cols="40" rows="4"></textarea>
 
 </div>
 

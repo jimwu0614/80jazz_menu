@@ -129,7 +129,7 @@
                         </div>
                         <div class="form-group">
                             <label for="intro" class="col-form-label">簡介</label>
-                            <textarea name="intro" id="intro" cols="60" rows="4"></textarea>
+                            <textarea name="intro" id="intro" cols="40" rows="4"></textarea>
                             
                         </div>
                         <?php
