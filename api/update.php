@@ -12,13 +12,16 @@ switch ($table) {
         break;
     case 'coffee':
         unset($_POST['table']);
-        $data = $Coffee->find($_POST['id']);
-        $data['type'=>$_POST['type'],
-              'name'=>$_POST['name'],
-              'chinese'=>$_POST['chinese'],
-              'japanese'=>$_POST['japanese'],
-              'price'=>$_POST['price']];
-        $Coffee->save($data);
+        // $data = $Coffee->find($_POST['id']);
+        // dd($_POST);
+        // dd($data);
+        // $data['type'=>$_POST['type'],
+        //       'name'=>$_POST['name'],
+        //       'chinese'=>$_POST['chinese'],
+        //       'japanese'=>$_POST['japanese'],
+        //       'price'=>$_POST['price']];
+        // $Coffee->save($data);
+        $Coffee->save($_POST);
         to("../back.php?do=coffee");
         break;
     case '':
