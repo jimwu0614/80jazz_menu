@@ -25,7 +25,7 @@
                 </div>
             </div>
             
-            <!-- modal -->
+            <!-- addmodal -->
             <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -62,10 +62,11 @@
                                     <label for="price" class="col-form-label">價格</label>
                                     <input type="number" class="form-control" id="price">
                                 </div>
-                                <div class="form-group">
-                                    <label for="intro" class="col-form-label">文字描述</label>
-                                    <textarea class="form-control" id="intro"></textarea>
-                                </div>
+                                <?php
+                                $rank = $Coffee->math('max','rank')+1
+                                ?>
+                                    <input type="hidden" class="form-control" id="rank" value="<?=$rank?>">
+
                             </form>
                         </div>
                         <!-- modal-body end -->
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <!-- modal end -->
+            <!-- addmodal end -->
             
             <!-- form -->
             <form action="./api/resume.php" method="post">
@@ -98,7 +99,7 @@
 
                             <div class="form_item_btns">
                                 <span class="form_item_smtitle">排序</span>
-                                <div class="order_btn" data-order="<?= $row['order_num'] ?>" data-id="<?= $row['id'] ?>">
+                                <div class="order_btn" data-order="<?= $row['rank'] ?>" data-id="<?= $row['id'] ?>">
                                     <button type="button" class="btn btn-outline-primary order_upbtn">上</button>
                                     <button type="button" class="btn btn-outline-primary order_bnbtn">下</button>
                                 </div>
@@ -109,25 +110,36 @@
                                         <div class="sh_btn <?= ($row['sh'] == 1) ? 'sh_btn_show' : '' ?>"></div>
                                     </div>
                                 </div>
-                                <div class="form_item_del" data-id="<?= $row['id'] ?>">
-                                    <i class="fa-solid fa-trash-can"></i>
+                                <div class="flex">
+                                    <div class="form_item_edit" data-id="<?=$row['id']?>" data-toggle="modal" data-target="#editModal" onclick="edit(this)">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </div>
+                                    <div class="form_item_del" data-id="<?=$row['id']?>">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </div>
                                 </div>
+                                
                             </div>
 
                         </div>
-                        <div class="form_item">
-                            <div class="form_item_text">品名</div>
-                            <input type="text" name="title[]" value="<?= $row['title'] ?>" class="form-control">
+                        <div class="form_item first_item">
+                            <div class="form_item_text">英文</div>
+                            <p><?= $row['name'] ?></p>
                         </div>
                         <div class="form_item">
-                            <div class="form_item_text">就讀期間</div>
-                            <input type="text" name="during[]" value="<?= $row['during'] ?>" class="form-control">
+                            <div class="form_item_text">中文</div>
+                            <p><?= $row['chinese'] ?></p>
                         </div>
                         <div class="form_item">
-                            <div class="form_item_text">文字描述</div>
-                            <textarea name="text[]" class="form-control" cols="30" rows="10" style="height: 160px;"><?= $row['text'] ?></textarea>
+                            <div class="form_item_text">日文</div>
+                            <p><?= $row['japanese'] ?></p>
+
                         </div>
-                        <input type="hidden" name="id[]" value="<?= $row['id'] ?>">
+                        <div class="form_item">
+                            <div class="form_item_text">價格</div>
+                            <p><?= $row['price'] ?></p>
+                        </div>
+                        <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">
                     </div>
 
                 <?php
@@ -135,19 +147,9 @@
                 ?>
             </div>
             <!-- data end -->
-
-            <!-- update btn -->
-            <div class="form_item form_item_Btn">
-                <input type="hidden" name="table" id="table" value="<?=$_GET['do']?>">
-                <button type="submit" class="btn btn-primary">更新</button>
-            </div>
-            <!-- update btn end -->
-
         </div>
     </form>
     <!-- form end -->
-
-
 </div>
 <script>
     // resume_add
@@ -157,10 +159,11 @@ $('.form_group').on('click', '#addBtn', function() {
     let chinese = $('#chinese').val();
     let japanese = $('#japanese').val();
     let price = $('#price').val();
+    let rank = $('#rank').val();
     let table = 'Coffee'
 
     console.log(type);
-    $.post('./api/add_menu.php', {type, name, chinese, japanese, price, table}, () => {
+    $.post('./api/add_menu.php', {type, name, chinese, japanese, price, rank, table}, () => {
         Swal.fire({
             icon: 'success',
             title: '新增成功',

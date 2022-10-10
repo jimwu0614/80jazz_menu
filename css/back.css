@@ -133,9 +133,13 @@ form {
     border: 1px solid lightgray;
 }
 
+.first_item {
+    margin-top: 15px;
+}
+
 
 .form_item {
-    padding: 12px 20px;
+    padding: 0px 20px;
 }
 
 .form_item_Title {
