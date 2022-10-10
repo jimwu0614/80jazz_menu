@@ -20,7 +20,8 @@ include "./base.php";
 
 <body>
     <div class="coffee"></div>
-
+    <div class="beam"><a href="./beam.php"><img src="./img/beam.png" alt=""></a></div>
+    <div class="speech-bubble" id='bubble'>Roasted<br>Coffee beam<br>On sale</div>
     <div class="box ">
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
@@ -173,6 +174,8 @@ include "./base.php";
             $(".cn").toggle()
             $(".jp").toggle()
         })
+
+        $("#bubble").show().delay(2500).fadeOut();
     </script>
 </body>
 
