@@ -9,11 +9,8 @@ $(".sh_bg").click(function() {
         let sh = 0;
         let id = $(this).data('id');
 
-        $.post('./api/resume_sh.php', {
-            id: id,
-            sh: sh,
-            table: table
-        }, () => {
+        $.post('./api/showhide.php', {id,sh,table}, (res) => {
+            console.log(res);
             // location.reload();
         })
 
@@ -27,11 +24,8 @@ $(".sh_bg").click(function() {
         let sh = 1;
         let id = $(this).data('id');
 
-        $.post('./api/resume_sh.php', {
-            id: id,
-            sh: sh,
-            table: table
-        }, () => {
+        $.post('./api/showhide.php', {id,sh,table}, (res) => {
+            console.log(res);
             // location.reload();
         })
     }

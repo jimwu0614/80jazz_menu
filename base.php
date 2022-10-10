@@ -130,5 +130,6 @@ $Meal = new DB('jazz_meal');
 $Event = new DB('jazz_event');
 $Admin = new DB('jazz_admin');
 $Coffee = new DB('jazz_coffee');
+$Beans = new DB('jazz_beans');
 
 ?>

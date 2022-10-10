@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Coffee
+                Coffee Beans
             </li>
         </ol>
     </nav>
@@ -15,7 +15,7 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Coffee
+                    Coffee Beans
                 </div>
             </div>
             <div class="addBtn">
@@ -27,7 +27,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Coffee->all("ORDER BY `rank` ASC");
+        $rows = $Beans->all("ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group">

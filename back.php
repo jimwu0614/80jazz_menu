@@ -77,7 +77,7 @@ if(empty($_SESSION['user'])){
             <a href="?do=coffee" class=" left_item <?=($do == 'coffee')?'left_item_active':''?>">
                 Coffee
             </a>
-            <a href="?do=bean" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
+            <a href="?do=beans" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
                 Beans
             </a>
             <a href="?do=whiskey" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
@@ -146,7 +146,7 @@ if(empty($_SESSION['user'])){
     <script src="./js/resume_orderbtn.js"></script>
 
     <!-- resume sh -->
-    <script src="./js/resume_sh.js"></script>
+    <script src="./js/showhide.js"></script>
 
 
 
