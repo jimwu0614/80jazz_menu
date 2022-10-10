@@ -53,7 +53,7 @@ include "./base.php";
                     <span class="jp" style="display:none;">アメリカーノ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">Americano </span>
+                    <span class="en">Americano</span>
                     <span class="price">$130</span>
                 </div>
 

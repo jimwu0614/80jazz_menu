@@ -13,13 +13,7 @@ $('.order_upbtn').click(function() {
         let order = $(this).parent().data('order');
         let id = $(this).parent().data('id');
 
-        $.post('./api/resume_order.php', {
-            id: id,
-            order: order,
-            pre_id: pre_id,
-            pre_order: pre_order,
-            table: table
-        }, () => {
+        $.post('./api/order.php', {id, order, pre_id, pre_order, table}, () => {
             location.reload();
         })
     }
@@ -36,13 +30,7 @@ $('.order_bnbtn').click(function() {
         let order = $(this).parent().data('order');
         let id = $(this).parent().data('id');
 
-        $.post('./api/resume_order.php', {
-            id: id,
-            order: order,
-            pre_id: pre_id,
-            pre_order: pre_order,
-            table: table
-        }, () => {
+        $.post('./api/order.php', {id, order, pre_id, pre_order, table}, () => {
             location.reload();
         })
     }

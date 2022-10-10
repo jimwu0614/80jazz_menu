@@ -142,10 +142,10 @@ if(empty($_SESSION['user'])){
     <!-- del -->
     <script src="./js/del.js"></script>
 
-    <!-- resume orderbtn -->
-    <script src="./js/resume_orderbtn.js"></script>
+    <!-- orderbtn -->
+    <script src="./js/order.js"></script>
 
-    <!-- resume sh -->
+    <!-- sh -->
     <script src="./js/showhide.js"></script>
 
 

@@ -180,7 +180,7 @@
 </div>
 <script>
     // resume_add
-$('.form_group').on('click', '#addBtn', function() {
+$('#addBtn').on('click', function() {
     let type = $('#type').val();
     let name = $('#name').val();
     let chinese = $('#chinese').val();
@@ -189,7 +189,8 @@ $('.form_group').on('click', '#addBtn', function() {
     let rank = $('#rank').val();
     let table = 'Coffee'
 
-    // console.log(type);
+    console.log(type);
+    console.log(chinese);
     $.post('./api/add_menu.php', {type, name, chinese, japanese, price, rank, table}, () => {
         Swal.fire({
             icon: 'success',
