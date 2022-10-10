@@ -55,7 +55,7 @@ $rows = $Admin->all();
                         <div class="form_item_text">帳號</div>
                         <p><?= $row['acc'] ?></p>
                     </div>
-                    <div class="form_item">
+                    <div class="form_item mb-3">
                         <div class="form_item_text">密碼</div>
                         <input type="password" name="pw[]" value="<?= $row['pw'] ?>" class="form-control">
                     </div>
@@ -63,7 +63,7 @@ $rows = $Admin->all();
                 <?php
                 }
                 ?>
-
+                <input type="hidden" name="table" id="table" value="admin">
         </div>
 
         

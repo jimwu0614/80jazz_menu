@@ -88,7 +88,7 @@
             <div>
                 <?php
                 
-                $rows = $Coffee->all("ORDER BY `rank` DESC");
+                $rows = $Coffee->all("ORDER BY `rank` ASC");
                 foreach ($rows as $key => $row) {
                 ?>
                     <div class="form_item_group">
@@ -144,6 +144,7 @@
                 <?php
                 }
                 ?>
+                <input type="hidden" name="table" id="table" value="coffee">
             </div>
             <!-- data end -->
         </div>

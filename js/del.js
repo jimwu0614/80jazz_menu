@@ -8,14 +8,15 @@ $('.form_item_del').click(function() {
         text: "刪除後將無法復原此筆資料!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
+        reverseButtons: true,
         cancelButtonColor: '#d33',
+        confirmButtonColor: '#3085d6',
+        cancelButtonText: '取消',
         confirmButtonText: '確定刪除!',
-        cancelButtonText: '取消'
     }).then((result) => {
         if (result.isConfirmed) {
 
-            $.post('./api/del.php',{id:id,table:table},(res)=>{
+            $.post('./api/del.php',{id,table},(res)=>{
                 
                 console.log(res);
 
