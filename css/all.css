@@ -9,6 +9,19 @@
 	flex-wrap: wrap;
 }
 
+.flex_nowrap{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.jc{
+	justify-content: space-between;
+}
+
+.bb{
+	border-bottom: 1px solid black;
+}
+
 .ma{
 	margin: 0 auto;
 }
@@ -72,4 +85,8 @@
 .red{
 	height: 50px;
 	background-color: red;
+}
+.redd{
+	height: 345px;
+	background-color: rgb(255, 0, 0, 0.5);
 }
