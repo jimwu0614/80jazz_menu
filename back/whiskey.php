@@ -18,6 +18,11 @@
                     Whiskey
                 </div>
             </div>
+            <div class="form_item_Title_middle">
+                <a href="#">Single</a>
+                <a href="">Blended</a>
+                <a href="">Bourbon</a>
+            </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
                     新增

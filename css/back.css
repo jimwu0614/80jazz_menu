@@ -150,6 +150,12 @@ form {
     font-size: 2.25rem;
 }
 
+.form_item_Title_middle{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .form_item_text {
     color: grey;
     margin-bottom: 5px;
