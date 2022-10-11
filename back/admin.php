@@ -120,13 +120,13 @@ $rows = $Admin->all();
                     </button>
                 </div>
                 
-            <form action="./api/update.php" method="post">
+            <form action="./api/edit.php" method="post">
 
                 <div class="modal-body" id="edit_modal_body">
 
+                    <!-- AJAX在這邊顯示 -->
+                    
                 </div>
-                
-
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>

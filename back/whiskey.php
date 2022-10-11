@@ -173,7 +173,7 @@
                         <div class="form-group flex_nowrap">
                             <div>
                                 <label for="inprice" class="col-form-label">進價</label>
-                                <input type="text"  class="form-control" id="inprice">
+                                <input type="number"  class="form-control" id="inprice">
                             </div>
                             <div>
                                 <label for="inputtime" class="col-form-label">報價時間</label>
@@ -187,11 +187,11 @@
                         <div class="form-group flex">
                             <div>
                                 <label for="bottle" class="col-form-label">整瓶</label>
-                                <input type="text"  class="form-control" id="bottle">
+                                <input type="number"  class="form-control" id="bottle">
                             </div>
                             <div>
                                 <label for="glass" class="col-form-label">單杯</label>
-                                <input type="text"  class="form-control" id="glass">
+                                <input type="number"  class="form-control" id="glass">
                             </div>
                         </div>
                         <div class="form-group flex">
@@ -206,7 +206,7 @@
                         </div>
 
                         <?php
-                        $rank = $Coffee->math('max','rank')+1
+                        $rank = $Whiskey->math('max','rank')+1
                         ?>
                             <input type="hidden" name="table" id="table" value="whiskey">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
@@ -239,7 +239,7 @@
                     </button>
                 </div>
                 
-            <form action="./api/update.php" method="post">
+            <form action="./api/edit.php" method="post">
 
                 <div class="modal-body" id="edit_modal_body">
 
@@ -269,10 +269,11 @@ $('#addBtn').on('click', function() {
     let supply = $('#supply').val();
     let bottle = $('#bottle').val();
     let glass = $('#glass').val();
+    let intro = $('#intro').val();
+    let promo = $('#promo').val();
     
     let rank = $('#rank').val();
     let table = $('#table').val();
-
 
     $.post('./api/add_menu.php', {type, memo, name, chinese, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, () => {
         Swal.fire({

@@ -166,7 +166,7 @@
                     </button>
                 </div>
                 
-            <form action="./api/update.php" method="post">
+            <form action="./api/edit.php" method="post">
 
                 <div class="modal-body" id="edit_modal_body">
 
