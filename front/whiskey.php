@@ -18,9 +18,9 @@
         </table>
     </div>
 </div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="position: relative;z-index: 99999999;">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="position: relative;z-index: 99999999;">
     Open modal
-  </button>
+  </button> -->
 
 
 <!-- The Modal -->
