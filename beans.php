@@ -28,10 +28,22 @@ include "./base.php";
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-5 red m-3" >1</div>
-            <div class="col-12 col-md-5 red m-3" >1</div>
-            <div class="col-12 col-md-5 red m-3" >1</div>
-            <div class="col-12 col-md-5 red m-3" >1</div>
+            <?php
+            $rows = $Beans->all(['sh'=>1]);
+            foreach ($rows as $key => $value) {
+            ?>
+            <div class="col-12 col-md-5 m-3">
+                <ul>
+                    <li><?=$value['name']?></li>
+                    <li>產地:<?=$value['land']?></li>
+                    <li>焙度:<?=$value['roast']?></li>
+                    <li>價格:<?=$value['price']?></li>
+                    <li>簡介:<br><?=$value['intro']?></li>
+                </ul>
+            </div>
+            <?php
+            }
+            ?>
         </div>
 
 
