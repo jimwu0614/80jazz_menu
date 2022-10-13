@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="#">Single</a>
-                <a href="">Blended</a>
-                <a href="">Bourbon</a>
+                <a href="?do=whiskey&type=single"  class="title_type <?=($_GET['type']=='single')?'liquer_active':''?>">Single</a>
+                <a href="?do=whiskey&type=blended" class="title_type <?=($_GET['type']=='blended')?'liquer_active':''?>">Blended</a>
+                <a href="?do=whiskey&type=bourbon" class="title_type <?=($_GET['type']=='bourbon')?'liquer_active':''?>">Bourbon</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
@@ -32,7 +32,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Whiskey->all("ORDER BY `rank` ASC");
+        $rows = $Whiskey->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group flex pr-3">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="my-3 w40 redd " >
-                    照片放這邊
+                    照片預覽放這邊
                 </div>
                 
                 <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">

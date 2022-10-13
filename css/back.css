@@ -423,3 +423,19 @@ footer {
     }
 }
 
+.title_type{
+    display: block;
+    width: 7.5rem;
+    text-align: center;
+    border-radius: 10px 10px 3px 3px;
+    font-size: 1.25rem;
+}
+
+.title_type:hover{
+    text-decoration: none;
+}
+
+.liquer_active{
+    font-weight: 900;
+    background: #aaa;
+}

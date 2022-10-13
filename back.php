@@ -80,7 +80,7 @@ if(empty($_SESSION['user'])){
             <a href="?do=beans" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
                 Beans
             </a>
-            <a href="?do=whiskey" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
+            <a href="?do=whiskey&type=single" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
                 Whiskey
             </a>
             <a href="?do=brandy" class=" left_item <?=($do == 'brandy')?'left_item_active':''?>">

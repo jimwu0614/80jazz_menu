@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-10-10 16:52:44
+-- 產生時間： 2022-10-13 15:57:57
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -49,7 +49,7 @@ INSERT INTO `jazz_admin` (`id`, `acc`, `pw`) VALUES
 CREATE TABLE `jazz_beans` (
   `id` tinyint(4) NOT NULL,
   `name` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '品名',
-  `land` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '產區',
+  `land` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '產區',
   `roast` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '焙度',
   `price` int(4) NOT NULL COMMENT '價格',
   `intro` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '介紹',
@@ -62,10 +62,10 @@ CREATE TABLE `jazz_beans` (
 --
 
 INSERT INTO `jazz_beans` (`id`, `name`, `land`, `roast`, `price`, `intro`, `rank`, `sh`) VALUES
-(1, '日曬耶加 G1', '衣索比亞', '淺焙', 0, '衣索比亞陽光下熟成的甘醇果實，G1等級日曬耶加雪菲，研磨瞬間，雞蛋花般的香氣，優雅綻放，蜜桃與香檳葡萄的淡淡發酵水果香氣，餘韻綿長。', 1, 1),
-(2, '巧克力公爵', '瓜地馬拉', '中焙', 0, '黑巧克力深邃的口感，馥郁焦糖甜香，微苦的甜味，轉化成綿延不斷回甘的餘韻，充滿變化就像是位優雅的公爵，令人回味再三。', 2, 1),
-(3, '雅典娜女神', '衣索比亞、瓜', '淺焙', 0, '希臘神話中，雅典娜女神守護著農作物，也就是代表守護著美好滋味的咖啡果實。清新莓果與熱帶水果香氣悠然綻放，蘋果酒、玫瑰、杏仁、甜橙的愉悅甜感。一飲入口是具層次感且愉悅的甘柔甜味，令人沈醉不已。', 3, 1),
-(4, '白蜜甜心', '哥倫比亞、衣', '中焙', 0, '以蜜處理法特殊處理，入口即感受甜李、荔枝果蜜甘醇，香氣飽滿均衡，圓潤喉韻帶著細緻的咖啡花香，甜蜜花香於舌尖慢慢綻放。', 4, 1);
+(1, '日曬耶加 G1', '衣索比亞', '淺焙', 470, '衣索比亞陽光下熟成的甘醇果實，G1等級日曬耶加雪菲，研磨瞬間，雞蛋花般的香氣，優雅綻放，蜜桃與香檳葡萄的淡淡發酵水果香氣，餘韻綿長。', 1, 1),
+(2, '可可公爵', '瓜地馬拉', '中焙', 420, '黑巧克力深邃的口感，馥郁焦糖甜香，微苦的甜味，轉化成綿延不斷回甘的餘韻，充滿變化就像是位優雅的公爵，令人回味再三。', 2, 1),
+(3, '雅典娜女神', '衣索比亞、瓜地馬拉', '淺焙', 420, '希臘神話中，雅典娜女神守護著農作物，也就是代表守護著美好滋味的咖啡果實。清新莓果與熱帶水果香氣悠然綻放，蘋果酒、玫瑰、杏仁、甜橙的愉悅甜感。一飲入口是具層次感且愉悅的甘柔甜味，令人沈醉不已。', 3, 1),
+(4, '白蜜甜心', '哥倫比亞、衣索比亞', '中焙', 460, '以蜜處理法特殊處理，入口即感受甜李、荔枝果蜜甘醇，香氣飽滿均衡，圓潤喉韻帶著細緻的咖啡花香，甜蜜花香於舌尖慢慢綻放。', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -141,34 +141,36 @@ INSERT INTO `jazz_brandy` (`id`, `name`, `chinese`, `type`, `inprice`, `inputtim
 
 CREATE TABLE `jazz_cocktail` (
   `id` int(11) NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `base` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `intro` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ingredient` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `step` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `web` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rank` int(11) NOT NULL,
-  `sh` tinyint(1) NOT NULL DEFAULT 1
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '品名',
+  `type` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '分類',
+  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '中文',
+  `image` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '照片',
+  `base` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '基底酒',
+  `intro` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '簡介',
+  `ingredient` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '材料',
+  `step` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '步驟',
+  `web` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '參考網頁',
+  `rank` int(11) NOT NULL COMMENT '排序',
+  `sh` tinyint(1) NOT NULL DEFAULT 1 COMMENT '上下架'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `jazz_cocktail`
 --
 
-INSERT INTO `jazz_cocktail` (`id`, `name`, `chinese`, `base`, `intro`, `ingredient`, `step`, `web`, `rank`, `sh`) VALUES
-(1, 'Gin Tonic', '琴通寧', 'Gin', '', '琴酒	45 ml	 \r\n通寧水	 適量	 \r\n檸檬角	1 個', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入琴酒，擠入檸檬汁，最後補滿通寧水，稍加攪拌。\r\n\r\n建議裝飾物：檸檬角', 'https://mixology.com.tw/RecipeContent.aspx?acid=7&rid=G004', 1, 1),
-(2, 'Chaplin', '卓別林', 'Gin', '', '野莓琴酒	30 ml	 \r\n杏桃白蘭地	30 ml	 \r\n現榨檸檬汁	20 ml', '１．冰鎮淺碟香檳杯。\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\n３．濾掉冰塊，將酒液倒入冰鎮過的淺碟香檳杯。\n\n建議裝飾物：柳橙皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=7&rid=G039', 2, 1),
-(3, 'Whiskey Sour', '威士忌酸酒', 'Whiskey', '', '波本威士忌	60 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	15 ml', '１．冰鎮古典杯。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的古典杯，加入適量冰塊。\r\n\r\n建議裝飾物：糖漬櫻桃', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W016', 3, 1),
-(4, 'Old Fashioned', '古典雞尾酒', 'Whiskey', '', '波本威士忌	60 ml	 \r\n安格式原味苦精	2~3 dashes	 \r\n蘇打水	1 splash	 \r\n純糖漿	1 tsp', '１．冰鎮古典杯。\r\n２．杯中放入方糖，滴入苦精再加入少許蘇打水\r\n３．將方糖搗碎後加入威士忌攪拌至溶解。\r\n４．加入岩冰攪拌均勻。', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W012', 4, 1),
-(5, 'Godfather', '教父', 'Whiskey', '', '蘇格蘭調和式威士忌	90 ml	 \r\n杏仁香甜酒	30 ml', '１．冰鎮古典杯。\r\n２．杯中放入岩石型冰塊，加入所有材料，攪拌均勻。\r\n', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W010', 5, 1),
-(6, 'X.Y.Z.', 'X.Y.Z.', 'Rum', '', '陳年蘭姆酒	55 ml	 \r\n君度橙酒	10 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	10 ml', '１．冰鎮馬丁尼杯。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的馬丁尼杯。', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R019', 6, 1),
-(7, 'Cuba Libre', '自由古巴', 'Rum', '', '白蘭姆酒	60 ml	 \r\n可口可樂	120 ml	 \r\n檸檬角	1 個', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入蘭姆酒、擠入檸檬汁，最後補滿可樂，稍加攪拌。\r\n\r\n建議裝飾物：檸檬角', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R003', 7, 1),
-(8, 'Olympic', '奧林匹克  ', 'Brandy', '', '白蘭地	30 ml	 \n香橙干邑白蘭地	30 ml	 \n現榨柳橙汁	30 ml', '１．將所有材料倒入雪克杯，加入冰塊搖盪均勻\n２．雙重過濾，濾掉冰塊將酒液倒入白蘭地杯，加入冰塊\n３．噴附柳橙皮油，投入皮捲作為裝飾\n\n建議裝飾物：勒薩多櫻桃、柳橙皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=10&rid=B030', 8, 1),
-(9, 'Tequila Sunrise', '龍舌蘭日出', 'Tequila', '', '龍舌蘭	40 ml	 \r\n現榨柳橙汁	120 ml	 \r\n紅石榴糖漿	適量 ', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入龍舌蘭及柳橙汁，攪拌均勻。\r\n３．再緩緩倒入紅石榴糖漿沉底。\r\n\r\n建議裝飾物：檸檬片', 'https://mixology.com.tw/RecipeContent.aspx?acid=9&rid=T005', 9, 1),
-(10, 'Margarita', '瑪格麗特', 'Tequila', '', '龍舌蘭	60 ml	 \r\n君度橙酒	20 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	2 tsp	 \r\n瑪格麗特苦精	1 dash', '１．以馬丁尼杯製作鹽口杯，並冰鎮。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的鹽口馬丁尼杯。\r\n\r\n建議裝飾物：檸檬片', 'https://mixology.com.tw/RecipeContent.aspx?acid=9&rid=T001', 10, 1),
-(11, 'Daiquiri', '戴克利', 'Rum', '', '白蘭姆酒	60 ml	 \r\n現榨萊姆汁	15 ml	 \r\n純糖漿	10 ml', '１．冰鎮馬丁尼杯。\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\n３．濾掉冰塊，將酒液倒入冰鎮過的馬丁尼杯。\n\n建議裝飾物：檸檬皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R001', 11, 1),
-(12, 'Mojito', '莫希托', 'Rum', '', '白蘭姆酒	60 ml	 \r\n純糖漿	30 ml	 \r\n現榨檸檬汁	30 ml	 \r\n薄荷葉	10-12 片	 \r\n蘇打水	適量', '１．厚底長飲杯放入薄荷葉 & 一半蘭姆酒，用搗棒輕壓出香氣。\r\n２．加入切塊檸檬，用搗棒壓出汁（或直接加入檸檬汁30ml）。\r\n３．加入剩餘蘭姆酒+純糖漿+碎冰至八分滿，攪拌均勻。\r\n４．再加入蘇打水至全滿，稍加攪拌。\r\n\r\n建議裝飾物：薄荷葉一株', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R010', 12, 1);
+INSERT INTO `jazz_cocktail` (`id`, `name`, `type`, `chinese`, `image`, `base`, `intro`, `ingredient`, `step`, `web`, `rank`, `sh`) VALUES
+(1, 'Gin Tonic', '', '琴通寧', '', 'Gin', '', '琴酒	45 ml	 \r\n通寧水	 適量	 \r\n檸檬角	1 個', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入琴酒，擠入檸檬汁，最後補滿通寧水，稍加攪拌。\r\n\r\n建議裝飾物：檸檬角', 'https://mixology.com.tw/RecipeContent.aspx?acid=7&rid=G004', 1, 1),
+(2, 'Chaplin', '', '卓別林', '', 'Gin', '', '野莓琴酒	30 ml	 \r\n杏桃白蘭地	30 ml	 \r\n現榨檸檬汁	20 ml', '１．冰鎮淺碟香檳杯。\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\n３．濾掉冰塊，將酒液倒入冰鎮過的淺碟香檳杯。\n\n建議裝飾物：柳橙皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=7&rid=G039', 2, 1),
+(3, 'Whiskey Sour', '', '威士忌酸酒', '', 'Whiskey', '', '波本威士忌	60 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	15 ml', '１．冰鎮古典杯。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的古典杯，加入適量冰塊。\r\n\r\n建議裝飾物：糖漬櫻桃', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W016', 3, 1),
+(4, 'Old Fashioned', '', '古典雞尾酒', '', 'Whiskey', '', '波本威士忌	60 ml	 \r\n安格式原味苦精	2~3 dashes	 \r\n蘇打水	1 splash	 \r\n純糖漿	1 tsp', '１．冰鎮古典杯。\r\n２．杯中放入方糖，滴入苦精再加入少許蘇打水\r\n３．將方糖搗碎後加入威士忌攪拌至溶解。\r\n４．加入岩冰攪拌均勻。', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W012', 4, 0),
+(5, 'Godfather', '', '教父', '', 'Whiskey', '', '蘇格蘭調和式威士忌	90 ml	 \r\n杏仁香甜酒	30 ml', '１．冰鎮古典杯。\r\n２．杯中放入岩石型冰塊，加入所有材料，攪拌均勻。\r\n', 'https://mixology.com.tw/RecipeContent.aspx?acid=11&rid=W010', 5, 1),
+(6, 'X.Y.Z.', '', 'X.Y.Z.', '', 'Rum', '', '陳年蘭姆酒	55 ml	 \r\n君度橙酒	10 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	10 ml', '１．冰鎮馬丁尼杯。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的馬丁尼杯。', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R019', 6, 1),
+(7, 'Cuba Libre', '', '自由古巴', '', 'Rum', '', '白蘭姆酒	60 ml	 \r\n可口可樂	120 ml	 \r\n檸檬角	1 個', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入蘭姆酒、擠入檸檬汁，最後補滿可樂，稍加攪拌。\r\n\r\n建議裝飾物：檸檬角', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R003', 7, 1),
+(8, 'Olympic', '', '奧林匹克  ', '', 'Brandy', '', '白蘭地	30 ml	 \n香橙干邑白蘭地	30 ml	 \n現榨柳橙汁	30 ml', '１．將所有材料倒入雪克杯，加入冰塊搖盪均勻\n２．雙重過濾，濾掉冰塊將酒液倒入白蘭地杯，加入冰塊\n３．噴附柳橙皮油，投入皮捲作為裝飾\n\n建議裝飾物：勒薩多櫻桃、柳橙皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=10&rid=B030', 8, 1),
+(9, 'Tequila Sunrise', '', '龍舌蘭日出', '', 'Tequila', '', '龍舌蘭	40 ml	 \r\n現榨柳橙汁	120 ml	 \r\n紅石榴糖漿	適量 ', '１．可林杯放入冰塊，攪拌冰杯後將融水倒出。\r\n２．倒入龍舌蘭及柳橙汁，攪拌均勻。\r\n３．再緩緩倒入紅石榴糖漿沉底。\r\n\r\n建議裝飾物：檸檬片', 'https://mixology.com.tw/RecipeContent.aspx?acid=9&rid=T005', 9, 1),
+(10, 'Margarita', '', '瑪格麗特', '', 'Tequila', '', '龍舌蘭	60 ml	 \r\n君度橙酒	20 ml	 \r\n現榨檸檬汁	20 ml	 \r\n純糖漿	2 tsp	 \r\n瑪格麗特苦精	1 dash', '１．以馬丁尼杯製作鹽口杯，並冰鎮。\r\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\r\n３．濾掉冰塊，將酒液倒入冰鎮過的鹽口馬丁尼杯。\r\n\r\n建議裝飾物：檸檬片', 'https://mixology.com.tw/RecipeContent.aspx?acid=9&rid=T001', 10, 1),
+(11, 'Daiquiri', '', '戴克利', '', 'Rum', '', '白蘭姆酒	60 ml	 \r\n現榨萊姆汁	15 ml	 \r\n純糖漿	10 ml', '１．冰鎮馬丁尼杯。\n２．雪克杯加入所有材料及冰塊，搖盪均勻。\n３．濾掉冰塊，將酒液倒入冰鎮過的馬丁尼杯。\n\n建議裝飾物：檸檬皮捲', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R001', 11, 1),
+(12, 'Mojito', '', '莫希托', '', 'Rum', '', '白蘭姆酒	60 ml	 \r\n純糖漿	30 ml	 \r\n現榨檸檬汁	30 ml	 \r\n薄荷葉	10-12 片	 \r\n蘇打水	適量', '１．厚底長飲杯放入薄荷葉 & 一半蘭姆酒，用搗棒輕壓出香氣。\r\n２．加入切塊檸檬，用搗棒壓出汁（或直接加入檸檬汁30ml）。\r\n３．加入剩餘蘭姆酒+純糖漿+碎冰至八分滿，攪拌均勻。\r\n４．再加入蘇打水至全滿，稍加攪拌。\r\n\r\n建議裝飾物：薄荷葉一株', 'https://mixology.com.tw/RecipeContent.aspx?acid=8&rid=R010', 12, 1);
 
 -- --------------------------------------------------------
 
@@ -345,46 +347,46 @@ INSERT INTO `jazz_soft` (`id`, `name`, `chinese`, `inprice`, `supply`, `glass`, 
 
 CREATE TABLE `jazz_whiskey` (
   `id` int(11) NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `inprice` int(11) NOT NULL,
-  `inputtime` int(11) NOT NULL,
-  `supply` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bottle` int(11) NOT NULL,
-  `glass` int(11) NOT NULL,
+  `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '分類',
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '品名(英)',
+  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '中文',
+  `inprice` int(11) NOT NULL COMMENT '進價',
+  `inputtime` int(11) NOT NULL COMMENT '報價時間',
+  `supply` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '廠商',
+  `bottle` int(11) NOT NULL COMMENT '單瓶價',
+  `glass` int(11) NOT NULL COMMENT '單杯價',
   `memo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `intro` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `promo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rank` int(11) NOT NULL,
-  `sh` tinyint(1) NOT NULL DEFAULT 1
+  `intro` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '簡介',
+  `promo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '促銷',
+  `rank` int(11) NOT NULL COMMENT '排序',
+  `sh` tinyint(1) NOT NULL DEFAULT 1 COMMENT '上下架'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `jazz_whiskey`
 --
 
-INSERT INTO `jazz_whiskey` (`id`, `name`, `chinese`, `type`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
-(1, 'Balvenie 12 Year Old\r\nDoubleWood', '百富雙桶12年', 'Single', 0, 0, '', 5200, 420, 'Speyside', '大眾口味 高低階', '', 1, 1),
-(2, 'Balvenie 16 Year Old \r\nTriple Cask', '百富雙桶16年', 'Single', 0, 0, '', 8000, 750, 'Speyside', '大眾口味 高低階', '', 2, 1),
-(3, 'Singleton 12 Glen Ord', '蘇格登12年', 'Single', 0, 0, '', 2800, 350, 'Speyside', '大眾口味 高低階', '', 3, 1),
-(4, 'Singleton 15 Glen Ord', '蘇格登15年', 'Single', 0, 0, '', 3600, 350, 'Speyside', '大眾口味 高低階', '', 4, 1),
-(5, 'Glenfiddich 12Y', '格蘭菲迪 12年', 'Single', 0, 0, '', 2500, 350, 'Speyside', '大眾口味 高低階', '', 5, 1),
-(6, 'Glenfiddich 18Y', '格蘭菲迪 18年', 'Single', 0, 0, '', 5500, 500, 'Speyside', '大眾口味 高低階', '', 6, 1),
-(7, 'Glenfiddich Gran Reserve \n21 Year Old ', '格蘭菲迪 21年', 'Single', 0, 0, '', 10000, 0, 'Speyside', '大眾口味 高年分 須討論衡量', '', 7, 1),
-(8, 'Laphroaig 10Y', '拉弗格 10年', 'Single', 0, 0, '', 3000, 350, '\"Islay Peated\"', '泥煤 味道重', '', 8, 1),
-(9, 'Lagavulin 10Y', '樂加維林 10年', 'Single', 0, 0, '', 5500, 450, '\"Islay Peated\"', '泥煤 味道重', '', 9, 1),
-(10, 'Auchentoshan Three Wood', '歐肯 三桶威士忌', 'Single', 0, 0, '', 5000, 450, 'Lowland', '低地  相對清爽', '', 10, 1),
-(11, 'Monkey Shoulder\r\nScotch Whisky', '三隻猴子調和式麥芽威士忌', 'Blended', 0, 0, '', 2000, 350, '', '', '', 11, 1),
-(12, 'John Walker Black Label', '約翰走路黑牌12年', 'Blended', 0, 0, '', 2000, 350, '', '', '', 12, 1),
-(13, 'John Walker Green Label 15Y', '約翰走路綠牌15年', 'Blended', 0, 0, '', 3500, 350, '', '', '', 13, 1),
-(14, 'Ballantine\'s 12 Y ', '百齡罈12年調和威士忌', 'Blended', 0, 0, '', 3500, 350, '', '', '', 14, 1),
-(15, 'Ballantine\'s 21 Y ', '百齡罈21年調和威士忌', 'Blended', 0, 0, '', 6000, 550, '', '', '', 15, 1),
-(16, 'Royal Salute 21 Years \r\nScotch Whisky', '皇家禮炮21年', 'Blended', 0, 0, '', 10000, 0, '', '', '', 16, 1),
-(17, 'Jim beam bourbon', '金賓白牌波本威士忌', 'Bourbon', 0, 0, '', 3000, 350, '複產區波本', '', '', 17, 1),
-(18, 'Jack Daniel Old NO.7', '傑克丹尼爾', 'Bourbon', 0, 0, '', 3500, 350, '田納西波本', '', '(送兩罐可樂)', 18, 1),
-(19, 'Maker\'s Mark Bourbon Whisky', '美格經典波本威士忌', 'Bourbon', 0, 0, '', 3900, 380, '肯塔基波本', '', '', 19, 1),
-(20, 'James 1776 Bourbon Whisky', '1776波本威士忌', 'Bourbon', 0, 0, '', 4500, 450, '', '', '', 20, 1);
+INSERT INTO `jazz_whiskey` (`id`, `type`, `name`, `chinese`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
+(1, 'Single', 'Balvenie 12 Year Old\r\nDoubleWood', '百富雙桶12年', 0, 0, '', 5200, 420, 'Speyside', '大眾口味 高低階', '', 1, 1),
+(2, 'Single', 'Balvenie 16 Year Old \r\nTriple Cask', '百富雙桶16年', 0, 0, '', 8000, 750, 'Speyside', '大眾口味 高低階', '', 2, 1),
+(3, 'Single', 'Singleton 12 Glen Ord', '蘇格登12年', 0, 0, '', 2800, 350, 'Speyside', '大眾口味 高低階', '', 3, 1),
+(4, 'Single', 'Singleton 15 Glen Ord', '蘇格登15年', 0, 0, '', 3600, 350, 'Speyside', '大眾口味 高低階', '', 4, 1),
+(5, 'Single', 'Glenfiddich 12Y', '格蘭菲迪 12年', 0, 0, '', 3800, 350, 'Speyside', '大眾口味 高低階', '', 5, 1),
+(6, 'Single', 'Glenfiddich 18Y', '格蘭菲迪 18年', 0, 0, '', 6000, 500, 'Speyside', '大眾口味 高低階', '', 6, 1),
+(7, 'Single', 'Glenfiddich Gran Reserve \n21 Year Old ', '格蘭菲迪 21年', 0, 0, '', 10000, 0, 'Speyside', '大眾口味 高年分 須討論衡量', '', 7, 1),
+(8, 'Single', 'Laphroaig 10Y', '拉弗格 10年', 0, 0, '', 3000, 350, '\"Islay Peated\"', '泥煤 味道重', '', 8, 1),
+(9, 'Single', 'Lagavulin 10Y', '樂加維林 10年', 0, 0, '', 5500, 450, '\"Islay Peated\"', '泥煤 味道重', '', 9, 1),
+(10, 'Single', 'Auchentoshan Three Wood', '歐肯 三桶威士忌', 0, 0, '', 5000, 450, 'Lowland', '低地  相對清爽', '', 10, 1),
+(11, 'Blended', 'Monkey Shoulder\r\nScotch Whisky', '三隻猴子調和式麥芽威士忌', 0, 0, '', 2000, 350, '', '', '', 11, 1),
+(12, 'Blended', 'John Walker Black Label', '約翰走路黑牌12年', 0, 0, '', 2000, 350, '', '', '', 12, 1),
+(13, 'Blended', 'John Walker Green Label 15Y', '約翰走路綠牌15年', 0, 0, '', 4200, 350, '', '', '', 13, 1),
+(14, 'Blended', 'Ballantine\'s 12 Y ', '百齡罈12年調和威士忌', 0, 0, '', 3500, 350, '', '', '', 14, 1),
+(15, 'Blended', 'Ballantine\'s 21 Y ', '百齡罈21年調和威士忌', 0, 0, '', 6000, 550, '', '', '', 15, 1),
+(16, 'Blended', 'Royal Salute 21 Years \r\nScotch Whisky', '皇家禮炮21年', 0, 0, '', 9200, 0, '', '', '', 16, 1),
+(17, 'Bourbon', 'Jim beam bourbon', '金賓白牌波本威士忌', 0, 0, '', 3000, 350, '複產區波本', '', '', 17, 1),
+(18, 'Bourbon', 'Jack Daniel Old NO.7', '傑克丹尼爾', 0, 0, '', 3500, 350, '田納西波本', '', '(送兩罐可樂)', 18, 1),
+(19, 'Bourbon', 'Maker\'s Mark Bourbon Whisky', '美格經典波本威士忌', 0, 0, '', 3900, 380, '肯塔基波本', '', '', 19, 1),
+(20, 'Bourbon', 'James 1776 Bourbon Whisky', '1776波本威士忌', 0, 0, '', 4500, 450, '', '', '', 20, 1);
 
 -- --------------------------------------------------------
 
