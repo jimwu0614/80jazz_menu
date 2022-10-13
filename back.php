@@ -80,28 +80,28 @@ if(empty($_SESSION['user'])){
             <a href="?do=beans" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
                 Beans
             </a>
-            <a href="?do=whiskey&type=single" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
+            <a href="?do=whiskey&type=Single" class=" left_item <?=($do == 'whiskey')?'left_item_active':''?>">
                 Whiskey
             </a>
-            <a href="?do=brandy" class=" left_item <?=($do == 'brandy')?'left_item_active':''?>">
+            <a href="?do=brandy&type=Cognac" class=" left_item <?=($do == 'brandy')?'left_item_active':''?>">
                 Brandy
             </a>
-            <a href="?do=ginvodka" class=" left_item <?=($do == 'ginvodka')?'left_item_active':''?>">
+            <a href="?do=ginvodka&type=Gin" class=" left_item <?=($do == 'ginvodka')?'left_item_active':''?>">
                 Gin&Vodka
             </a>
-            <a href="?do=rumteq" class=" left_item <?=($do == 'rumteq')?'left_item_active':''?>">
+            <a href="?do=rumteq&type=Rum" class=" left_item <?=($do == 'rumteq')?'left_item_active':''?>">
                 Rum&Tequila
             </a>
-            <a href="?do=beerliquer" class=" left_item <?=($do == 'beerliquer')?'left_item_active':''?>">
+            <a href="?do=beerlique&type=Beer" class=" left_item <?=($do == 'beerliquer')?'left_item_active':''?>">
                 Beer&Liquer
             </a>
-            <a href="?do=sake" class=" left_item <?=($do == 'sake')?'left_item_active':''?>">
+            <a href="?do=sake&type=Sake" class=" left_item <?=($do == 'sake')?'left_item_active':''?>">
                 Sake&Shochu
             </a>
             <a href="?do=wine" class=" left_item <?=($do == 'wine')?'left_item_active':''?>">
                 Wine
             </a>
-            <a href="?do=cocktail" class=" left_item <?=($do == 'cocktail')?'left_item_active':''?>">
+            <a href="?do=cocktail&type=Classic" class=" left_item <?=($do == 'cocktail')?'left_item_active':''?>">
                 Cocktail
             </a>
             <a href="?do=softdrink" class=" left_item <?=($do == 'softdrink')?'left_item_active':''?>">

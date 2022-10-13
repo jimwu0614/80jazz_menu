@@ -132,4 +132,5 @@ $Admin = new DB('jazz_admin');
 $Coffee = new DB('jazz_coffee');
 $Beans = new DB('jazz_beans');
 
+
 ?>

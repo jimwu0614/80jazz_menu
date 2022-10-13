@@ -133,7 +133,7 @@
                             
                         </div>
                         <?php
-                        $rank = $Beans->math('max','rank')+1
+                        $rank = $Beans->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
                             <input type="hidden" name="table" id="table" value="beans">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">

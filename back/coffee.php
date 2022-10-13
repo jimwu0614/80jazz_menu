@@ -127,7 +127,7 @@
                             <input type="number" class="form-control" id="price">
                         </div>
                         <?php
-                        $rank = $Coffee->math('max','rank')+1
+                        $rank = $Coffee->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
                             <input type="hidden" name="table" id="table" value="coffee">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
