@@ -179,6 +179,15 @@
     color: rgb(206, 148, 97);
 }
 
+.bean_row{
+    padding-left: 1rem;
+    padding-right: 3rem;
+}
+
+.bean_body{
+    padding-left: 0;
+}
+
 .bean_body li{
     line-height: 33px;
 }

@@ -27,7 +27,7 @@ include "./base.php";
                 <h1>Home Roasting Coffee Beans</h1>
             </div>
         </div>
-        <div class="row">
+        <div class="row bean_row">
             <?php
             $rows = $Beans->all(['sh'=>1]);
             foreach ($rows as $key => $value) {

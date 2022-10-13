@@ -15,6 +15,11 @@ switch ($table) {
         $Coffee->save($_POST);
         to("../back.php?do=coffee");
         break;
+    case 'beans':
+        unset($_POST['table']);
+        $Beans->save($_POST);
+        to("../back.php?do=beans");
+        break;
     case 'whiskey':
         unset($_POST['table']);
         $Whiskey->save($_POST);
