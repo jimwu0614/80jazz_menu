@@ -35,10 +35,10 @@ include "./base.php";
             <div class="col-12 col-md-5 m-3">
                 <ul class="bean_body">
                     <li><?=$value['name']?></li>
-                    <li>產地:<?=$value['land']?></li>
-                    <li>焙度:<?=$value['roast']?></li>
-                    <li>價格:<?=$value['price']?></li>
-                    <li class="bean_intro">簡介:<br><?=$value['intro']?></li>
+                    <li>產地：&nbsp;<?=$value['land']?></li>
+                    <li>焙度：&nbsp;<?=$value['roast']?></li>
+                    <li>價格：&nbsp;<span style="letter-spacing: 2px;"><?=$value['price']?></span>/半磅</li>
+                    <li class="bean_intro">簡介：<br><?=$value['intro']?></li>
                 </ul>
             </div>
             <?php
