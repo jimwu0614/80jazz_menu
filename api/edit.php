@@ -25,6 +25,15 @@ switch ($table) {
         $Whiskey->save($_POST);
         to("../back.php?do=whiskey");
         break;
+    case 'cocktail':
+        unset($_POST['table']);
+        $Cocktail->save($_POST);
+        to("../back.php?do=cocktail");
+        break;
+    case '':
+        unset($_POST['table']);
+        
+        break;
     case '':
         unset($_POST['table']);
         
