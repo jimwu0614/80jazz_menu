@@ -178,3 +178,11 @@
     text-decoration: none;
     color: rgb(206, 148, 97);
 }
+
+.bean_body li{
+    line-height: 33px;
+}
+
+.bean_body .bean_intro{
+    line-height: 25px;
+}

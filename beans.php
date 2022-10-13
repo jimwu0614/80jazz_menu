@@ -33,12 +33,12 @@ include "./base.php";
             foreach ($rows as $key => $value) {
             ?>
             <div class="col-12 col-md-5 m-3">
-                <ul>
+                <ul class="bean_body">
                     <li><?=$value['name']?></li>
                     <li>產地:<?=$value['land']?></li>
                     <li>焙度:<?=$value['roast']?></li>
                     <li>價格:<?=$value['price']?></li>
-                    <li>簡介:<br><?=$value['intro']?></li>
+                    <li class="bean_intro">簡介:<br><?=$value['intro']?></li>
                 </ul>
             </div>
             <?php
