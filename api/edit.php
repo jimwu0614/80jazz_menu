@@ -23,16 +23,17 @@ switch ($table) {
     case 'whiskey':
         unset($_POST['table']);
         $Whiskey->save($_POST);
-        to("../back.php?do=whiskey");
+        to("../back.php?do=whiskey&type={$_POST['type']}");
         break;
     case 'cocktail':
         unset($_POST['table']);
         $Cocktail->save($_POST);
-        to("../back.php?do=cocktail");
+        to("../back.php?do=cocktail&type={$_POST['type']}");
         break;
-    case '':
+    case 'brandy':
         unset($_POST['table']);
-        
+        $Brandy->save($_POST);
+        to("../back.php?do=brandy&type={$_POST['type']}");
         break;
     case '':
         unset($_POST['table']);
