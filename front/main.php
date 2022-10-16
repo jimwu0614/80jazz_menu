@@ -5,8 +5,8 @@
             <h1 class="neon-effect">Lounge Bar</h1>
         </div>
         <br>
-        <a href="./coffee.php" class="neon-button cafe mb-4">Café&nbsp;&nbsp;Menu</a>
-        <a href="#" class="neon-button bar" data-toggle="offcanvas">Bar&nbsp;&nbsp;Menu</a>
+        <a href="#" class="neon-button bar" data-toggle="offcanvas">Menu</a>
+        <!-- <a href="?do=event" class="neon-button cafe mt-4">Events</a> -->
     </div>
 </div>
 <footer class="footer">

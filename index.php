@@ -40,6 +40,7 @@ include "./base.php";
                         <a href="index.php">80 Jazz Menu</a>
                     </div>
                 </div>
+                <li><a href="./coffee.php">Coffee</a></li>
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
