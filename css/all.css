@@ -8,6 +8,10 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+.flexcol{
+	display: flex;
+	flex-direction: column;
+}
 
 .flex_nowrap{
 	display: flex;

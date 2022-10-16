@@ -179,7 +179,7 @@ function reg() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./ajax/admin.php',{editid},(res)=>{
+    $.post('./edit_modal/admin.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

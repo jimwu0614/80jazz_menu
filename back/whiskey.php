@@ -295,7 +295,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./ajax/whiskey.php',{editid},(res)=>{
+    $.post('./edit_modal/whiskey.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

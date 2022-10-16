@@ -211,7 +211,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./ajax/beans.php',{editid},(res)=>{
+    $.post('./edit_modal/beans.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

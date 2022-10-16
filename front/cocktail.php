@@ -40,7 +40,7 @@
 <script>
 function showmodal(who) {
     let itemid = $(who).data('id');
-    $.post('./ajaxfront/cocktail.php',{itemid},(res)=>{
+    $.post('./info_modal/cocktail.php',{itemid},(res)=>{
         $("#front_modal_body").html(res)
     })
 }
