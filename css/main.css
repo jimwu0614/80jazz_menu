@@ -31,6 +31,12 @@
     /* height: calc(100% - 50px); */
 }
 
+@media (max-width: 768px) {
+    .neon_box{
+        padding-left: 4rem;
+    }
+}
+
 .footer{
     height: 30px; 
     width: 100vw;
@@ -54,13 +60,6 @@
         top: 6rem;
     }
 }
-
-
-
-
-
-
-
 
 footer a:hover{
     cursor: default;
