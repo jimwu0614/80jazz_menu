@@ -83,23 +83,7 @@ include "./base.php";
     <script src="./js/js.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-        //點擊小圖會用MODAL放大
-
-    // $(document).ready(function () {
-
-    // $(".open").on("click",function(){
-    //     let img=$(this).attr('src')  //拿到圖片的連結
-
-    //                             //把連結塞到一個img標籤中..把標籤放到modal中的modal-body區塊中...
-    //                             //button那三行是右上角的叉
-    //     $('.modal-header').html(`<img class="modal_pic" src="${img}">  
-    //                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    //                                 <span aria-hidden="true">&times;</span>
-    //                             </button>
-    //                             `) 
-    //     })
-
-    // })
+        $("#bubble").show().delay(2000).fadeOut();
     </script>
 </body>
 

@@ -11,7 +11,7 @@ $data = $Cocktail->find($_POST['itemid']);
 <!-- Modal body -->
 <div class="modal-body">
     <!-- <div class="w60"><img src="" alt=""></div> -->
-    <div class="w80 ma">
+    <div class="w80 ma linehigh">
         <?=$data['intro']?>
     </div>
     <div class="w80 ma flex_nowrap jc mt-3">
