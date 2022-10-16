@@ -12,7 +12,10 @@ $data = $Cocktail->find($_POST['itemid']);
 <div class="modal-body">
     <!-- <div class="w60"><img src="" alt=""></div> -->
     <div class="w80 ma">
-        <?=$data['intro']?>
+        <pre>
+            <?=$data['intro']?>
+        </pre>
+        
     </div>
     <div class="w80 ma flex_nowrap jc mt-3">
         <div class="flexcol">
