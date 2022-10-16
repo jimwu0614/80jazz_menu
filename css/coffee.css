@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@font-face {
+    font-family: 'Behind Script'; 
+    src: url(../font/Behind\ Script.otf)
+}
 *{
     box-sizing: border-box;
     color: rgb(255, 228, 196);

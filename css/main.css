@@ -33,7 +33,9 @@
 
 @media (max-width: 768px) {
     .neon_box{
-        padding-left: 4rem;
+        width: 75%;
+        /* padding-left: 3rem; */
+        margin: auto;
     }
 }
 
