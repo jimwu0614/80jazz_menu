@@ -2,7 +2,7 @@
     <div class="title">
         <div class="neon_box">
             <h1 class="neon-effect">80 Jazz</h1>
-            <h1 class="neon-effect">Lounge Bar</h1>
+            <h1 class="neon-effect">Caf主業改名&<br>Lounge</h1>
         </div>
         <br>
         <a href="#" class="neon-button bar" data-toggle="offcanvas">Menu</a>
