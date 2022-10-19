@@ -152,7 +152,7 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-                        <div class="form-group flex ">
+                        <div class="form-group flex" style="justify-content: space-evenly;">
                             <div class="pt-4 ml-4">
                                 <select name="type" id="type">
                                     <option value="Single">Single</option>
@@ -160,7 +160,7 @@
                                     <option value="Bourbon">Bourbon</option>
                                 </select>
                             </div>
-                            <div style="margin-left: 5rem;">
+                            <div>
                                 <label for="memo"  class="col-form-label">Memo</label>
                                 <input type="text" name="memo" class="form-control" id="memo">
                             </div>

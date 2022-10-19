@@ -143,6 +143,13 @@ form {
     align-items: center;
     justify-content: space-between;
 }
+@media (max-width: 768px) {
+    .form_item_Title{
+        flex-direction: column;
+    }
+
+}
+
 
 .form_item_header {
     color: rgb(41, 123, 211);
@@ -154,6 +161,12 @@ form {
     width: 30%;
     display: flex;
     justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .form_item_Title_middle{
+        width: 100%;
+    }
+
 }
 
 .form_item_text {

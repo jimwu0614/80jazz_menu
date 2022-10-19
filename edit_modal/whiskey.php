@@ -4,7 +4,7 @@ $data = $Whiskey->find($_POST['editid']);
 
 ?>
                   
-<div class="form-group flex ">
+<div class="form-group flex" style="justify-content: space-evenly;">
     <div class="pt-4 ml-4">
     <select name="type" id="type">
         <option value="" >---</option>
@@ -13,7 +13,7 @@ $data = $Whiskey->find($_POST['editid']);
         <option value="Bourbon" <?=($data['type']=='Bourbon')?'selected':''?>>Bourbon</option>
     </select>  
     </div>
-    <div style="margin-left: 5rem;">
+    <div >
         <label for="memo"  class="col-form-label">Memo</label>
         <input name="memo" type="text" class="form-control" id="memo" value="<?=$data['memo']?>">
     </div>

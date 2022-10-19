@@ -40,29 +40,29 @@ include "./base.php";
             </div>
             <div class="col">
                 <div class="mt-3 above">
-                    <span class="cn">義式濃縮&nbsp;&nbsp;&nbsp;Espresso</span>
-                    <span class="jp" style="display:none;">エスプレッソ&nbsp;&nbsp;&nbsp;Espresso</span>
+                    <span class="cn">義式濃縮</span>
+                    <span class="jp" style="display:none;">エスプレッソ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;</span>
+                    <span class="en">Espresso</span>
                     <span class="price">$120</span>
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">美式&nbsp;&nbsp;&nbsp;Americano</span>
-                    <span class="jp" style="display:none;">アメリカーノ&nbsp;&nbsp;&nbsp;Americano</span>
+                    <span class="cn">美式</span>
+                    <span class="jp" style="display:none;">アメリカーノ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Americano</span>
                     <span class="price">$130</span>
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">拿鐵&nbsp;&nbsp;&nbsp;Caffè latte</span>
-                    <span class="jp" style="display:none;">カフェラテ&nbsp;&nbsp;&nbsp;Caffè latte</span>
+                    <span class="cn">拿鐵</span>
+                    <span class="jp" style="display:none;">カフェラテ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Caffè latte</span>
                     <span class="price">$160</span>
                 </div>
 
@@ -76,11 +76,11 @@ include "./base.php";
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">焦糖瑪奇朵&nbsp;&nbsp;&nbsp;Caramel macchiato</span>
-                    <span class="jp" style="display:none;">キャラメルマキアート&nbsp;&nbsp;&nbsp;Caramel macchiato</span>
+                    <span class="cn">焦糖瑪奇朵</span>
+                    <span class="jp" style="display:none;">キャラメルマキアート</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Caramel macchiato</span>
                     <span class="price">$180</span>
                 </div>
             </div>
@@ -93,38 +93,38 @@ include "./base.php";
             </div>
             <div class="col">
                 <div class="mt-3 above">
-                    <span class="cn">愛爾蘭咖啡&nbsp;&nbsp;&nbsp;Irish coffee</span>
-                    <span class="jp" style="display:none;">アイリッシュコーヒー&nbsp;&nbsp;&nbsp;Irish coffee</span>
+                    <span class="cn">愛爾蘭咖啡</span>
+                    <span class="jp" style="display:none;">アイリッシュコーヒー</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Irish coffee</span>
                     <span class="price">$220</span>
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">咖啡馬丁尼&nbsp;&nbsp;&nbsp;Expresso Martini</span>
-                    <span class="jp" style="display:none;">エスプレッソ・マティーニ&nbsp;&nbsp;&nbsp;Expresso Martini</span>
+                    <span class="cn">咖啡馬丁尼</span>
+                    <span class="jp" style="display:none;">エスプレッソ・マティーニ</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Expresso Martini</span>
                     <span class="price">$200</span>
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">咖啡琴湯尼&nbsp;&nbsp;&nbsp;Turbo Gin & Tonic</span>
-                    <span class="jp" style="display:none;">エスプレッソ・ジントニック&nbsp;&nbsp;&nbsp;Turbo Gin & Tonic</span>
+                    <span class="cn">咖啡琴湯尼</span>
+                    <span class="jp" style="display:none;">エスプレッソ・ジントニック</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Turbo Gin & Tonic</span>
                     <span class="price">$200</span>
                 </div>
 
                 <div class="mt-3 above">
-                    <span class="cn">漂浮咖啡波本Coffee Bourbon Float&nbsp;&nbsp;&nbsp;</span>
-                    <span class="jp" style="display:none;">バーボンコーヒーフロート&nbsp;&nbsp;&nbsp;Coffee Bourbon Float</span>
+                    <span class="cn">漂浮咖啡波本</span>
+                    <span class="jp" style="display:none;">バーボンコーヒーフロート</span>
                 </div>
                 <div class="mt-1 under">
-                    <span class="en">&nbsp;&nbsp;&nbsp;</span>
+                    <span class="en">Coffee Bourbon Float</span>
                     <span class="price">$220</span>
                 </div>
             </div>
