@@ -280,13 +280,15 @@ $('#addBtn').on('click', function() {
     let rank = $('#rank').val();
     let table = $('#table').val();
 
-    $.post('./api/add_menu.php', {type, memo, name, chinese, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, () => {
+    $.post('./api/add_menu.php', {type, memo, name, chinese, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, (res) => {
+        // console.log(res);
         Swal.fire({
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
             timer: 1500
         }).then((result) => {
+            // console.log(res);
             location.reload();
         })
     })
