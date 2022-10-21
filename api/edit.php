@@ -13,7 +13,7 @@ switch ($table) {
     case 'coffee':
         unset($_POST['table']);
         $Coffee->save($_POST);
-        to("../back.php?do=coffee");
+        to("../back.php?do=coffee&type={$_POST['type']}");
         break;
     case 'beans':
         unset($_POST['table']);

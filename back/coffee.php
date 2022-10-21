@@ -18,6 +18,13 @@
                     Coffee
                 </div>
             </div>
+            <div class="form_item_Title_middle" style="width:50%;">
+                <a href="?do=coffee&type=Coffee"  class="title_type <?=($_GET['type']=='Coffee')?'liquer_active':''?>">Coffee</a>
+                <a href="?do=coffee&type=Pour" class="title_type <?=($_GET['type']=='Pour')?'liquer_active':''?>">Pour</a>
+                <a href="?do=coffee&type=Cold" class="title_type <?=($_GET['type']=='Cold')?'liquer_active':''?>">Cold</a>
+                <a href="?do=coffee&type=Cocktail" class="title_type <?=($_GET['type']=='Cocktail')?'liquer_active':''?>">Cocktail</a>
+                <a href="?do=coffee&type=Tea" class="title_type <?=($_GET['type']=='Tea')?'liquer_active':''?>">Tea</a>
+            </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
                     新增
@@ -27,7 +34,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Coffee->all("ORDER BY `rank` ASC");
+        $rows = $Coffee->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group">
@@ -107,7 +114,9 @@
                     <form>
                         <select name="type" id="type">
                             <option value="Coffee">Coffee</option>
-                            <option value="Cocktail">Coffee cocktail</option>
+                            <option value="Pour">Pour Over</option>
+                            <option value="Cold">Cold Drip</option>
+                            <option value="Cocktail">Coffee Cocktail</option>
                             <option value="Tea">Tea</option>
                         </select>
                         <div class="form-group">
@@ -127,7 +136,9 @@
                             <input type="number" class="form-control" id="price">
                         </div>
                         <?php
+                        // dd($_GET);
                         $rank = $Coffee->math('max','rank',['type'=>$_GET['type']])+1
+
                         ?>
                             <input type="hidden" name="table" id="table" value="coffee">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">

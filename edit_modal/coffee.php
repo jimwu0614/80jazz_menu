@@ -6,6 +6,8 @@ $data = $Coffee->find($_POST['editid']);
     <select name="type" id="type">
         <option value="" >---</option>
         <option value="Coffee" <?=($data['type']=='Coffee')?'selected':''?>>Coffee</option>
+        <option value="Pour"<?=($data['type']=='Pour')?'selected':''?>>Pour Over</option>
+        <option value="Cold"<?=($data['type']=='Cold')?'selected':''?>>Cold Drip</option>
         <option value="Cocktail" <?=($data['type']=='Cocktail')?'selected':''?>>Coffee Cocktail</option>
         <option value="Tea" <?=($data['type']=='Tea')?'selected':''?>>Tea</option>
     </select>

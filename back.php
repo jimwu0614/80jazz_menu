@@ -74,7 +74,7 @@ if(empty($_SESSION['user'])){
         </div>
 
         <div class="left">
-            <a href="?do=coffee" class=" left_item <?=($do == 'coffee')?'left_item_active':''?>">
+            <a href="?do=coffee&type=Coffee" class=" left_item <?=($do == 'coffee')?'left_item_active':''?>">
                 Coffee
             </a>
             <a href="?do=beans" class=" left_item <?=($do == 'bean')?'left_item_active':''?>">
