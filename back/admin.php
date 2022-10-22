@@ -144,6 +144,7 @@ function reg() {
 
     let acc = $("#acc").val();
     let pw = $("#pw").val();
+
     if (acc == '' || pw == '') {
         Swal.fire({
             icon: 'error',

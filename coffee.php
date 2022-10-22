@@ -38,51 +38,22 @@ include "./base.php";
                 <div class="line">&nbsp;</div>
                 <h1>Coffee</h1>
             </div>
-            <div class="col">
-                <div class="mt-3 above">
-                    <span class="cn">義式濃縮</span>
-                    <span class="jp" style="display:none;">エスプレッソ</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Espresso</span>
-                    <span class="price">$120</span>
-                </div>
+            <div class="col" id="coffee_items">
 
-                <div class="mt-3 above">
-                    <span class="cn">美式</span>
-                    <span class="jp" style="display:none;">アメリカーノ</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Americano</span>
-                    <span class="price">$130</span>
-                </div>
+                <!-- 咖啡內文這邊 -->
 
-                <div class="mt-3 above">
-                    <span class="cn">拿鐵</span>
-                    <span class="jp" style="display:none;">カフェラテ</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Caffè latte</span>
-                    <span class="price">$160</span>
-                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 title">
+                <div class="line">&nbsp;</div>
+                <h1>Pour Over Coffee</h1>
+            </div>
+            <div class="col" id="pour_items">
 
-                <div class="mt-3 above">
-                    <span class="cn">風味拿鐵（榛果、香草、焦糖瑪琪朵、摩卡、抹茶）</span>
-                    <span class="jp" style="display:none;">フレーバーラテ（ヘーゼルナッツ、バニラ、キャラメル、モカ、抹茶）</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)</span>
-                    <span class="price">$180</span>
-                </div>
+                <!-- 手沖內文這邊 -->
 
-                <div class="mt-3 above">
-                    <span class="cn">焦糖瑪奇朵</span>
-                    <span class="jp" style="display:none;">キャラメルマキアート</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Caramel macchiato</span>
-                    <span class="price">$180</span>
-                </div>
             </div>
         </div>
 
@@ -91,42 +62,10 @@ include "./base.php";
                 <div class="line">&nbsp;</div>
                 <h1>Coffe Cocktail</h1>
             </div>
-            <div class="col">
-                <div class="mt-3 above">
-                    <span class="cn">愛爾蘭咖啡</span>
-                    <span class="jp" style="display:none;">アイリッシュコーヒー</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Irish coffee</span>
-                    <span class="price">$220</span>
-                </div>
+            <div class="col" id="cocktail_items">
 
-                <div class="mt-3 above">
-                    <span class="cn">咖啡馬丁尼</span>
-                    <span class="jp" style="display:none;">エスプレッソ・マティーニ</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Expresso Martini</span>
-                    <span class="price">$200</span>
-                </div>
+                <!-- 咖啡調酒內文這邊 -->
 
-                <div class="mt-3 above">
-                    <span class="cn">咖啡琴湯尼</span>
-                    <span class="jp" style="display:none;">エスプレッソ・ジントニック</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Turbo Gin & Tonic</span>
-                    <span class="price">$200</span>
-                </div>
-
-                <div class="mt-3 above">
-                    <span class="cn">漂浮咖啡波本</span>
-                    <span class="jp" style="display:none;">バーボンコーヒーフロート</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Coffee Bourbon Float</span>
-                    <span class="price">$220</span>
-                </div>
             </div>
         </div>
 
@@ -135,24 +74,8 @@ include "./base.php";
                 <div class="line">&nbsp;</div>
                 <h1>Tea</h1>
             </div>
-            <div class="col">
-                <div class="mt-3 above">
-                    <span class="cn">水果茶</span>
-                    <span class="jp" style="display:none;">フルーツティー</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Fruit Tea</span>
-                    <span class="price">$160</span>
-                </div>
+            <div class="col" id="tea_items">
 
-                <div class="mt-3 above">
-                    <span class="cn">花草茶</span>
-                    <span class="jp" style="display:none;">フレーバーティー</span>
-                </div>
-                <div class="mt-1 under">
-                    <span class="en">Flour Tea</span>
-                    <span class="price">$180</span>
-                </div>
             </div>
         </div>
 
@@ -176,6 +99,21 @@ include "./base.php";
         })
 
         $("#bubble").show().delay(2500).fadeOut();
+
+
+
+        $.post("./get/getcoffee.php", {type:'Coffee'}, (res) => {
+            $("#coffee_items").html(res)
+        })
+        $.post("./get/getcoffee.php", {type:'Pour'}, (res) => {
+            $("#pour_items").html(res)
+        })
+        $.post("./get/getcoffee.php", {type:'Cocktail'}, (res) => {
+            $("#cocktail_items").html(res)
+        })
+        $.post("./get/getcoffee.php", {type:'Tea'}, (res) => {
+            $("#tea_items").html(res)
+        })
     </script>
 </body>
 
