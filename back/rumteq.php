@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Gin&Vodka
+                Whiskey
             </li>
         </ol>
     </nav>
@@ -15,12 +15,13 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Gin&Vodka
+                    Whiskey
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=ginvodka&type=Gin"  class="title_type <?=($_GET['type']=='Gin')?'liquor_active':''?>">Gin</a>
-                <a href="?do=ginvodka&type=Vodka" class="title_type <?=($_GET['type']=='Vodka')?'liquor_active':''?>">Vodka</a>
+                <a href="?do=whiskey&type=Single"  class="title_type <?=($_GET['type']=='Single')?'liquor_active':''?>">Single</a>
+                <a href="?do=whiskey&type=Blended" class="title_type <?=($_GET['type']=='Blended')?'liquor_active':''?>">Blended</a>
+                <a href="?do=whiskey&type=Bourbon" class="title_type <?=($_GET['type']=='Bourbon')?'liquor_active':''?>">Bourbon</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
@@ -31,7 +32,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Ginvodka->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
+        $rows = $Whiskey->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group flex pr-3">
@@ -154,9 +155,9 @@
                         <div class="form-group flex" style="justify-content: space-evenly;">
                             <div class="pt-4 ml-4">
                                 <select name="type" id="type">
-                                    <option value="Gin">Gin</option>
-                                    <option value="Vodka">Vodka</option>
-                                    
+                                    <option value="Single">Single</option>
+                                    <option value="Blended">Blended</option>
+                                    <option value="Bourbon">Bourbon</option>
                                 </select>
                             </div>
                             <div>
@@ -210,9 +211,9 @@
                         </div>
 
                         <?php
-                        $rank = $Ginvodka->math('max','rank',['type'=>$_GET['type']])+1
+                        $rank = $Whiskey->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
-                            <input type="hidden" name="table" id="table" value="ginvodka">
+                            <input type="hidden" name="table" id="table" value="whiskey">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
@@ -296,7 +297,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./edit_modal/ginvodka.php',{editid},(res)=>{
+    $.post('./edit_modal/whiskey.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

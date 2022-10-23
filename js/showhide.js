@@ -10,8 +10,8 @@ $(".sh_bg").click(function() {
         let id = $(this).data('id');
 
         $.post('./api/showhide.php', {id,sh,table}, (res) => {
-            console.log(res);
-            location.reload();
+            // console.log(res);
+            // location.reload();
         })
 
     } else {
@@ -25,8 +25,8 @@ $(".sh_bg").click(function() {
         let id = $(this).data('id');
 
         $.post('./api/showhide.php', {id,sh,table}, (res) => {
-            console.log(res);
-            location.reload();
+            // console.log(res);
+            // location.reload();
         })
     }
 })

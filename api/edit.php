@@ -35,13 +35,15 @@ switch ($table) {
         $Brandy->save($_POST);
         to("../back.php?do=brandy&type={$_POST['type']}");
         break;
-    case '':
+    case 'ginvodka':
         unset($_POST['table']);
-        
+        $Ginvodka->save($_POST);
+        to("../back.php?do=ginvodka&type={$_POST['type']}");
         break;
-    case '':
+    case 'rumteq':
         unset($_POST['table']);
-        
+        $Rumteq->save($_POST);
+        to("../back.php?do=rumteq&type={$_POST['type']}");
         break;
     case '':
         unset($_POST['table']);
