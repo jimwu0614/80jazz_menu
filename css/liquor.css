@@ -14,7 +14,7 @@
     height: 100vh;
 }
 
-.speech_bubble_liquer {
+.speech_bubble_liquor {
     position: absolute;
     background: rgba(20, 253, 145 ,0.8);
     border-radius: 0.4em;
@@ -28,7 +28,7 @@
     font-family: Arial, Helvetica, sans-serif8;
 }
 
-.speech_bubble_liquer:after {
+.speech_bubble_liquor:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
@@ -42,7 +42,7 @@
 	margin-bottom: -15px;
 }
 @media (min-width: 768px) {
-    .speech_bubble_liquer{
+    .speech_bubble_liquor{
         left: 15rem;
     }
 }

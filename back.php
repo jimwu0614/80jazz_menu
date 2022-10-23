@@ -92,8 +92,8 @@ if(empty($_SESSION['user'])){
             <a href="?do=rumteq&type=Rum" class=" left_item <?=($do == 'rumteq')?'left_item_active':''?>">
                 Rum&Tequila
             </a>
-            <a href="?do=beerlique&type=Beer" class=" left_item <?=($do == 'beerliquer')?'left_item_active':''?>">
-                Beer&Liquer
+            <a href="?do=beerliquor&type=Beer" class=" left_item <?=($do == 'beerliquor')?'left_item_active':''?>">
+                Beer&Liquor
             </a>
             <a href="?do=sake&type=Sake" class=" left_item <?=($do == 'sake')?'left_item_active':''?>">
                 Sake&Shochu

@@ -27,9 +27,9 @@ switch ($table) {
         unset($_POST['table']);
         $Rumteq->save($_POST);
         break;
-    case 'beerliquer':
+    case 'beerliquor':
         unset($_POST['table']);
-        $Beerliquer->save($_POST);
+        $Beerliquor->save($_POST);
         break;
     case 'sake':
         unset($_POST['table']);

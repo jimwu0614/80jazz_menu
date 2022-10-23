@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Brandy
+                Gin&Vodka
             </li>
         </ol>
     </nav>
@@ -15,12 +15,12 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Brandy
+                Gin&Vodka
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=brandy&type=Cognac"  class="title_type <?=($_GET['type']=='Cognac')?'liquer_active':''?>">Cognac</a>
-                <a href="?do=brandy&type=Armagnac" class="title_type <?=($_GET['type']=='Armagnac')?'liquer_active':''?>">Armagnac</a>
+                <a href="?do=ginvodka&type=Gin"  class="title_type <?=($_GET['type']=='Gin')?'liquor_active':''?>">Gin</a>
+                <a href="?do=ginvodka&type=Vodka" class="title_type <?=($_GET['type']=='Vodka')?'liquor_active':''?>">Vodka</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
@@ -31,7 +31,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Brandy->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
+        $rows = $Ginvodka->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group flex pr-3">
@@ -154,8 +154,8 @@
                         <div class="form-group flex ">
                             <div class="pt-4 ml-4">
                                 <select name="type" id="type">
-                                    <option value="Cognac">Cognac</option>
-                                    <option value="Armagnac">Armagnac</option>
+                                    <option value="Gin">Gin</option>
+                                    <option value="Vodka">Vodka</option>
                                 </select>
                             </div>
                             <div style="margin-left: 5rem;">
@@ -209,9 +209,9 @@
                         </div>
 
                         <?php
-                        $rank = $Brandy->math('max','rank',['type'=>$_GET['type']])+1
+                        $rank = $GinVodka->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
-                            <input type="hidden" name="table" id="table" value="brandy">
+                            <input type="hidden" name="table" id="table" value="ginvodka">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
@@ -293,7 +293,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./edit_modal/brandy.php',{editid},(res)=>{
+    $.post('./edit_modal/ginvodka.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

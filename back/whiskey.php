@@ -19,9 +19,9 @@
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=whiskey&type=Single"  class="title_type <?=($_GET['type']=='Single')?'liquer_active':''?>">Single</a>
-                <a href="?do=whiskey&type=Blended" class="title_type <?=($_GET['type']=='Blended')?'liquer_active':''?>">Blended</a>
-                <a href="?do=whiskey&type=Bourbon" class="title_type <?=($_GET['type']=='Bourbon')?'liquer_active':''?>">Bourbon</a>
+                <a href="?do=whiskey&type=Single"  class="title_type <?=($_GET['type']=='Single')?'liquor_active':''?>">Single</a>
+                <a href="?do=whiskey&type=Blended" class="title_type <?=($_GET['type']=='Blended')?'liquor_active':''?>">Blended</a>
+                <a href="?do=whiskey&type=Bourbon" class="title_type <?=($_GET['type']=='Bourbon')?'liquor_active':''?>">Bourbon</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">

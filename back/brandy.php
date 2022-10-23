@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=brandy&type=Cognac"  class="title_type <?=($_GET['type']=='Cognac')?'liquer_active':''?>">Cognac</a>
-                <a href="?do=brandy&type=Armagnac" class="title_type <?=($_GET['type']=='Armagnac')?'liquer_active':''?>">Armagnac</a>
+                <a href="?do=brandy&type=Cognac"  class="title_type <?=($_GET['type']=='Cognac')?'liquor_active':''?>">Cognac</a>
+                <a href="?do=brandy&type=Armagnac" class="title_type <?=($_GET['type']=='Armagnac')?'liquor_active':''?>">Armagnac</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">

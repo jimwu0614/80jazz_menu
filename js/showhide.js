@@ -11,7 +11,7 @@ $(".sh_bg").click(function() {
 
         $.post('./api/showhide.php', {id,sh,table}, (res) => {
             console.log(res);
-            // location.reload();
+            location.reload();
         })
 
     } else {
@@ -26,7 +26,7 @@ $(".sh_bg").click(function() {
 
         $.post('./api/showhide.php', {id,sh,table}, (res) => {
             console.log(res);
-            // location.reload();
+            location.reload();
         })
     }
 })

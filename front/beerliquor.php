@@ -1,8 +1,8 @@
-<div class="beerliquer"></div>
+<div class="beerliquor"></div>
 <div class="box">
     <div class="liquortitle">
         <span class="type active">Beer</span>
-        <span class="type">Liquer</span>
+        <span class="type">liquor</span>
 
     </div>
     <div class="blur">
@@ -13,7 +13,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./get/getbeerliquer.php", {type:'Beer'}, (res) => {
+        $.post("./get/getbeerliquor.php", {type:'Beer'}, (res) => {
 
             $("#table").html(res)
         })
@@ -30,7 +30,7 @@
         let type = $(this).text();
         console.log(type);
 
-        $.post("./get/getbeerliquer.php", {type}, (res) => {
+        $.post("./get/getbeerliquor.php", {type}, (res) => {
             $("#table").html(res)
         })
     })

@@ -19,8 +19,8 @@
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=Cocktail&type=Classic" class="title_type <?= ($_GET['type'] == 'Classic') ? 'liquer_active' : '' ?>">Classic</a>
-                <a href="?do=Cocktail&type=Signature" class="title_type <?= ($_GET['type'] == 'Signature') ? 'liquer_active' : '' ?>">Signature</a>
+                <a href="?do=Cocktail&type=Classic" class="title_type <?= ($_GET['type'] == 'Classic') ? 'liquor_active' : '' ?>">Classic</a>
+                <a href="?do=Cocktail&type=Signature" class="title_type <?= ($_GET['type'] == 'Signature') ? 'liquor_active' : '' ?>">Signature</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">

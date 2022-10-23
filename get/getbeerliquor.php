@@ -13,7 +13,7 @@ if ($_POST['type']=='Beer') {
 </tr>
 <tbody class="tbody">
 <?php
-$rows = $Beerliquer->all(['type'=>$_POST['type'],'sh'=>1],"ORDER BY RANK ASC");
+$rows = $Beerliquor->all(['type'=>$_POST['type'],'sh'=>1],"ORDER BY RANK ASC");
 foreach ($rows as $key => $value) {
     ?>
 
@@ -27,7 +27,7 @@ foreach ($rows as $key => $value) {
 ?>     
 </tbody>
 <?php
-} else if ($_POST['type']=='Liquer') {
+} else if ($_POST['type']=='liquor') {
 ?>
 <tr>
     <td class="w60"></td>
@@ -37,12 +37,12 @@ foreach ($rows as $key => $value) {
 <tbody class="tbody">
 
 <?php
-$rows = $Beerliquer->all(['type'=>'Liquer']);
+$rows = $Beerliquor->all(['type'=>'liquor']);
 foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre data-type="liquer" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
+        <td><pre data-type="liquor" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
 
 <?php
         if ($value['glass']==0) {

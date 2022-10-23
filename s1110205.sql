@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- 主機： localhost
--- 產生時間： 2022 年 10 月 20 日 19:26
--- 伺服器版本： 10.3.34-MariaDB-0ubuntu0.20.04.1
--- PHP 版本： 7.4.3
+-- 主機： 127.0.0.1
+-- 產生時間： 2022-10-23 14:50:45
+-- 伺服器版本： 10.4.24-MariaDB
+-- PHP 版本： 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,10 +70,10 @@ INSERT INTO `jazz_beans` (`id`, `name`, `land`, `roast`, `price`, `intro`, `rank
 -- --------------------------------------------------------
 
 --
--- 資料表結構 `jazz_beerliquer`
+-- 資料表結構 `jazz_beerliquor`
 --
 
-CREATE TABLE `jazz_beerliquer` (
+CREATE TABLE `jazz_beerliquor` (
   `id` int(11) NOT NULL,
   `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '品名(英文)',
@@ -92,10 +92,10 @@ CREATE TABLE `jazz_beerliquer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- 傾印資料表的資料 `jazz_beerliquer`
+-- 傾印資料表的資料 `jazz_beerliquor`
 --
 
-INSERT INTO `jazz_beerliquer` (`id`, `type`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
+INSERT INTO `jazz_beerliquor` (`id`, `type`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
 (1, 'Liquer', 'Baileys Irish Cream', '愛爾蘭貝禮詩甜奶酒', '', 0, '0000-00-00', '', 2500, 350, '', '', '', 1, 1),
 (2, 'Liquer', 'Dita Lychee Liqueur', '法國Dita荔枝香甜利口酒', '', 0, '0000-00-00', '', 2000, 0, '', '', '(送兩罐雪碧)', 2, 1),
 (3, 'Beer', 'Budweiser\r\n330ml', '百威啤酒', '', 0, '0000-00-00', '', 500, 100, '', '', '', 1, 1),
@@ -204,7 +204,15 @@ INSERT INTO `jazz_coffee` (`id`, `type`, `name`, `chinese`, `japanese`, `price`,
 (1, 'Coffee', 'Espresso', '義式濃縮', 'エスプレッソ', 120, 1, 1, 0),
 (2, 'Coffee', 'Americano', '美式', 'アメリカーノ', 130, 2, 1, 0),
 (4, 'Coffee', 'Caffè latte', '拿鐵', 'カフェラテ', 160, 3, 1, 0),
-(5, 'Coffee', 'Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)', '風味拿鐵（榛果、香草、焦糖瑪琪朵、摩卡、抹茶）', 'フレーバーラテ（ヘーゼルナッツ、バニラ、キャラメル、モカ、抹茶）', 180, 4, 1, 1);
+(5, 'Coffee', 'Flavored latte(Hazelnut, Vanilla, Caramel, Mocha, Matcha)', '風味拿鐵（榛果、香草、焦糖瑪琪朵、摩卡、抹茶）', 'フレーバーラテ（ヘーゼルナッツ、バニラ、キャラメル、モカ、抹茶）', 180, 4, 1, 1),
+(6, 'Coffee', 'Caramel macchiato', '焦糖瑪奇朵', 'キャラメルマキアート', 180, 5, 1, 0),
+(7, 'Cocktail', 'Irish coffee', '愛爾蘭咖啡', 'アイリッシュコーヒー', 220, 1, 1, 0),
+(8, 'Cocktail', 'Expresso Martini', '咖啡馬丁尼', 'エスプレッソ・マティーニ', 200, 2, 1, 0),
+(10, 'Cocktail', 'Turbo Gin & Tonic', '咖啡琴湯尼', 'エスプレッソ・ジントニック', 200, 3, 1, 0),
+(11, 'Cocktail', 'Coffee Bourbon Float', '漂浮咖啡波本', 'バーボンコーヒーフロート', 220, 4, 1, 0),
+(12, 'Tea', 'Fruit Tea', '水果茶', 'フルーツティー', 160, 5, 1, 0),
+(13, 'Tea', 'Flour Tea', '花草茶', 'フレーバーティー', 180, 6, 1, 0),
+(14, 'Pour', 'White Honey', '白蜜甜心', '白蜜甜心', 130, 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -440,9 +448,9 @@ ALTER TABLE `jazz_beans`
   ADD PRIMARY KEY (`id`);
 
 --
--- 資料表索引 `jazz_beerliquer`
+-- 資料表索引 `jazz_beerliquor`
 --
-ALTER TABLE `jazz_beerliquer`
+ALTER TABLE `jazz_beerliquor`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -516,9 +524,9 @@ ALTER TABLE `jazz_beans`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beerliquer`
+-- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beerliquor`
 --
-ALTER TABLE `jazz_beerliquer`
+ALTER TABLE `jazz_beerliquor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
@@ -537,7 +545,7 @@ ALTER TABLE `jazz_cocktail`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_coffee`
 --
 ALTER TABLE `jazz_coffee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_ginvodka`

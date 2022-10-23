@@ -19,11 +19,11 @@
                 </div>
             </div>
             <div class="form_item_Title_middle" style="width:50%;">
-                <a href="?do=coffee&type=Coffee"  class="title_type <?=($_GET['type']=='Coffee')?'liquer_active':''?>">Coffee</a>
-                <a href="?do=coffee&type=Pour" class="title_type <?=($_GET['type']=='Pour')?'liquer_active':''?>">Pour</a>
-                <a href="?do=coffee&type=Cold" class="title_type <?=($_GET['type']=='Cold')?'liquer_active':''?>">Cold</a>
-                <a href="?do=coffee&type=Cocktail" class="title_type <?=($_GET['type']=='Cocktail')?'liquer_active':''?>">Cocktail</a>
-                <a href="?do=coffee&type=Tea" class="title_type <?=($_GET['type']=='Tea')?'liquer_active':''?>">Tea</a>
+                <a href="?do=coffee&type=Coffee"  class="title_type <?=($_GET['type']=='Coffee')?'liquor_active':''?>">Coffee</a>
+                <a href="?do=coffee&type=Pour" class="title_type <?=($_GET['type']=='Pour')?'liquor_active':''?>">Pour</a>
+                <a href="?do=coffee&type=Cold" class="title_type <?=($_GET['type']=='Cold')?'liquor_active':''?>">Cold</a>
+                <a href="?do=coffee&type=Cocktail" class="title_type <?=($_GET['type']=='Cocktail')?'liquor_active':''?>">Cocktail</a>
+                <a href="?do=coffee&type=Tea" class="title_type <?=($_GET['type']=='Tea')?'liquor_active':''?>">Tea</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">

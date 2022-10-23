@@ -45,11 +45,11 @@ include "./base.php";
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
                 <li><a href="?do=rumteq">Rum&Tequila</a></li>
-                <li><a href="?do=beerliquer">Beer&Liquer</a></li>
+                <li><a href="?do=beerliquor">Beer&Liquor</a></li>
                 <li><a href="?do=sake">Sake&Shochu</a></li>
                 <li><a href="?do=wine" id="wine">Wine</a></li>
-                <li><a href="?do=cocktail">Cocktail</a></li>
-                <li><a href="?do=softdrink">Softdrink</a></li>
+                <li><a href="?do=cocktail">Cocktails</a></li>
+                <li><a href="?do=softdrink">Softdrinks</a></li>
                 <li><a href="?do=meal" id="meal">Meal</a></li>
                 <li><a href="?do=event" id="event">Events</a></li>
             </ul>
