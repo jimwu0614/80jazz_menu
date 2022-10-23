@@ -145,6 +145,7 @@ html {
 
 .sidebar-brand a {
     color: #ddd;
+    text-decoration: none;
 }
 
 .sidebar-brand a:hover {

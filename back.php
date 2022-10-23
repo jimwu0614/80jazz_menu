@@ -107,8 +107,8 @@ if(empty($_SESSION['user'])){
             <a href="?do=soft" class=" left_item <?=($do == 'softdrink')?'left_item_active':''?>">
                 Softdrinks
             </a>
-            <a href="?do=event" class=" left_item <?=($do == 'event')?'left_item_active':''?>">
-                Event
+            <a href="?do=events" class=" left_item <?=($do == 'event')?'left_item_active':''?>">
+                Events
             </a>
             <a href="?do=admin" class=" left_item <?=($do == 'admin')?'left_item_active':''?>">
                 帳號管理
