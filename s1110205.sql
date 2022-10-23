@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-10-23 14:50:45
+-- 產生時間： 2022-10-23 20:42:42
 -- 伺服器版本： 10.4.24-MariaDB
 -- PHP 版本： 8.1.6
 
@@ -76,17 +76,17 @@ INSERT INTO `jazz_beans` (`id`, `name`, `land`, `roast`, `price`, `intro`, `rank
 CREATE TABLE `jazz_beerliquor` (
   `id` int(11) NOT NULL,
   `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '品名(英文)',
-  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '  ',
+  `memo` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '\' \'',
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '\' \'' COMMENT '品名(英文)',
+  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '\'  \'',
   `image` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '圖片',
   `inprice` int(11) NOT NULL DEFAULT 0 COMMENT '價格',
   `inputtime` date NOT NULL DEFAULT current_timestamp() COMMENT '報價時間',
   `supply` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '廠商',
-  `bottle` int(11) NOT NULL DEFAULT 0,
-  `glass` int(11) NOT NULL DEFAULT 0,
-  `memo` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
+  `bottle` int(11) NOT NULL DEFAULT 0 COMMENT '整瓶價/啤酒六瓶價',
+  `glass` int(11) NOT NULL DEFAULT 0 COMMENT '單杯價/啤酒單瓶價',
   `intro` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '簡介',
-  `promo` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '促銷',
+  `promo` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '\' \'' COMMENT '促銷',
   `rank` int(11) NOT NULL,
   `sh` tinyint(1) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -95,11 +95,11 @@ CREATE TABLE `jazz_beerliquor` (
 -- 傾印資料表的資料 `jazz_beerliquor`
 --
 
-INSERT INTO `jazz_beerliquor` (`id`, `type`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
-(1, 'Liquer', 'Baileys Irish Cream', '愛爾蘭貝禮詩甜奶酒', '', 0, '0000-00-00', '', 2500, 350, '', '', '', 1, 1),
-(2, 'Liquer', 'Dita Lychee Liqueur', '法國Dita荔枝香甜利口酒', '', 0, '0000-00-00', '', 2000, 0, '', '', '(送兩罐雪碧)', 2, 1),
-(3, 'Beer', 'Budweiser\r\n330ml', '百威啤酒', '', 0, '0000-00-00', '', 500, 100, '', '', '', 1, 1),
-(4, 'Beer', 'Peroni Beer\r\n330ml', '沛羅尼啤酒', '', 0, '0000-00-00', '', 750, 150, '', '', '', 2, 1);
+INSERT INTO `jazz_beerliquor` (`id`, `type`, `memo`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `intro`, `promo`, `rank`, `sh`) VALUES
+(1, 'Liquor', '', 'Baileys Irish Cream', '愛爾蘭貝禮詩甜奶酒', '', 0, '0000-00-00', '', 2500, 350, '', '', 1, 1),
+(2, 'Liquor', '', 'Dita Lychee Liqueur', '法國Dita荔枝香甜利口酒', '', 0, '0000-00-00', '', 2000, 0, '', '(送兩罐雪碧)', 2, 1),
+(3, 'Beer', '', 'Budweiser\r\n330ml', '百威啤酒', '', 0, '0000-00-00', '', 500, 100, '', '', 1, 1),
+(4, 'Beer', '', 'Peroni Beer\r\n330ml', '沛羅尼啤酒', '', 0, '0000-00-00', '', 750, 150, '', '', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -210,8 +210,8 @@ INSERT INTO `jazz_coffee` (`id`, `type`, `name`, `chinese`, `japanese`, `price`,
 (8, 'Cocktail', 'Expresso Martini', '咖啡馬丁尼', 'エスプレッソ・マティーニ', 200, 2, 1, 0),
 (10, 'Cocktail', 'Turbo Gin & Tonic', '咖啡琴湯尼', 'エスプレッソ・ジントニック', 200, 3, 1, 0),
 (11, 'Cocktail', 'Coffee Bourbon Float', '漂浮咖啡波本', 'バーボンコーヒーフロート', 220, 4, 1, 0),
-(12, 'Tea', 'Fruit Tea', '水果茶', 'フルーツティー', 160, 5, 1, 0),
-(13, 'Tea', 'Flour Tea', '花草茶', 'フレーバーティー', 180, 6, 1, 0),
+(12, 'Tea', 'Fruit Tea', '水果茶', 'フルーツティー', 160, 1, 1, 0),
+(13, 'Tea', 'Flour Tea', '花草茶', 'フレーバーティー', 180, 2, 1, 0),
 (14, 'Pour', 'White Honey', '白蜜甜心', '白蜜甜心', 130, 1, 1, 0);
 
 -- --------------------------------------------------------
@@ -248,7 +248,7 @@ INSERT INTO `jazz_ginvodka` (`id`, `type`, `memo`, `name`, `chinese`, `image`, `
 (3, 'Gin', '日本琴酒', 'Roku Gin', '日本六ROKU頂級琴酒', '', 0, '0000-00-00', '', 3500, 350, '', '', 3, 1),
 (4, 'Gin', '', 'Hendricks Gin', '蘇格蘭亨利爵士琴酒', '', 0, '0000-00-00', '', 3800, 380, '', '', 4, 1),
 (5, 'Gin', '', 'Hendricks Lunar Gin', '蘇格蘭亨利爵士月神琴酒', '', 0, '0000-00-00', '', 3900, 390, '', '', 5, 1),
-(6, 'Vodka', '', 'Absolut Blue', '絕對伏特加', '', 0, '0000-00-00', '', 3200, 350, '', '', 1, 1),
+(6, 'Vodka', '', 'Absolute Blue', '絕對伏特加', '', 0, '0000-00-00', '', 3200, 350, ' ', ' ', 1, 1),
 (7, 'Vodka', '', 'Belvedere Pure Vodka', '波蘭雪樹伏特加', '', 0, '0000-00-00', '', 4000, 0, '', '', 2, 1),
 (8, 'Vodka', '', 'GreyGoose', '法國灰雁原味伏特加', '', 0, '0000-00-00', '', 4000, 0, '', '', 3, 1);
 
@@ -281,11 +281,11 @@ CREATE TABLE `jazz_rumteq` (
 --
 
 INSERT INTO `jazz_rumteq` (`id`, `type`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `bottle`, `glass`, `memo`, `intro`, `promo`, `rank`, `sh`) VALUES
-(1, 'Tequila', 'Jose Cuervo\nEspecial Gold', '墨西哥金快活龍舌蘭酒', '', 0, 0, '', 2500, 350, '', '', '', 1, 1),
+(1, 'Tequila', 'Jose Cuervo\nEspecial Gold', '墨西哥金快活龍舌蘭酒', '', 0, 0, '', 3500, 350, '', '', '', 1, 1),
 (2, 'Tequila', 'Don Julio\nBlanco Tequila', '唐‧胡立歐 Blanco龍舌蘭', '', 0, 0, '', 4000, 350, '', '', '', 2, 1),
 (3, 'Tequila', 'Don Julio\nReposado Tequila', '唐‧胡立歐 Reposado龍舌蘭', '', 0, 0, '', 4200, 400, '', '', '', 3, 1),
 (4, 'Tequila', 'Patron Reposado', '培恩 金樽龍舌蘭', '', 0, 0, '', 4500, 420, '', '', '', 4, 1),
-(6, 'Rum', 'Bacardi', '百加得蘭姆酒', '', 0, 0, '', 2500, 350, '', '', '', 1, 1),
+(6, 'Rum', 'Bacardi Blanc', '百加得蘭姆酒', '', 0, 0, '', 2500, 350, '', ' ', ' ', 1, 1),
 (7, 'Rum', 'Captain Morgan', '摩根船長蘭姆酒', '', 0, 0, '', 2500, 350, '', '', '', 2, 1),
 (8, 'Rum', 'Diplomatico Reserva \r\nExclusiva', '外交官蘭姆酒', '', 0, 0, '', 3500, 350, '', '', '', 3, 1);
 
@@ -320,7 +320,10 @@ INSERT INTO `jazz_sake` (`id`, `type`, `memo`, `name`, `image`, `inprice`, `inpu
 (1, 'Shochu', '', '雲州庵-蕎麥燒酎', '', 0, '0000-00-00', '', 2800, 250, '', '', 1, 1),
 (2, 'Shochu', '', '天孫降臨-芋燒酎', '', 0, '0000-00-00', '', 2800, 250, '', '', 2, 1),
 (3, 'Shochu', '', '黑馬 長期貯藏-麥燒酎', '', 0, '0000-00-00', '', 3000, 300, '', '', 3, 1),
-(4, 'Shochu', '', '一本槍 琥珀-麥燒酎', '', 0, '0000-00-00', '', 3500, 350, '', '', 4, 1);
+(4, 'Shochu', '', '一本槍 琥珀-麥燒酎', '', 0, '0000-00-00', '', 3500, 350, '', '', 4, 1),
+(12, 'Shochu', 'test', 'test', ' ', 0, '0000-00-00', '', 0, 0, '', '', 5, 1),
+(13, 'Sake', 'sdsds', 'sdsds', ' ', 0, '0000-00-00', '', 0, 0, '', '', 1, 1),
+(14, 'Sake', 'cccc', 'ccccc', ' ', 0, '0000-00-00', '', 0, 0, '', '', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -330,31 +333,32 @@ INSERT INTO `jazz_sake` (`id`, `type`, `memo`, `name`, `image`, `inprice`, `inpu
 
 CREATE TABLE `jazz_soft` (
   `id` int(11) NOT NULL,
-  `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `inprice` int(11) NOT NULL,
-  `inputtime` date NOT NULL,
-  `supply` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `glass` int(11) NOT NULL,
-  `memo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `promo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `rank` int(11) NOT NULL,
-  `sh` tinyint(1) NOT NULL DEFAULT 1
+  `name` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '品名(英文)',
+  `chinese` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '中文',
+  `image` text COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '圖片',
+  `inprice` int(11) NOT NULL DEFAULT 0 COMMENT '進價',
+  `inputtime` date NOT NULL COMMENT '報價時間',
+  `supply` varchar(6) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '廠商',
+  `price` int(4) NOT NULL DEFAULT 0 COMMENT '價格',
+  `memo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
+  `promo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ' COMMENT '促銷',
+  `rank` tinyint(4) NOT NULL DEFAULT 0 COMMENT '排序',
+  `sh` tinyint(1) NOT NULL DEFAULT 1 COMMENT '上下架'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `jazz_soft`
 --
 
-INSERT INTO `jazz_soft` (`id`, `name`, `chinese`, `inprice`, `inputtime`, `supply`, `glass`, `memo`, `promo`, `rank`, `sh`) VALUES
-(1, 'Coke', '可口可樂', 0, '0000-00-00', '', 150, '', '', 1, 1),
-(2, '7-UP', '七喜', 0, '0000-00-00', '', 150, '', '', 2, 1),
-(3, 'Tonic Water', '通寧水', 0, '0000-00-00', '', 150, '', '', 3, 1),
-(4, 'Ginger Ale', '薑汁汽水', 0, '0000-00-00', '', 150, '', '', 4, 1),
-(5, 'Red Bull', '紅牛', 0, '0000-00-00', '', 200, '', '', 5, 1),
-(6, 'Orange Juice', '現榨柳橙汁', 0, '0000-00-00', '', 200, '', '', 6, 1),
-(7, 'S.Pellegrino Sparking Water', '聖沛黎洛氣泡礦泉水', 0, '0000-00-00', '', 200, '', '', 7, 1),
-(8, 'Acqua Panna Mineral Water', '普娜天然礦泉水', 0, '0000-00-00', '', 200, '', '', 8, 1);
+INSERT INTO `jazz_soft` (`id`, `name`, `chinese`, `image`, `inprice`, `inputtime`, `supply`, `price`, `memo`, `promo`, `rank`, `sh`) VALUES
+(1, 'Coke', '可口可樂', ' ', 0, '0000-00-00', '', 150, '', '', 1, 1),
+(2, '7-UP', '七喜', ' ', 0, '0000-00-00', '', 150, '', '', 2, 1),
+(3, 'Tonic Water', '通寧水', ' ', 0, '0000-00-00', '', 150, '', '', 3, 1),
+(4, 'Ginger Ale', '薑汁汽水', ' ', 0, '0000-00-00', '', 150, '', '', 4, 1),
+(5, 'Red Bull', '紅牛', ' ', 0, '0000-00-00', '', 200, '', '', 5, 1),
+(6, 'Orange Juice', '現榨柳橙汁', ' ', 0, '0000-00-00', '', 200, '', '', 6, 1),
+(7, 'Acqua Panna Mineral Water', '普娜天然礦泉水', ' ', 0, '0000-00-00', '', 200, '', '', 7, 1),
+(8, 'S.Pellegrino Sparking Water', '聖沛黎洛氣泡礦泉水', ' ', 0, '0000-00-00', '', 200, '', '', 8, 1);
 
 -- --------------------------------------------------------
 
@@ -521,13 +525,13 @@ ALTER TABLE `jazz_admin`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beans`
 --
 ALTER TABLE `jazz_beans`
-  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_beerliquor`
 --
 ALTER TABLE `jazz_beerliquor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_brandy`
@@ -545,31 +549,31 @@ ALTER TABLE `jazz_cocktail`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_coffee`
 --
 ALTER TABLE `jazz_coffee`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_ginvodka`
 --
 ALTER TABLE `jazz_ginvodka`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_rumteq`
 --
 ALTER TABLE `jazz_rumteq`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_sake`
 --
 ALTER TABLE `jazz_sake`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_soft`
 --
 ALTER TABLE `jazz_soft`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `jazz_whiskey`
