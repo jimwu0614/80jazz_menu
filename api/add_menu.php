@@ -43,15 +43,17 @@ switch ($table) {
         unset($_POST['table']);
         $Cocktail->save($_POST);
         break;
-    case 'softdrink':
+    case 'soft':
         unset($_POST['table']);
         $Soft->save($_POST);
-        to("../back.php");
         break;
     case 'meal':
         unset($_POST['table']);
         $Meal->save($_POST);
-        to("../back.php");
+        break;
+    case 'events':
+        unset($_POST['table']);
+        $Meal->save($_POST);
         break;
 }
 

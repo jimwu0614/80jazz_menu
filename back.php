@@ -102,10 +102,10 @@ if(empty($_SESSION['user'])){
                 Wine
             </a>
             <a href="?do=cocktail&type=Classic" class=" left_item <?=($do == 'cocktail')?'left_item_active':''?>">
-                Cocktail
+                Cocktails
             </a>
-            <a href="?do=softdrink" class=" left_item <?=($do == 'softdrink')?'left_item_active':''?>">
-                Softdrink
+            <a href="?do=soft" class=" left_item <?=($do == 'softdrink')?'left_item_active':''?>">
+                Softdrinks
             </a>
             <a href="?do=event" class=" left_item <?=($do == 'event')?'left_item_active':''?>">
                 Event

@@ -43,11 +43,12 @@ switch ($table) {
         break;
     case 'sake':
         unset($_POST['table']);
-        
+        $Sake->save($_POST);
         break;
-    case '':
+    case 'soft':
         unset($_POST['table']);
-        
+        $Soft->save($_POST);
+        to("../back.php?do=$table");
         break;
     case '':
         unset($_POST['table']);

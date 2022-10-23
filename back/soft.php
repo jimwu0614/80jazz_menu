@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Coffee
+                Softdrinks
             </li>
         </ol>
     </nav>
@@ -15,15 +15,8 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Coffee
+                    Softdrinks
                 </div>
-            </div>
-            <div class="form_item_Title_middle" style="width:50%;">
-                <a href="?do=coffee&type=Coffee"  class="title_type <?=($_GET['type']=='Coffee')?'liquor_active':''?>">Coffee</a>
-                <a href="?do=coffee&type=Pour" class="title_type <?=($_GET['type']=='Pour')?'liquor_active':''?>">Pour</a>
-                <a href="?do=coffee&type=Cold" class="title_type <?=($_GET['type']=='Cold')?'liquor_active':''?>">Cold</a>
-                <a href="?do=coffee&type=Cocktail" class="title_type <?=($_GET['type']=='Cocktail')?'liquor_active':''?>">Cocktail</a>
-                <a href="?do=coffee&type=Tea" class="title_type <?=($_GET['type']=='Tea')?'liquor_active':''?>">Tea</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
@@ -34,11 +27,11 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Coffee->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
+        $rows = $Soft->all("ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
-            <div class="form_item_group">
-                <div class="form_item form_item_control">
+            <div class="form_item_group flex pr-3">
+                <div class="form_item form_item_control w100">
                     <span class="form_item_num">第<?= $key + 1 ?>筆資料</span>
                     <div class="form_item_btns">
                         <span class="form_item_smtitle">排序</span>
@@ -60,37 +53,62 @@
                                 <i class="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
-                            
+                    </div>
+                </div>
+
+                <div class="w60 mt-3 flex">
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">品項</div>
+                            <p><?= $row['name'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">中文</div>
+                            <p><?= $row['chinese'] ?></p>
+                        </div>
                     </div>
 
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">進價</div>
+                            <p><?= $row['inprice'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">報價時間</div>
+                            <p><?= $row['inputtime'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">廠商</div>
+                            <p><?= $row['supply'] ?></p>
+                        </div>
+                    </div>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">價格</div>
+                            <p><?= $row['price'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">促銷</div>
+                            <p><?= $row['promo'] ?></p>
+                        </div>
+                    </div>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">memo</div>
+                            <p><?= $row['memo'] ?></p>
+                        </div>                       
+                    </div>
                 </div>
-
-                <div class="form_item first_item">
-                    <div class="form_item_text">英文</div>
-                    <p><?= $row['name'] ?></p>
-                </div>
-
-                <div class="form_item">
-                    <div class="form_item_text">中文</div>
-                    <p><?= $row['chinese'] ?></p>
-                </div>
-
-                <div class="form_item">
-                    <div class="form_item_text">日文</div>
-                    <p><?= $row['japanese'] ?></p>
-                </div>
-
-                <div class="form_item">
-                    <div class="form_item_text">價格</div>
-                    <p><?= $row['price'] ?></p>
+                <div class="my-3 w40 redd " >
+                    照片預覽放這邊
                 </div>
                 
                 <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">
             </div>
 
-                <?php
-                }
-                ?>
+        <?php
+        }
+        ?>
          </div>
         <!-- data end -->
     </div>
@@ -112,52 +130,54 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-                        <?php if ($_GET['type']=="Coffee") { ?>
-                        <label class="col-form-label">分類</label>
-                        <p id="type">Coffee</p>
-
-                        <?php } else if($_GET['type']=="Pour"){ ?>
-                        <label class="col-form-label">分類</label>
-                        <p id="type">Pour</p>
-
-                        <?php }else if($_GET['type']=="Cold"){ ?>
-
-                        <label class="col-form-label">分類</label>
-                        <p id="type">Cold</p>
-
-                        <?php }else if($_GET['type']=="Cocktail"){ ?>
-                        <label class="col-form-label">分類</label>
-                        <p id="type">Cocktail</p>
-
-                        <?php }else if($_GET['type']=="Tea"){ ?>
-                        <label class="col-form-label">分類</label>
-                        <p id="type">Tea</p>
-
-                        <?php } ?>
-
-                        
-                        <div class="form-group">
-                            <label for="name" class="col-form-label">英文</label>
-                            <input type="text"  class="form-control" id="name">
+                        <div class="form-group flex">
+                            <div>
+                                <label for="name" class="col-form-label">品項</label>
+                                <input type="text" name="name" class="form-control" id="name">
+                            </div>
+                            <div>
+                                <label for="chinese" class="col-form-label">中文</label>
+                                <input type="text" name="chinese" class="form-control" id="chinese">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="chinese" class="col-form-label">中文</label>
-                            <input type="text" class="form-control" id="chinese">
+
+                        <div class="form-group flex_nowrap">
+                            <div>
+                                <label for="inprice" class="col-form-label">進價</label>
+                                <input type="number" name="inprice" class="form-control" id="inprice">
+                            </div>
+                            <div>
+                                <label for="inputtime" class="col-form-label">報價時間</label>
+                                <input type="date" name="inputtime" class="form-control" id="inputtime">
+                            </div>
+                            <div>
+                                <label for="supply" class="col-form-label">廠商</label>
+                                <input type="text" name="supply" class="form-control" id="supply">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="japanese" class="col-form-label">日文</label>
-                            <input type="text" class="form-control" id="japanese">
+
+                        <div class="form-group flex" style="justify-content: space-evenly;">
+                            <div>
+                                <label for="price" class="col-form-label">價格</label>
+                                <input type="number" name="price" class="form-control" id="price">
+                            </div>
+                             <div>
+                                <label for="promo" class="col-form-label">促銷</label>
+                                <textarea name="promo" id="promo" cols="20" rows="3"></textarea>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="price" class="col-form-label">價格</label>
-                            <input type="number" class="form-control" id="price">
+
+                        <div class="form-group flex">
+                           <div>
+                                <label for="memo"  class="col-form-label">Memo</label>
+                                <input type="text" name="memo" class="form-control" id="memo">
+                            </div>
                         </div>
+
                         <?php
-                        // dd($_GET);
-                        $rank = $Coffee->math('max','rank',['type'=>$_GET['type']])+1
-
+                        $rank = $Soft->math('max','rank')+1
                         ?>
-                            <input type="hidden" name="table" id="table" value="coffee">
+                            <input type="hidden" name="table" id="table" value="soft">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
@@ -209,23 +229,27 @@
 <script>
     // resume_add
 $('#addBtn').on('click', function() {
-    let type = $('#type').text();
     let name = $('#name').val();
     let chinese = $('#chinese').val();
-    let japanese = $('#japanese').val();
+    let inprice = $('#inprice').val();
+    let inputtime = $('#inputtime').val();
+    let supply = $('#supply').val();
     let price = $('#price').val();
+    let promo = $('#promo').val();
+    let memo = $('#memo').val();
+    
     let rank = $('#rank').val();
-    let table = 'coffee'
+    let table = $('#table').val();
 
-    console.log(type);
-    console.log(chinese);
-    $.post('./api/add_menu.php', {type, name, chinese, japanese, price, rank, table}, () => {
+    $.post('./api/add_menu.php', {name, chinese, inprice, inputtime, supply, price, promo, memo, rank, table}, (res) => {
+        // console.log(res);
         Swal.fire({
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
             timer: 1500
         }).then((result) => {
+            // console.log(res);
             location.reload();
         })
     })
@@ -234,7 +258,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./edit_modal/coffee.php',{editid},(res)=>{
+    $.post('./edit_modal/soft.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }
