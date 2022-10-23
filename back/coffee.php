@@ -112,13 +112,34 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-                        <select name="type" id="type">
-                            <option value="Coffee">Coffee</option>
-                            <option value="Pour">Pour Over</option>
-                            <option value="Cold">Cold Drip</option>
-                            <option value="Cocktail">Coffee Cocktail</option>
-                            <option value="Tea">Tea</option>
-                        </select>
+                    <?php
+                        if ($_GET['type']=="Coffee") {
+                        ?>
+                        <label class="col-form-label">分類</label>
+                        <p id="type">Coffee</p>
+                        <?php                                    
+                        } else if($_GET['type']=="Pour"){
+                        ?>
+                        <label class="col-form-label">分類</label>
+                        <p id="type">Pour</p>
+                        <?php 
+                        }else if($_GET['type']=="Cold"){
+                        ?>
+                        <label class="col-form-label">分類</label>
+                        <p id="type">Cold</p>
+                        <?php 
+                        }else if($_GET['type']=="Cocktail"){
+                        ?>
+                        <label class="col-form-label">分類</label>
+                        <p id="type">Cocktail</p>
+                        <?php 
+                        }else if($_GET['type']=="Tea"){
+                        ?>
+                        <label class="col-form-label">分類</label>
+                        <p id="type">Tea</p>
+                        <?php 
+                        }
+                        ?>
                         <div class="form-group">
                             <label for="name" class="col-form-label">英文</label>
                             <input type="text"  class="form-control" id="name">
@@ -192,7 +213,7 @@
 <script>
     // resume_add
 $('#addBtn').on('click', function() {
-    let type = $('#type').val();
+    let type = $('#type').text();
     let name = $('#name').val();
     let chinese = $('#chinese').val();
     let japanese = $('#japanese').val();

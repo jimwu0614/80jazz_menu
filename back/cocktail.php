@@ -141,10 +141,19 @@
                     <form>
                         <div class="form-group flex ">
                             <div class="pt-4 ml-4">
-                                <select name="type" id="type">
-                                    <option value="Classic">Classic</option>
-                                    <option value="Signature">Signature</option>
-                                </select>
+                                <?php
+                                if ($_GET['type']=="Classic") {
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Classic</p>
+                                <?php                                    
+                                } else {
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Signature</p>
+                                <?php 
+                                }
+                                ?>
                             </div>
                         </div>
                         <div class="form-group flex">
@@ -274,7 +283,7 @@
 <script>
     // resume_add
     $('#addBtn').on('click', function() {
-        let type = $('#type').val();
+        let type = $('#type').text();
         let name = $('#name').val();
         let chinese = $('#chinese').val();
         let base = $('#base').val();
@@ -286,18 +295,7 @@
         let rank = $('#rank').val();
         let table = $('#table').val();
 
-        $.post('./api/add_menu.php', {
-            type,
-            name,
-            chinese,
-            base,
-            intro,
-            ingredient,
-            step,
-            web,
-            rank,
-            table
-        }, (res) => {
+        $.post('./api/add_menu.php', { type, name, chinese, base, intro, ingredient, step, web, rank, table }, (res) => {
             Swal.fire({
                 icon: 'success',
                 title: '新增成功',

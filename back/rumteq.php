@@ -153,10 +153,19 @@
                     <form>
                         <div class="form-group flex" style="justify-content: space-evenly;">
                             <div class="pt-4 ml-4">
-                                <select name="type" id="type">
-                                    <option value="Rum">Rum</option>
-                                    <option value="Tequila">Tequila</option>
-                                </select>
+                            <?php
+                                if ($_GET['type']=="Rum") {
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Rum</p>
+                                <?php                                    
+                                } else {
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Tequila</p>
+                                <?php 
+                                }
+                                ?>
                             </div>
                             <div>
                                 <label for="memo"  class="col-form-label">Memo</label>
@@ -263,7 +272,7 @@
 <script>
     // resume_add
 $('#addBtn').on('click', function() {
-    let type = $('#type').val();
+    let type = $('#type').text();
     let memo = $('#memo').val();
     let name = $('#name').val();
     let chinese = $('#chinese').val();

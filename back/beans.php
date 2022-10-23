@@ -211,7 +211,7 @@ $('#addBtn').on('click', function() {
             timer: 1500
         }).then((result) => {
             // console.log(res);
-            location.reload();
+            location.href = "back.php?do="+table;
         })
     })
 })

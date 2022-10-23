@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Brandy
+                Sake&Shochu
             </li>
         </ol>
     </nav>
@@ -15,12 +15,12 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Brandy
+                    Sake&Shochu
                 </div>
             </div>
             <div class="form_item_Title_middle">
-                <a href="?do=brandy&type=Cognac"  class="title_type <?=($_GET['type']=='Cognac')?'liquor_active':''?>">Cognac</a>
-                <a href="?do=brandy&type=Armagnac" class="title_type <?=($_GET['type']=='Armagnac')?'liquor_active':''?>">Armagnac</a>
+                <a href="?do=sake&type=Sake"  class="title_type <?=($_GET['type']=='Sake')?'liquor_active':''?>">Sake</a>
+                <a href="?do=sake&type=Shochu" class="title_type <?=($_GET['type']=='Shochu')?'liquor_active':''?>">Shochu</a>
             </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
@@ -31,7 +31,7 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Brandy->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
+        $rows = $Sake->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
             <div class="form_item_group flex pr-3">
@@ -57,9 +57,7 @@
                                 <i class="fa-solid fa-trash-can"></i>
                             </div>
                         </div>
-                            
                     </div>
-
                 </div>
 
                 <div class="w60 mt-3 flex">
@@ -73,15 +71,11 @@
                             <p><?= $row['memo'] ?></p>
                         </div>
                     </div>
-
+                    
                     <div class="form_item flex w100 jc">
                         <div>
                             <div class="form_item_text">品項</div>
                             <p><?= $row['name'] ?></p>
-                        </div>
-                        <div>
-                            <div class="form_item_text">中文</div>
-                            <p><?= $row['chinese'] ?></p>
                         </div>
                     </div>
 
@@ -151,25 +145,21 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-                        <div class="form-group flex ">
-                            <div class="pt-4 ml-4">
+                        <div class="form-group flex" style="justify-content: space-evenly;">
+                            <div class="pt-4">
                                 <?php
-                                if ($_GET['type']=="Cognac") {
+                                if ($_GET['type']=="Sake") {
                                 ?>
                                 <label class="col-form-label">分類</label>
-                                <p id="type">Cognac</p>
+                                <p id="type">Sake</p>
                                 <?php                                    
                                 } else {
                                 ?>
                                 <label class="col-form-label">分類</label>
-                                <p id="type">Armagnac</p>
+                                <p id="type">Shochu</p>
                                 <?php 
                                 }
                                 ?>
-                            </div>
-                            <div style="margin-left: 5rem;">
-                                <label for="memo"  class="col-form-label">Memo</label>
-                                <input type="text" name="memo" class="form-control" id="memo">
                             </div>
                         </div>
                         <div class="form-group flex">
@@ -178,8 +168,8 @@
                                 <input type="text" name="name" class="form-control" id="name">
                             </div>
                             <div>
-                                <label for="chinese" class="col-form-label">中文</label>
-                                <input type="text" name="chinese" class="form-control" id="chinese">
+                                <label for="memo"  class="col-form-label">Memo</label>
+                                <input type="text" name="memo" class="form-control" id="memo">
                             </div>
                         </div>
                         <div class="form-group flex_nowrap">
@@ -218,9 +208,9 @@
                         </div>
 
                         <?php
-                        $rank = $Brandy->math('max','rank',['type'=>$_GET['type']])+1
+                        $rank = $Sake->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
-                            <input type="hidden" name="table" id="table" value="brandy">
+                            <input type="hidden" name="table" id="table" value="sake">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
@@ -275,7 +265,6 @@ $('#addBtn').on('click', function() {
     let type = $('#type').text();
     let memo = $('#memo').val();
     let name = $('#name').val();
-    let chinese = $('#chinese').val();
     let inprice = $('#inprice').val();
     let inputtime = $('#inputtime').val();
     let supply = $('#supply').val();
@@ -287,14 +276,17 @@ $('#addBtn').on('click', function() {
     let rank = $('#rank').val();
     let table = $('#table').val();
 
-    $.post('./api/add_menu.php', {type, memo, name, chinese, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, () => {
+    $.post('./api/add_menu.php', {type, memo, name, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, (res) => {
+        // console.log(res);
         Swal.fire({
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
             timer: 1500
         }).then((result) => {
+            // console.log(res);
             location.reload();
+
         })
     })
 })
@@ -302,7 +294,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./edit_modal/brandy.php',{editid},(res)=>{
+    $.post('./edit_modal/sake.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

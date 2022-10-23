@@ -154,11 +154,24 @@
                     <form>
                         <div class="form-group flex" style="justify-content: space-evenly;">
                             <div class="pt-4 ml-4">
-                                <select name="type" id="type">
-                                    <option value="Single">Single</option>
-                                    <option value="Blended">Blended</option>
-                                    <option value="Bourbon">Bourbon</option>
-                                </select>
+                            <?php
+                                if ($_GET['type']=="Single") {
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Single</p>
+                                <?php                                    
+                                } else if($_GET['type']=="Blended"){
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Blended</p>
+                                <?php 
+                                }else{
+                                ?>
+                                <label class="col-form-label">分類</label>
+                                <p id="type">Bourbon</p>
+                                <?php
+                                }
+                                ?>
                             </div>
                             <div>
                                 <label for="memo"  class="col-form-label">Memo</label>
@@ -265,7 +278,7 @@
 <script>
     // resume_add
 $('#addBtn').on('click', function() {
-    let type = $('#type').val();
+    let type = $('#type').text();
     let memo = $('#memo').val();
     let name = $('#name').val();
     let chinese = $('#chinese').val();
@@ -289,7 +302,7 @@ $('#addBtn').on('click', function() {
             timer: 1500
         }).then((result) => {
             // console.log(res);
-            location.reload();
+            location.reload()
         })
     })
 })
