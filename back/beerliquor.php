@@ -6,7 +6,7 @@
                 <a href="./back.php">後台管理</a>
             </li>
             <li class="breadcrumb-item active">
-                Coffee Beans
+                Beer&Liquor
             </li>
         </ol>
     </nav>
@@ -15,10 +15,13 @@
         <div class="form_item form_item_Title">
             <div>
                 <div class="form_item_header">
-                    Coffee Beans
+                    Beer&Liquor
                 </div>
             </div>
-
+            <div class="form_item_Title_middle">
+                <a href="?do=beerliquor&type=Beer"  class="title_type <?=($_GET['type']=='Beer')?'liquor_active':''?>">Beer</a>
+                <a href="?do=beerliquor&type=Liquor" class="title_type <?=($_GET['type']=='Liquor')?'liquor_active':''?>">Liquor</a>
+            </div>
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
                     新增
@@ -28,10 +31,10 @@
             <!-- data -->
         <div>
         <?php
-        $rows = $Beans->all("ORDER BY `rank` ASC");
+        $rows = $Beerliquor->all(['type'=>$_GET['type']],"ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
-            <div class="form_item_group  pr-3">
+            <div class="form_item_group flex pr-3">
                 <div class="form_item form_item_control w100">
                     <span class="form_item_num">第<?= $key + 1 ?>筆資料</span>
                     <div class="form_item_btns">
@@ -57,28 +60,66 @@
                     </div>
                 </div>
 
-                <div class="form_item first_item mt-4">
-                    <div class="form_item_text w40">品名</div>
-                    <p><?= $row['name'] ?></p>
-                </div>
+                <div class="w60 mt-3 flex">
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">分類</div>
+                            <p><?= $row['type'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">Memo</div>
+                            <p><?= $row['memo'] ?></p>
+                        </div>
+                    </div>
 
-                <div class="form_item">
-                    <div class="form_item_text w40">產區</div>
-                    <p><?= $row['land'] ?></p>
-                </div>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">品項</div>
+                            <p><?= $row['name'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">中文</div>
+                            <p><?= $row['chinese'] ?></p>
+                        </div>
+                    </div>
 
-                <div class="form_item">
-                    <div class="form_item_text w40">焙度</div>
-                    <p><?= $row['roast'] ?></p>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">進價</div>
+                            <p><?= $row['inprice'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">報價時間</div>
+                            <p><?= $row['inputtime'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">廠商</div>
+                            <p><?= $row['supply'] ?></p>
+                        </div>
+                    </div>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">整瓶</div>
+                            <p><?= $row['bottle'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">單杯</div>
+                            <p><?= $row['glass'] ?></p>
+                        </div>
+                    </div>
+                    <div class="form_item flex w100 jc">
+                        <div>
+                            <div class="form_item_text">簡介</div>
+                            <p><?= $row['intro'] ?></p>
+                        </div>
+                        <div>
+                            <div class="form_item_text">促銷</div>
+                            <p><?= $row['promo'] ?></p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form_item">
-                    <div class="form_item_text w40">價格</div>
-                    <p><?= $row['price'] ?></p>
-                </div>
-                <div class="form_item">
-                    <div class="form_item_text">簡介</div>
-                    <p><?= $row['intro'] ?></p>
+                <div class="my-3 w40 redd " >
+                    照片預覽放這邊
                 </div>
                 
                 <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">
@@ -108,40 +149,67 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-
+                        <div class="form-group flex" style="justify-content: space-evenly;">
+                            <div class="pt-4 ml-4">
+                                <select name="type" id="type">
+                                    <option value="Beer">Beer</option>
+                                    <option value="Liquor">Liquor</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="memo"  class="col-form-label">Memo</label>
+                                <input type="text" name="memo" class="form-control" id="memo">
+                            </div>
+                        </div>
                         <div class="form-group flex">
                             <div>
-                                <label for="name" class="col-form-label">品名</label>
+                                <label for="name" class="col-form-label">品項</label>
                                 <input type="text" name="name" class="form-control" id="name">
                             </div>
                             <div>
-                                <label for="land" class="col-form-label">產區</label>
-                                <input type="text" name="land" class="form-control" id="land">
+                                <label for="chinese" class="col-form-label">中文</label>
+                                <input type="text" name="chinese" class="form-control" id="chinese">
                             </div>
                         </div>
-  
-                        <div class="form-group flex">
-                            <div>                            
-                                <label for="roast" class="col-form-label">焙度</label>
-                                <input type="text" name="roast" class="form-control" id="roast">
+                        <div class="form-group flex_nowrap">
+                            <div>
+                                <label for="inprice" class="col-form-label">進價</label>
+                                <input type="number" name="inprice" class="form-control" id="inprice">
                             </div>
                             <div>
-                                <label for="price" class="col-form-label">價格</label>
-                                <input type="number" class="form-control" id="price">
+                                <label for="inputtime" class="col-form-label">報價時間</label>
+                                <input type="date" name="inputtime" class="form-control" id="inputtime">
+                            </div>
+                            <div>
+                                <label for="supply" class="col-form-label">廠商</label>
+                                <input type="text" name="supply" class="form-control" id="supply">
+                            </div>
+                        </div>
+                        <div class="form-group flex">
+                            <div>
+                                <label for="bottle" class="col-form-label">整瓶</label>
+                                <input type="number" name="bottle" class="form-control" id="bottle">
+                            </div>
+                            <div>
+                                <label for="glass" class="col-form-label">單杯</label>
+                                <input type="number" name="glass" class="form-control" id="glass">
                             </div>
                         </div>
                         <div class="form-group flex">
                             <div>
                                 <label for="intro" class="col-form-label">簡介</label>
-                                <textarea name="intro" id="intro" cols="25" rows="3"></textarea>
+                                <textarea name="intro" id="intro" cols="20" rows="3"></textarea>
                             </div>
-
+                            <div>
+                                <label for="promo" class="col-form-label">促銷</label>
+                                <textarea name="promo" id="promo" cols="20" rows="3"></textarea>
+                            </div>
                         </div>
 
                         <?php
-                        $rank = $Beans->math('max','rank')+1
+                        $rank = $Beerliquor->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
-                            <input type="hidden" name="table" id="table" value="beans">
+                            <input type="hidden" name="table" id="table" value="beerliquor">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
                     </form>
                 </div>
@@ -193,16 +261,22 @@
 <script>
     // resume_add
 $('#addBtn').on('click', function() {
+    let type = $('#type').val();
+    let memo = $('#memo').val();
     let name = $('#name').val();
-    let land = $('#land').val();
-    let roast = $('#roast').val();
-    let price = $('#price').val();
+    let chinese = $('#chinese').val();
+    let inprice = $('#inprice').val();
+    let inputtime = $('#inputtime').val();
+    let supply = $('#supply').val();
+    let bottle = $('#bottle').val();
+    let glass = $('#glass').val();
     let intro = $('#intro').val();
+    let promo = $('#promo').val();
     
     let rank = $('#rank').val();
     let table = $('#table').val();
 
-    $.post('./api/add_menu.php', {name, land, roast, price, intro, rank, table}, () => {
+    $.post('./api/add_menu.php', {type, memo, name, chinese, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, (res) => {
         // console.log(res);
         Swal.fire({
             icon: 'success',
@@ -219,7 +293,7 @@ $('#addBtn').on('click', function() {
 
 function edit(who) {
     let editid = $(who).data('id');
-    $.post('./edit_modal/beans.php',{editid},(res)=>{
+    $.post('./edit_modal/beerliquor.php',{editid},(res)=>{
         $("#edit_modal_body").html(res)
     })
 }

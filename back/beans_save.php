@@ -18,7 +18,6 @@
                     Coffee Beans
                 </div>
             </div>
-
             <div class="addBtn">
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal">
                     新增
@@ -31,8 +30,9 @@
         $rows = $Beans->all("ORDER BY `rank` ASC");
         foreach ($rows as $key => $row) {
         ?>
-            <div class="form_item_group  pr-3">
-                <div class="form_item form_item_control w100">
+            <div class="form_item_group">
+                <!-- 最上面控制區 -->
+                <div class="form_item form_item_control">
                     <span class="form_item_num">第<?= $key + 1 ?>筆資料</span>
                     <div class="form_item_btns">
                         <span class="form_item_smtitle">排序</span>
@@ -56,24 +56,27 @@
                         </div>
                     </div>
                 </div>
+                <!-- 最上面控制區 end -->
+                            
 
-                <div class="form_item first_item mt-4">
-                    <div class="form_item_text w40">品名</div>
+
+                <div class="form_item first_item">
+                    <div class="form_item_text">品名</div>
                     <p><?= $row['name'] ?></p>
                 </div>
 
                 <div class="form_item">
-                    <div class="form_item_text w40">產區</div>
+                    <div class="form_item_text">產區</div>
                     <p><?= $row['land'] ?></p>
                 </div>
 
                 <div class="form_item">
-                    <div class="form_item_text w40">焙度</div>
+                    <div class="form_item_text">焙度</div>
                     <p><?= $row['roast'] ?></p>
                 </div>
 
                 <div class="form_item">
-                    <div class="form_item_text w40">價格</div>
+                    <div class="form_item_text">價格</div>
                     <p><?= $row['price'] ?></p>
                 </div>
                 <div class="form_item">
@@ -108,38 +111,29 @@
                 <!-- modal-body -->
                 <div class="modal-body">
                     <form>
-
-                        <div class="form-group flex">
-                            <div>
-                                <label for="name" class="col-form-label">品名</label>
-                                <input type="text" name="name" class="form-control" id="name">
-                            </div>
-                            <div>
-                                <label for="land" class="col-form-label">產區</label>
-                                <input type="text" name="land" class="form-control" id="land">
-                            </div>
+                        <div class="form-group">
+                            <label for="name" class="col-form-label">品名</label>
+                            <input type="text"  class="form-control" id="name">
                         </div>
-  
-                        <div class="form-group flex">
-                            <div>                            
-                                <label for="roast" class="col-form-label">焙度</label>
-                                <input type="text" name="roast" class="form-control" id="roast">
-                            </div>
-                            <div>
-                                <label for="price" class="col-form-label">價格</label>
-                                <input type="number" class="form-control" id="price">
-                            </div>
+                        <div class="form-group">
+                            <label for="land" class="col-form-label">產區</label>
+                            <input type="text" class="form-control" id="land">
                         </div>
-                        <div class="form-group flex">
-                            <div>
-                                <label for="intro" class="col-form-label">簡介</label>
-                                <textarea name="intro" id="intro" cols="25" rows="3"></textarea>
-                            </div>
-
+                        <div class="form-group">
+                            <label for="roast" class="col-form-label">焙度</label>
+                            <input type="text" class="form-control" id="roast">
                         </div>
-
+                        <div class="form-group">
+                            <label for="price" class="col-form-label">價格</label>
+                            <input type="number" class="form-control" id="price">
+                        </div>
+                        <div class="form-group">
+                            <label for="intro" class="col-form-label">簡介</label>
+                            <textarea name="intro" id="intro" cols="25" rows="4"></textarea>
+                            
+                        </div>
                         <?php
-                        $rank = $Beans->math('max','rank')+1
+                        $rank = $Beans->math('max','rank',['type'=>$_GET['type']])+1
                         ?>
                             <input type="hidden" name="table" id="table" value="beans">
                             <input type="hidden" name="rank" id="rank" value="<?=$rank?>">
@@ -198,19 +192,17 @@ $('#addBtn').on('click', function() {
     let roast = $('#roast').val();
     let price = $('#price').val();
     let intro = $('#intro').val();
-    
     let rank = $('#rank').val();
-    let table = $('#table').val();
+    let table = 'beans'
 
+    // console.log(type);
     $.post('./api/add_menu.php', {name, land, roast, price, intro, rank, table}, () => {
-        // console.log(res);
         Swal.fire({
             icon: 'success',
             title: '新增成功',
             text: '成功新增一筆資料!',
             timer: 1500
         }).then((result) => {
-            // console.log(res);
             location.reload();
         })
     })
