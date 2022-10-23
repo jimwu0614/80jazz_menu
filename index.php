@@ -23,6 +23,7 @@ include "./base.php";
     <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/events.css">
     <link rel="stylesheet" href="./css/liquor.css">
     <link rel="stylesheet" href="./css/bgpic.css">
     <script src="./js/jqyery3.6.1.js"></script>
@@ -40,6 +41,7 @@ include "./base.php";
                         <a href="index.php">80 Jazz Menu</a>
                     </div>
                 </div>
+                <li><a href="?do=events" class="pulse">Events</a></li>
                 <li><a href="./coffee.php">Coffee</a></li>
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
@@ -51,7 +53,6 @@ include "./base.php";
                 <li><a href="?do=cocktail">Cocktails</a></li>
                 <li><a href="?do=softdrink">Softdrinks</a></li>
                 <li><a href="?do=meal" id="meal">Meal</a></li>
-                <li><a href="?do=event" id="event">Events</a></li>
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

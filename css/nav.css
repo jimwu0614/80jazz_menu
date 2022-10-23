@@ -76,7 +76,7 @@ html {
 
 .nav {
     font-family: 'Mufan', sans-serif;
-    font-size: 2.5rem;                                     
+    font-size: 2.5rem;
 }
 
 .sidebar-nav {
@@ -207,7 +207,8 @@ html {
     height: 4px;
     width: 100%;
 }
-.hamburger.is-closed{
+
+.hamburger.is-closed {
     position: fixed;
     left: 0;
     top: 20px;
@@ -291,9 +292,34 @@ html {
     transition: all .35s ease-in-out;
 }
 
+.pulse {
+    background: rgba(220, 53, 69 ,0.4);
+    width: 65%;
+    margin-left: 5px;
+    border-radius: 10px;
+    animation: animate 2s infinite;
+}
 
-#event,#meal,#wine{
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+    }
+    40% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69 ,0);
+    }
+    80% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69 ,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69 ,0);
+    }
+
+
+}
+
+
+#meal,
+#wine {
     color: #ddd;
     cursor: not-allowed;
 }
-
