@@ -17,7 +17,7 @@
 
             <tr>
                 <td><pre><?=$value['name']?></pre></td>
-                <td><pre><?=$value['glass']?></pre></td>
+                <td><pre><?=$value['price']?></pre></td>
             </tr>
     <?php
 }
