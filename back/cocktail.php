@@ -93,6 +93,20 @@
                         </div>
                         <div class="form_item flex w100 jc">
                             <div>
+                                <div class="form_item_text">酒感</div>
+                                <p><?= $row['feel'] ?></p>
+                            </div>
+                            <div>
+                                <div class="form_item_text">酸度</div>
+                                <p><?= $row['acidity'] ?></p>
+                            </div>
+                            <div>
+                                <div class="form_item_text">甜度</div>
+                                <p><?= $row['sweet'] ?></p>
+                            </div>
+                        </div>
+                        <div class="form_item flex w100 jc">
+                            <div>
                                 <div class="form_item_text">材料</div>
                                 <p><?= $row['ingredient'] ?></p>
                             </div>
