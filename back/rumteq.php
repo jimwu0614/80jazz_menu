@@ -185,11 +185,11 @@
                         <div class="form-group flex_nowrap">
                             <div>
                                 <label for="inprice" class="col-form-label">進價</label>
-                                <input type="number" name="inprice" class="form-control" id="inprice">
+                                <input type="number" name="inprice" class="form-control" id="inprice" value="0">
                             </div>
                             <div>
                                 <label for="inputtime" class="col-form-label">報價時間</label>
-                                <input type="date" name="inputtime" class="form-control" id="inputtime">
+                                <input type="date" name="inputtime" class="form-control" id="inputtime" value="<?=date('Y-m-d')?>">
                             </div>
                             <div>
                                 <label for="supply" class="col-form-label">廠商</label>
@@ -199,11 +199,11 @@
                         <div class="form-group flex">
                             <div>
                                 <label for="bottle" class="col-form-label">整瓶</label>
-                                <input type="number" name="bottle" class="form-control" id="bottle">
+                                <input type="number" name="bottle" class="form-control" id="bottle" value="0">
                             </div>
                             <div>
                                 <label for="glass" class="col-form-label">單杯</label>
-                                <input type="number" name="glass" class="form-control" id="glass">
+                                <input type="number" name="glass" class="form-control" id="glass" value="0">
                             </div>
                         </div>
                         <div class="form-group flex">

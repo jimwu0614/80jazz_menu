@@ -144,11 +144,11 @@
                         <div class="form-group flex_nowrap">
                             <div>
                                 <label for="inprice" class="col-form-label">進價</label>
-                                <input type="number" name="inprice" class="form-control" id="inprice">
+                                <input type="number" name="inprice" class="form-control" id="inprice" value="0">
                             </div>
                             <div>
                                 <label for="inputtime" class="col-form-label">報價時間</label>
-                                <input type="date" name="inputtime" class="form-control" id="inputtime">
+                                <input type="date" name="inputtime" class="form-control" id="inputtime" value="<?=date('Y-m-d')?>">
                             </div>
                             <div>
                                 <label for="supply" class="col-form-label">廠商</label>
@@ -159,7 +159,7 @@
                         <div class="form-group flex" style="justify-content: space-evenly;">
                             <div>
                                 <label for="price" class="col-form-label">價格</label>
-                                <input type="number" name="price" class="form-control" id="price">
+                                <input type="number" name="price" class="form-control" id="price" value="0">
                             </div>
                              <div>
                                 <label for="promo" class="col-form-label">促銷</label>

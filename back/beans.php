@@ -127,7 +127,7 @@
                             </div>
                             <div>
                                 <label for="price" class="col-form-label">價格</label>
-                                <input type="number" class="form-control" id="price">
+                                <input type="number" class="form-control" id="price" value="0">
                             </div>
                         </div>
                         <div class="form-group flex">

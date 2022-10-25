@@ -150,7 +150,7 @@
                         </div>
                         <div class="form-group">
                             <label for="price" class="col-form-label">價格</label>
-                            <input type="number" class="form-control" id="price">
+                            <input type="number" class="form-control" id="price" value="0">
                         </div>
                         <?php
                         // dd($_GET);
