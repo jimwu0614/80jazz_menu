@@ -26,7 +26,7 @@ $data = $Sake->find($_POST['editid']);
 <div class="form-group flex_nowrap">
     <div>
         <label for="inprice" class="col-form-label">進價</label>
-        <input name="inprice" type="number"  class="form-control" id="inprice" value="<?=$data['memo']?>">
+        <input name="inprice" type="number"  class="form-control" id="inprice" value="<?=$data['inprice']?>">
     </div>
     <div>
         <label for="inputtime" class="col-form-label">報價時間</label>
