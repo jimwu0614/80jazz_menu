@@ -29,6 +29,12 @@
             </tbody>
         </table>
     </div>
+    <div class="liquortitle flexcol pt-4">
+        <span class="type active">
+            <h3 class="chinese">單點Shots $250/杯</h3>
+            <h3>one Shot For NTD $250/Glass</h3>
+        </span>
+    </div>
 
         <!-- detail modal -->
     <div class="modal fade" id="detailModal">
