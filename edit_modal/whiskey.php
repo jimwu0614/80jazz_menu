@@ -21,7 +21,7 @@ $data = $Whiskey->find($_POST['editid']);
 <div class="form-group flex">
     <div>
         <label for="name" class="col-form-label">品名</label>
-        <input name="name" type="text" class="form-control" id="name" value="<?=$data['name']?>">
+        <textarea name="name" id="name" cols="25" rows="2" class="form-control"><?=$data['name']?></textarea>
     </div>
     <div>
         <label for="chinese" class="col-form-label">中文</label>

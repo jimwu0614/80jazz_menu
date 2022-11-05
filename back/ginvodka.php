@@ -175,7 +175,7 @@
                         <div class="form-group flex">
                             <div>
                                 <label for="name" class="col-form-label">品項</label>
-                                <input type="text" name="name" class="form-control" id="name">
+                                <textarea name="name" id="name" cols="25" rows="2" class="form-control"></textarea>
                             </div>
                             <div>
                                 <label for="chinese" class="col-form-label">中文</label>
