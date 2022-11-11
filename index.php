@@ -42,7 +42,7 @@ include "./base.php";
                     </div>
                 </div>
                 <li><a href="?do=events" class="pulse">Events</a></li>
-                <li><a href="./coffee.php">Coffee</a></li>
+                <!-- <li><a href="./coffee.php">Coffee</a></li> -->
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
