@@ -41,18 +41,39 @@ include "./base.php";
                         <a href="index.php">80 Jazz Menu</a>
                     </div>
                 </div>
-                <li><a href="?do=events" class="pulse">Events</a></li>
+                <li class="enlist"><a href="?do=events" class="pulse">Events&Info</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=events" class="pulse">活動&資訊</a></li>
+
+                <li class="enlist"><a href="?do=cocktail">Cocktails</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=cocktail">Cocktails</a></li>
+
+                <li class="enlist"><a href="?do=whiskey">Whiskey</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=whiskey">Whiskey</a></li>
+
+                <li class="enlist"><a href="?do=brandy">Brandy</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=brandy">Brandy</a></li>
+
+                <li class="enlist"><a href="?do=ginvodka">Gin & Vodka</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=ginvodka">Gin & Vodka</a></li>
+
+                <li class="enlist"><a href="?do=rumteq">Rum&Tequila</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=rumteq">Rum&Tequila</a></li>
+
+                <li class="enlist"><a href="?do=beerliquor">Beer&Liquor</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=beerliquor">Beer&Liquor</a></li>
+
+                <li class="enlist"><a href="?do=sake">Sake&Shochu</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=sake">Sake&Shochu</a></li>
+
+                <li class="enlist"><a href="?do=wine" id="wine">Wine</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=wine" id="wine">Wine</a></li>
+
+                <li class="enlist"><a href="?do=softdrink">Softdrinks</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=softdrink">Softdrinks</a></li>
+                
+                <li class="enlist"><a href="?do=meal" id="meal">Meal</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=meal" id="meal">Meal</a></li>
                 <!-- <li><a href="./coffee.php">Coffee</a></li> -->
-                <li><a href="?do=cocktail">Cocktails</a></li>
-                <li><a href="?do=whiskey">Whiskey</a></li>
-                <li><a href="?do=brandy">Brandy</a></li>
-                <li><a href="?do=ginvodka">Gin & Vodka</a></li>
-                <li><a href="?do=rumteq">Rum&Tequila</a></li>
-                <li><a href="?do=beerliquor">Beer&Liquor</a></li>
-                <li><a href="?do=sake">Sake&Shochu</a></li>
-                <li><a href="?do=wine" id="wine">Wine</a></li>
-                <li><a href="?do=softdrink">Softdrinks</a></li>
-                <li><a href="?do=meal" id="meal">Meal</a></li>
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->

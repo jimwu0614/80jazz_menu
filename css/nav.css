@@ -295,7 +295,7 @@ html {
 
 .pulse {
     background: rgba(220, 53, 69 ,0.4);
-    width: 65%;
+    width: 90%;
     margin-left: 5px;
     border-radius: 10px;
     animation: animate 2s infinite;
