@@ -8,7 +8,7 @@
             </div>
             <div class="blur">
                 <div class="pic">
-                    <img src="./img/rules.jpg" alt="">
+                    <img src="./img/events/info.jpg" alt="">
                 </div>
             </div>
         </div>

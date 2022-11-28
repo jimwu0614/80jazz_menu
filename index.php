@@ -43,6 +43,7 @@ include "./base.php";
                 </div>
                 <li><a href="?do=events" class="pulse">Events</a></li>
                 <!-- <li><a href="./coffee.php">Coffee</a></li> -->
+                <li><a href="?do=cocktail">Cocktails</a></li>
                 <li><a href="?do=whiskey">Whiskey</a></li>
                 <li><a href="?do=brandy">Brandy</a></li>
                 <li><a href="?do=ginvodka">Gin & Vodka</a></li>
@@ -50,7 +51,6 @@ include "./base.php";
                 <li><a href="?do=beerliquor">Beer&Liquor</a></li>
                 <li><a href="?do=sake">Sake&Shochu</a></li>
                 <li><a href="?do=wine" id="wine">Wine</a></li>
-                <li><a href="?do=cocktail">Cocktails</a></li>
                 <li><a href="?do=softdrink">Softdrinks</a></li>
                 <li><a href="?do=meal" id="meal">Meal</a></li>
             </ul>

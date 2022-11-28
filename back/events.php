@@ -55,10 +55,10 @@
 
                 </div>
 
-                <div class="w60 mt-3 flex">
+                <div class="mt-3 flex">
                     <div class="form_item flex w100 jc">
                         <div>
-                            <div class="form_item_text">分類</div>
+                            <div class="form_item_text">標題</div>
                             <p><?= $row['title'] ?></p>
                         </div>
 
@@ -66,53 +66,16 @@
 
                     <div class="form_item flex w100 jc">
                         <div>
-                            <div class="form_item_text">品項</div>
-                            <p><?= $row['name'] ?></p>
+                            <div class="form_item_text">活動內容</div>
+                            <p><img src="./img/events/<?= $row['content'] ?>.jpg" alt=""></p>
                         </div>
-                        <div>
-                            <div class="form_item_text">中文</div>
-                            <p><?= $row['chinese'] ?></p>
-                        </div>
+
                     </div>
 
-                    <div class="form_item flex w100 jc">
-                        <div>
-                            <div class="form_item_text">進價</div>
-                            <p><?= $row['inprice'] ?></p>
-                        </div>
-                        <div>
-                            <div class="form_item_text">報價時間</div>
-                            <p><?= $row['inputtime'] ?></p>
-                        </div>
-                        <div>
-                            <div class="form_item_text">廠商</div>
-                            <p><?= $row['supply'] ?></p>
-                        </div>
-                    </div>
-                    <div class="form_item flex w100 jc">
-                        <div>
-                            <div class="form_item_text">整瓶</div>
-                            <p><?= $row['bottle'] ?></p>
-                        </div>
-                        <div>
-                            <div class="form_item_text">單杯</div>
-                            <p><?= $row['glass'] ?></p>
-                        </div>
-                    </div>
-                    <div class="form_item flex w100 jc">
-                        <div>
-                            <div class="form_item_text">簡介</div>
-                            <p><?= $row['intro'] ?></p>
-                        </div>
-                        <div>
-                            <div class="form_item_text">促銷</div>
-                            <p><?= $row['promo'] ?></p>
-                        </div>
-                    </div>
+
+
                 </div>
-                <div class="my-3 w40 redd " >
-                    照片預覽放這邊
-                </div>
+
                 
                 <input type="hidden" name="id" value="<?= $row['id'] ?>" data-id="<?= $row['id'] ?>">
             </div>
