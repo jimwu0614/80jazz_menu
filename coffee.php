@@ -22,11 +22,12 @@ include "./base.php";
     <div class="coffee"></div>
     <div class="beans"><a href="./beans.php"><img src="./img/beans.png" alt=""></a></div>
     <div class="speech-bubble" id='bubble'>Roasted<br>Coffee bean<br>On sale</div>
-    <div class="box ">
+    <div class="box">
         <input type="checkbox" class="checkbox" id="chk" />
         <label class="label" for="chk">
             <img class="flag" src="https://img.icons8.com/emoji/48/000000/taiwan-emoji.png" />
-            <img class="flag" src="https://img.icons8.com/emoji/48/000000/japan-emoji.png" />
+            <img class="flag" src="https://img.icons8.com/emoji/48/000000/united-states-emoji.png"/>
+            <!-- <img class="flag" src="https://img.icons8.com/emoji/48/000000/japan-emoji.png" /> -->
             <div class="ball"></div>
         </label>
     </div>

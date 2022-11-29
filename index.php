@@ -41,38 +41,47 @@ include "./base.php";
                         <a href="index.php">80 Jazz Menu</a>
                     </div>
                 </div>
+                <div class="langBox">
+                    <input type="checkbox" class="checkbox" id="chk" />
+                    <label class="langLabel" for="chk">
+                        <img class="flag" src="https://img.icons8.com/emoji/48/000000/taiwan-emoji.png" />
+                        <img class="flag" src="https://img.icons8.com/emoji/48/000000/united-states-emoji.png"/>
+                        <div class="ball"></div>
+                    </label>
+    </div>
                 <li class="enlist"><a href="?do=events" class="pulse">Events&Info</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=events" class="pulse">活動&資訊</a></li>
 
                 <li class="enlist"><a href="?do=cocktail">Cocktails</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=cocktail">Cocktails</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=cocktail">調酒</a></li>
 
                 <li class="enlist"><a href="?do=whiskey">Whiskey</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=whiskey">Whiskey</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=whiskey">威士忌</a></li>
 
                 <li class="enlist"><a href="?do=brandy">Brandy</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=brandy">Brandy</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=brandy">白蘭地</a></li>
 
                 <li class="enlist"><a href="?do=ginvodka">Gin & Vodka</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=ginvodka">Gin & Vodka</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=ginvodka">琴酒&伏特加</a></li>
 
                 <li class="enlist"><a href="?do=rumteq">Rum&Tequila</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=rumteq">Rum&Tequila</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=rumteq">蘭姆酒&龍舌蘭</a></li>
 
                 <li class="enlist"><a href="?do=beerliquor">Beer&Liquor</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=beerliquor">Beer&Liquor</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=beerliquor">啤酒&其他</a></li>
 
                 <li class="enlist"><a href="?do=sake">Sake&Shochu</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=sake">Sake&Shochu</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=sake">清酒&燒酎</a></li>
 
                 <li class="enlist"><a href="?do=wine" id="wine">Wine</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=wine" id="wine">Wine</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=wine" id="wine">葡萄酒</a></li>
 
                 <li class="enlist"><a href="?do=softdrink">Softdrinks</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=softdrink">Softdrinks</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=softdrink">無酒精</a></li>
+
+                <!-- <li class="enlist"><a href="?do=meal" id="meal">Meal</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=meal" id="meal">Meal</a></li> -->
                 
-                <li class="enlist"><a href="?do=meal" id="meal">Meal</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=meal" id="meal">Meal</a></li>
                 <!-- <li><a href="./coffee.php">Coffee</a></li> -->
             </ul>
         </nav>
