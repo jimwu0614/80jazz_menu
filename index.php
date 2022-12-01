@@ -51,6 +51,9 @@ include "./base.php";
     </div>
                 <li class="enlist"><a href="?do=events" class="pulse">Events&Info</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=events" class="pulse">活動&資訊</a></li>
+                
+                <li class="enlist"><a href="?do=wine">Wine</a></li>
+                <li class="cnlist" style="display:none;"><a href="?do=wine">葡萄酒</a></li>
 
                 <li class="enlist"><a href="?do=cocktail">Cocktails</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=cocktail">調酒</a></li>
@@ -73,15 +76,12 @@ include "./base.php";
                 <li class="enlist"><a href="?do=sake">Sake&Shochu</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=sake">清酒&燒酎</a></li>
 
-                <li class="enlist"><a href="?do=wine" id="wine">Wine</a></li>
-                <li class="cnlist" style="display:none;"><a href="?do=wine" id="wine">葡萄酒</a></li>
-
                 <li class="enlist"><a href="?do=softdrink">Softdrinks</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=softdrink">無酒精</a></li>
 
                 <!-- <li class="enlist"><a href="?do=meal" id="meal">Meal</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=meal" id="meal">Meal</a></li> -->
-                
+
                 <!-- <li><a href="./coffee.php">Coffee</a></li> -->
             </ul>
         </nav>

@@ -193,3 +193,37 @@
         z-index: -99;
     }
 }
+
+
+.wine{
+    background: url(../img/wine.jpeg);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -99;
+    background-size: cover;
+    background-position-x: 75% ;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    right: 0px;
+    padding-top: 10rem;
+    overflow: auto;
+}
+@media (max-width: 768px) {
+    .wine{
+        background: url(../img/wine.jpeg);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: -99;
+        background-size: cover;
+        background-position-x: 15% ;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        right: 0px;
+        padding-top: 10rem;
+        overflow: auto;
+    }
+}
