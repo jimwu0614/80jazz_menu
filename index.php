@@ -38,7 +38,7 @@ include "./base.php";
             <ul class="nav sidebar-nav">
                 <div class="sidebar-header">
                     <div class="sidebar-brand">
-                        <a href="index.php">80 Jazz Menu</a>
+                        <a href="index.php">Bar Vintage Menu</a>
                     </div>
                 </div>
                 <div class="langBox">
@@ -48,7 +48,7 @@ include "./base.php";
                         <img class="flag" src="https://img.icons8.com/emoji/48/000000/united-states-emoji.png"/>
                         <div class="ball"></div>
                     </label>
-    </div>
+                </div>
                 <li class="enlist"><a href="?do=events" class="pulse">Events&Info</a></li>
                 <li class="cnlist" style="display:none;"><a href="?do=events" class="pulse">活動&資訊</a></li>
                 

@@ -1,8 +1,8 @@
 <div class="centered body">
     <div class="title">
         <div class="neon_box">
-            <h1 class="neon-effect">80 Jazz</h1>
-            <h1 class="neon-effect">Café&<br>Lounge</h1>
+            <h1 class="neon-effect">Bar</h1>
+            <h1 class="neon-effect">Vintage</h1>
         </div>
         <br>
         <a href="#" class="neon-button bar" data-toggle="offcanvas">Menu</a>
@@ -10,8 +10,8 @@
     </div>
 </div>
 <footer class="footer">
-    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="big">Copyright © 2022 80-jazz. All rights reserved. Design by Jim Wu</span>
-    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="small">Copyright © 2022 80-jazz.<br>All rights reserved. Design by Jim Wu</span>
+    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="big">Copyright © 2022 Vintage. All rights reserved. Design by Jim Wu</span>
+    <span data-bs-toggle="modal" data-bs-target="#Loginmodal" class="small">Copyright © 2022 Vintage.<br>All rights reserved. Design by Jim Wu</span>
 </footer>
 
 <div class="modal fade" id="Loginmodal">

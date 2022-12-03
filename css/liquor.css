@@ -148,3 +148,54 @@ table td.crossed pre{
     background: blue;
     height: 20px;
 }
+
+
+
+/* 切換開關 */
+.langBox_page{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    margin-bottom: 10px;
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+
+.langLabel {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.langLabel .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .langLabel .ball {
+	transform: translateX(24px);
+}
+
+.flag{
+    width: 40%;
+}
+/* 切換開關結束 */
