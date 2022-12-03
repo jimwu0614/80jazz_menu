@@ -1,6 +1,6 @@
 <div class="langBox_page">
-    <input type="checkbox" class="checkbox" id="chk" />
-    <label class="langLabel" for="chk">
+    <input type="checkbox" class="checkbox" id="chk_page">
+    <label class="langLabel" for="chk_page">
         <img class="flag" src="https://img.icons8.com/emoji/48/000000/taiwan-emoji.png" />
         <img class="flag" src="https://img.icons8.com/emoji/48/000000/united-states-emoji.png"/>
         <div class="ball"></div>

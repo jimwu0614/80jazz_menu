@@ -6,7 +6,10 @@ foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre data-type="wine" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
+        <td>
+            <pre data-type="wine" data-id="<?=$value['id']?>" class="enlist"><?=$value['name']?></pre>
+            <pre data-type="wine" data-id="<?=$value['id']?>" class="cnlist" style="display:none;"><?=$value['chinese']?></pre>
+        </td>
         <td><pre><?=$value['bottle']?></pre></td>
     </tr>
     <?php
