@@ -160,7 +160,7 @@ table td.crossed pre{
     margin-bottom: 10px;
 }
 
-.checkbox {
+.checkbox_page {
 	opacity: 0;
 	position: absolute;
 }

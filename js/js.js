@@ -37,3 +37,4 @@ $(".langLabel").on("click", function () {
     $(".enlist").toggle()
     $(".cnlist").toggle()
 })
+
