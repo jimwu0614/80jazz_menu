@@ -140,6 +140,10 @@ table td.crossed pre{
     line-height: 35px;
 }
 
+.itemModelPic{
+    width: 50%;
+}
+
 .red{
     background:red ;
     height: 20px;
