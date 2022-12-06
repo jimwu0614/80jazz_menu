@@ -140,8 +140,21 @@ table td.crossed pre{
     line-height: 35px;
 }
 
+/* @media (max-width: 768px){
+    .modal-content{
+        
+    }
+} */
+
 .itemModelPic{
-    width: 50%;
+    width: 100%;
+}
+
+.modalLine{
+    margin: 0.2rem 1rem;
+    display: block;
+    background-color: rgba(0,0,0,0.2);
+    width: 2px;
 }
 
 .red{
