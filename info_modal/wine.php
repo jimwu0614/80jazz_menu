@@ -11,13 +11,15 @@ $data = $Wine->find($_POST['itemid']);
 <!-- Modal body -->
 <div class="modal-body">
     <div class="flex_nowrap">
-        <div class="w50">
+        <div class="w50 flex ai_c">
             <img class="itemModelPic" src="./img/menupic/wine/<?=$data['image']?>.jpg" alt="">
         </div>
         <div class="modalLine">
         </div>
-        <div class="flexcol">
+        <div class="flexcol w45">
             <div class="modalItem">產區:<br><?=$data['from']?></div>
+            <br>
+            <div class="modalItem">品種:<br><?=$data['variety']?></div>
             <br>
             <div class="modalItem">介紹:<br><?=$data['intro']?></div>
         </div>

@@ -173,7 +173,7 @@ table td.crossed pre{
     position: absolute;
     top: 2rem;
     right: 2rem;
-    z-index: 9999;
+    z-index: 999;
     margin-bottom: 10px;
 }
 
