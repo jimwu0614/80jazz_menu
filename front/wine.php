@@ -11,7 +11,7 @@
     <div class="liquortitle">
         <span class="type active">Red</span>
         <span class="type">White</span>
-        <span class="type">Sparking</span>
+        <span class="type">Sparkling</span>
     </div>
     <div class="blur">
         <table class="w80 ma">
