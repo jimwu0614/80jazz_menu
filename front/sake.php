@@ -1,15 +1,15 @@
 <div class="sake"></div>
 <div class="box">
     <div class="liquortitle">
-        <span class="type">Sake</span>
-        <span class="type active">Shochu</span>
+        <span class="type active">Sake</span>
+        <span class="type">Shochu</span>
 
     </div>
     <div class="blur">
         <table class="w100 ">
             <tr>
                 <td class="w60"></td>
-                <td class="w20">Glass/<br>杯</td>
+                <td class="w20">Glass/壺<br></td>
                 <td class="w20">Bottle/<br>瓶</td>
             </tr>
             <tbody class="tbody">
@@ -20,7 +20,7 @@
 </div>
 <script>
     $(document).ready(function(){
-        $.post("./get/getsake.php", {type:'Shochu'}, (res) => {
+        $.post("./get/getsake.php", {type:'Sake'}, (res) => {
 
             $(".tbody").html(res)
         })
