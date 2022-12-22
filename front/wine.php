@@ -7,6 +7,7 @@
     </label>
 </div>
 <div class="wine"></div>
+<div class="speech_bubble_liquor" id='bubble'>點擊品項可以看到酒款簡介唷</div>
 <div class="box">
     <div class="liquortitle">
         <span class="type active">Red</span>
