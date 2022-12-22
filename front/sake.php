@@ -9,7 +9,7 @@
         <table class="w100 ">
             <tr>
                 <td class="w60"></td>
-                <td class="w20">Glass/壺<br></td>
+                <td class="w20">Glass/<br>壺/杯<br></td>
                 <td class="w20">Bottle/<br>瓶</td>
             </tr>
             <tbody class="tbody">
@@ -18,6 +18,18 @@
         </table>
     </div>
 </div>
+
+<!-- detail modal -->
+<div class="modal fade" id="detailModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content front_modal_body">
+
+        <!-- ajax顯示在這裡 -->
+
+        </div>
+    </div>
+</div>
+<!-- detail modal end -->
 <script>
     $(document).ready(function(){
         $.post("./get/getsake.php", {type:'Sake'}, (res) => {
@@ -42,5 +54,14 @@
         })
     })
 
+    function showmodal(who) {
+        let itemid = $(who).data('id');
+        let kind = $(who).data('kind');
+        
+        $.post('./info_modal/sake.php',{itemid,kind},(res)=>{
+            // console.log(res);
+            $(".front_modal_body").html(res)
+        })
+    }
 
 </script>

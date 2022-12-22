@@ -68,7 +68,7 @@
         let itemid = $(who).data('id');
         
         $.post('./info_modal/wine.php',{itemid},(res)=>{
-            console.log(res);
+            // console.log(res);
             $(".front_modal_body").html(res)
         })
     }

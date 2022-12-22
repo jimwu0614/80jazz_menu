@@ -6,7 +6,7 @@ foreach ($rows as $key => $value) {
     ?>
 
     <tr>
-        <td><pre data-type="sake" data-id="<?=$value['id']?>"><?=$value['name']?></pre></td>
+        <td><pre data-type="sake" data-kind="<?=$value['type']?>" data-id="<?=$value['id']?>" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="showmodal(this)"><?=$value['name']?></pre></td>
 
 <?php
         if ($value['glass']==0) {
