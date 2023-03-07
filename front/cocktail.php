@@ -31,6 +31,12 @@
     </div>
     <div class="liquortitle flexcol pt-4">
         <span class="type active">
+            <h3 class="chinese">額外酒精 $75/杯</h3>
+            <h3>Extra Alcohol NTD $75/Glass</h3>
+        </span>
+    </div>
+    <div class="liquortitle flexcol pt-4">
+        <span class="type active">
             <h3 class="chinese">單點Shots $200/杯</h3>
             <h3>one Shot For NTD $200/Glass</h3>
         </span>
