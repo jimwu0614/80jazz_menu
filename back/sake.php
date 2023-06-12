@@ -108,10 +108,7 @@
                             <div class="form_item_text">簡介</div>
                             <p><?= $row['intro'] ?></p>
                         </div>
-                        <div>
-                            <div class="form_item_text">促銷</div>
-                            <p><?= $row['promo'] ?></p>
-                        </div>
+
                     </div>
                 </div>
                 <div class="my-3 w40 redd " >
@@ -201,10 +198,7 @@
                                 <label for="intro" class="col-form-label">簡介</label>
                                 <textarea name="intro" id="intro" cols="20" rows="3"></textarea>
                             </div>
-                            <div>
-                                <label for="promo" class="col-form-label">促銷</label>
-                                <textarea name="promo" id="promo" cols="20" rows="3"></textarea>
-                            </div>
+
                         </div>
 
                         <?php
@@ -271,12 +265,12 @@ $('#addBtn').on('click', function() {
     let bottle = $('#bottle').val();
     let glass = $('#glass').val();
     let intro = $('#intro').val();
-    let promo = $('#promo').val();
+
     
     let rank = $('#rank').val();
     let table = $('#table').val();
 
-    $.post('./api/add_menu.php', {type, memo, name, inprice, inputtime, supply, bottle, glass, intro, promo, rank, table}, (res) => {
+    $.post('./api/add_menu.php', {type, memo, name, inprice, inputtime, supply, bottle, glass, intro, rank, table}, (res) => {
         // console.log(res);
         Swal.fire({
             icon: 'success',

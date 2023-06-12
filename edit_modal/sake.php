@@ -52,10 +52,7 @@ $data = $Sake->find($_POST['editid']);
         <label for="intro" class="col-form-label">簡介</label>
         <textarea name="intro" id="intro" cols="20" rows="3"> <?=$data['intro']?></textarea>
     </div>
-    <div>
-        <label for="promo" class="col-form-label">促銷</label>
-        <textarea name="promo" id="promo" cols="20" rows="3"> <?=$data['promo']?></textarea>
-    </div>
+
 </div>
 
 
